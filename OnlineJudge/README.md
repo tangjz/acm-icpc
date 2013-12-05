@@ -2,7 +2,7 @@ There are several Tangjz's codes sorted according to OnlineJudge, maybe from whi
 The solved problems might come from the following list:
 Bzoj&Lydsy: www.lydsy.com/JudgeOnline/
 COGS: cojs.tk/cogs/
-Luogu: oj.luogu.org:8888/
+Luogu: www.luogu.org/
 MAIN: main.edu.pl/
 POJ: poj.org/
 Project_Euler: projecteuler.net/
@@ -17,3 +17,4 @@ USACO_Training: train.usaco.org/
 Uva: uva.onlinejudge.org/
 Vijos: vijos.org/
 Wikioi&Codevs: www.wikioi.com/
+ZeroJudge: zerojudge.tw/
