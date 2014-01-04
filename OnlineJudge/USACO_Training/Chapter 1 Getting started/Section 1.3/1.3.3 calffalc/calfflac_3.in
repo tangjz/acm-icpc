@@ -1,0 +1,81 @@
+/*
+ID: jweisbl1
+LANG: JAVA
+PROG: calfflac
+*/
+import java.io.*;
+import java.util.*;
+public class calfflac
+{
+    private int money=0;
+    private String name="";
+    public static void main(String[] args) throws Exception
+    {
+        FileOutputStream out; // declare a file output object 
+                    PrintStream p; // declare a print stream object 
+                        out = new FileOutputStream("calfflac.out"); // Connect print stream to the output stream
+                        p = new PrintStream( out );
+        Scanner in=new Scanner(new BufferedReader(new FileReader("calfflac.in")));
+        StringBuffer str=new StringBuffer(in.nextLine());
+        while(in.hasNextLine())
+            str.append("\n"+in.nextLine());
+            String maxPal="";
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+char[] letters=new char[str.length()];
+int size=0,indices[]=new int[str.length()];
+for(int i=0;i<str.length();i++)
+{
+    if(Character.isLetter(str.charAt(i)))
+    {
+        indices[size]=i;
+        letters[size]=Character.toUpperCase(str.charAt(i));
+        size++;
+    }
+}
+int maxLength=0,maxCenter=0,maxAdd=0,maxDiff=0;
+for(int center=Math.min(size-1,1);center<size;center++)
+{
+    for(int add=0;add<2;add++)
+    {
+        
+        int diff=0;
+        while(center-diff>=0 && center+diff+add<size)
+        {
+            if(letters[center+diff+add]==letters[center-diff])
+            {
+                diff++;
+            }
+            else
+            {
+                break;
+            }
+            
+        }
+        diff--;
+        if(2*diff+add+1>maxLength)
+        {
+            maxLength=2*diff+add+1; maxCenter=center;maxDiff=diff;maxAdd=add;
+            if(indices[center+diff+add]==str.length()-1)  maxPal=str.substring(indices[center-diff]);
+            else maxPal=str.substring(indices[center-diff],indices[center+diff+add]+1);
+        }//if
+    }//even/odd
+} //center
+//for(int g=0;g<size;g++) System.out.print(g%10);
+//System.out.println();
+//for(int g=0;g<size;g++) System.out.print(letters[g]);
+//System.out.println();
+//System.out.println(maxPal+"\nlength="+maxLength+"\ncenter="+maxCenter+"\ndiff="+maxDiff+"\nadd="+maxAdd);
+p.println(maxLength+"\n"+maxPal);        
+p.close();
+}//method
+}//class
+/*
+private static int palLength(String s)
+{
+char a[]=s.toCharArray();
+int sum=0;
+for(char c:a)
+if(Character.isLetter(c)) sum++;
+return sum;
+}//method
+}//class*/
