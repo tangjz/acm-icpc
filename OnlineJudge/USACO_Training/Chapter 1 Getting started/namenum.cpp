@@ -4,7 +4,6 @@ LANG: C++
 TASK: namenum
 */
 #include <cstdio>
-#include <cstring>
 const char transform[10][3] = {{}, {}, {'A', 'B', 'C'}, {'D', 'E', 'F'}, {'G', 'H', 'I'}, {'J', 'K', 'L'}, {'M', 'N', 'O'}, {'P', 'R', 'S'}, {'T', 'U', 'V'}, {'W', 'X', 'Y'}};
 char name[13];
 int num[13], key, flag;

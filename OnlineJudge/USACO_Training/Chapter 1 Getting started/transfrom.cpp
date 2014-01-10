@@ -5,7 +5,7 @@ TASK: transform
 */
 #include <cstdio>
 int n;
-char init[10][10], goal[10][10];
+char init[11][11], goal[11][11];
 bool match()
 {
 	for(int i = 0; i < n; ++i)
@@ -15,7 +15,7 @@ bool match()
 bool transform1()
 {
 	int i, j;
-	char temp[10][10];
+	char temp[11][11];
 	for(i = 0; i < n; ++i)
 		for(j = 0; j < n; ++j) temp[i][j] = init[i][j];
 	for(i = 0; i < n; ++i)
@@ -25,7 +25,7 @@ bool transform1()
 bool transform2()
 {
 	int i, j;
-	char temp[10][10];
+	char temp[11][11];
 	for(i = 0; i < n; ++i)
 		for(j = 0; j < n; ++j) temp[i][j] = init[i][j];
 	for(i = 0; i < n; ++i)
@@ -47,8 +47,8 @@ int main()
 {
 	freopen("transform.in", "r", stdin);
 	freopen("transform.out", "w", stdout);
-	int i, j;
-	scanf("%d\n", &n);
+	int i;
+	scanf("%d", &n);
 	for(i = 0; i < n; ++i) scanf("%s", init[i]);
 	for(i = 0; i < n; ++i) scanf("%s", goal[i]);
 	printf("%d\n", test());

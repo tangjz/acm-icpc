@@ -13,12 +13,12 @@ int main()
 	scanf("%s%s", a, b);
 	for(int i = 0; a[i]; ++i)
 	{
-		cnt1 *= a[i] - 'A';
+		cnt1 *= a[i] - 'A' + 1;
 		cnt1 %= 47;
 	}
 	for(int i = 0; b[i]; ++i)
 	{
-		cnt2 = b[i] - 'A';
+		cnt2 *= b[i] - 'A' + 1;
 		cnt2 %= 47;
 	}
 	puts(cnt1 == cnt2 ? "GO" : "STAY");

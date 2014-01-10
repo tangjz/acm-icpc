@@ -1,48 +1,48 @@
 Chapter 1	DONE	2012.12.05	Getting started
 Section 1.0	DONE	2012.10.26	TEXT Introduction
 Section 1.1	DONE	2012.10.26	TEXT Submitting Solutions
-		DONE	2012.03.03	PROB Your Ride Is Here [ANALYSIS]
+		DONE	2012.03.03	PROB Your Ride Is Here
 		DONE	2012.03.24	TEXT Contest Problem Types
 		DONE	2012.03.24	TEXT Ad Hoc Problems
-		DONE	2012.10.26	PROB Greedy Gift Givers [ANALYSIS]
-		DONE	2012.10.26	PROB Friday the Thirteenth [ANALYSIS]
-		DONE	2012.10.26	PROB Broken Necklace [ANALYSIS]
+		DONE	2012.10.26	PROB Greedy Gift Givers
+		DONE	2012.10.26	PROB Friday the Thirteenth
+		DONE	2012.10.26	PROB Broken Necklace
 Section 1.2	DONE	2012.10.26	TEXT Complete Search
-		DONE	2012.10.26	PROB Milking Cows [ANALYSIS]
-		DONE	2012.10.27	PROB Transformations [ANALYSIS]
-		DONE	2012.10.28	PROB Name That Number [ANALYSIS]
-		DONE	2012.10.28	PROB Palindromic Squares [ANALYSIS]
-		DONE	2012.10.28	PROB Dual Palindromes [ANALYSIS]
+		DONE	2012.10.26	PROB Milking Cows
+		DONE	2012.10.27	PROB Transformations
+		DONE	2012.10.28	PROB Name That Number
+		DONE	2012.10.28	PROB Palindromic Squares
+		DONE	2012.10.28	PROB Dual Palindromes
 Section 1.3	DONE	2012.11.09	TEXT Greedy Algorithm
-		DONE	2012.11.07	PROB Mixing Milk [ANALYSIS]
-		DONE	2012.11.09	PROB Barn Repair [ANALYSIS]
+		DONE	2012.11.07	PROB Mixing Milk
+		DONE	2012.11.09	PROB Barn Repair
 		DONE	2012.11.09	TEXT Winning Solutions
-		DONE	2012.11.02	PROB Calf Flac [ANALYSIS]
-		DONE	2012.11.15	PROB Prime Cryptarithm [ANALYSIS]
+		DONE	2012.11.02	PROB Calf Flac
+		DONE	2012.11.15	PROB Prime Cryptarithm
 Section 1.4	DONE	2012.11.15	TEXT More Search Techniques
-		DONE	2012.12.05	PROB Packing Rectangles [ANALYSIS]
-		DONE	2012.12.03	PROB The Clocks [ANALYSIS]
-		DONE	2012.12.03	PROB Arithmetic Progressions [ANALYSIS]
-		DONE	2012.12.05	PROB Mother's Milk [ANALYSIS]
+		DONE	2012.12.05	PROB Packing Rectangles
+		DONE	2012.12.03	PROB The Clocks
+		DONE	2012.12.03	PROB Arithmetic Progressions
+		DONE	2012.12.05	PROB Mother's Milk
 Section 1.5	DONE	2012.12.05	TEXT Introduction to Binary Numbers
-		DONE	2012.08.13	PROB Number Triangles [ANALYSIS]
-		DONE	2012.03.24	PROB Prime Palindromes [ANALYSIS]
-		DONE	2012.03.24	PROB SuperPrime Rib [ANALYSIS]
-		DONE	2012.03.03	PROB Checker Challenge [ANALYSIS]
+		DONE	2012.08.13	PROB Number Triangles
+		DONE	2012.03.24	PROB Prime Palindromes
+		DONE	2012.03.24	PROB SuperPrime Rib
+		DONE	2012.03.03	PROB Checker Challenge
 Chapter 2	TODO	2012.03.24	Bigger Challenges
 Section 2.1	DONE	2013.01.04	TEXT Graph Theory
 		DONE	2013.01.04	TEXT Flood Fill Algorithms
-		DONE	2012.03.24	PROB The Castle [ANALYSIS]
-		DONE	2012.03.24	PROB Ordered Fractions [ANALYSIS]
-		DONE	2013.01.04	PROB Sorting A Three-Valued Sequence [ANALYSIS]
-		DONE	2013.01.05	PROB Healthy Holsteins [ANALYSIS]
-		DONE	2013.01.05	PROB Hamming Codes [ANALYSIS]
+		DONE	2012.03.24	PROB The Castle
+		DONE	2012.03.24	PROB Ordered Fractions
+		DONE	2013.01.04	PROB Sorting A Three-Valued Sequence
+		DONE	2013.01.05	PROB Healthy Holsteins
+		DONE	2013.01.05	PROB Hamming Codes
 Section 2.2	DONE	2013.01.05	TEXT Data Structures
 		DONE	2013.01.05	TEXT Dynamic Programming
-		DONE	2013.01.05	PROB Preface Numbering [ANALYSIS]
-		DONE	2013.01.05	PROB Subset Sums [ANALYSIS]
-		DONE	2013.01.06	PROB Runaround Numbers [ANALYSIS]
-		DONE	2013.01.13	PROB Party Lamps [ANALYSIS]
+		DONE	2013.01.05	PROB Preface Numbering
+		DONE	2013.01.05	PROB Subset Sums
+		DONE	2013.01.06	PROB Runaround Numbers
+		DONE	2013.01.13	PROB Party Lamps
 Section 2.3	TODO	 		PROB The Longest Prefix
 		TODO	 		PROB Cow Pedigrees
 		TODO	 		PROB Zero Sum

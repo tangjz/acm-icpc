@@ -9,10 +9,9 @@ using namespace std;
 struct Node
 {
 	int l, r;
-	bool operator < (const Node &x) const
-	{ return l < x.l || l == x.l && r < x.r; }
+	bool operator < (const Node &x) const { return l < x.l || l == x.l && r < x.r; }
 } farmer[5001];
-int max_work, max_relax, N;
+int max_work, max_relax, n;
 int main()
 {
 	freopen("milk2.in", "r", stdin);
@@ -23,15 +22,11 @@ int main()
 	sort(farmer + 1, farmer + n + 1);
 	for(i = 1; i < n; ++i)
 		if(farmer[i].l >= 0)
-		{
-			j = 1;
-			while(farmer[i].r >= farmer[i + j].l && i + j <= n)
+			for(j = 1; farmer[i].r >= farmer[i + j].l && i + j <= n; ++j)
 			{
 				if(farmer[i].r < farmer[i + j].r) farmer[i].r = farmer[i + j].r;
 				farmer[i + j].l = -1;
-				++j;
 			}
-		}
 	temp1 = farmer[1].l;
 	for(i = 1; i <= n; ++i)
 		if(farmer[i].l >= 0)

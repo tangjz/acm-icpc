@@ -17,10 +17,11 @@ int main()
 	freopen("dualpal.out", "w", stdout);
 	scanf("%d%d", &n, &s);
 	for(++s; n; ++s)
-		for(int i = 2, j = s, flag = 0; i <= 10; ++i)
+		for(int i = 2, j, flag = 0; i <= 10; ++i)
 		{
 			memset(num, 0, sizeof num);
 			len = 0;
+			j = s;
 			while(j)
 			{
 				num[len++] = j % i;

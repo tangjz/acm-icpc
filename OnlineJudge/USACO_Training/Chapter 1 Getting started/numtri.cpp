@@ -3,31 +3,21 @@ ID: tangjin2
 LANG: C++
 TASK: numtri
 */
-#include <fstream>
-#include <iostream>
-#include <algorithm>
-using namespace std;
-int r;
-struct node{int vue, cnt;} num[1001][1001]={};
+#include <cstdio>
+int n, f[1001][1001];
 int main()
 {
-   ifstream cin( "numtri.in", ios::in);
-   ofstream cout("numtri.out", ios::out);
-   int i, j;
-   cin >> r;
-   for(i = 1; i <= r; ++i)
-      for(j = 1; j <= i; ++j)
-      {
-         cin >> num[i][j].vue;
-         num[i][j].cnt = num[i][j].vue;
-      }
-  for(i = 1; i <= r; ++i)
-     for(j = 1; j <= i; ++j)
-        if(num[i - 1][j - 1].cnt > num[i - 1][j].cnt) num[i][j].cnt += num[i - 1][j - 1].cnt;
-        else num[i][j].cnt += num[i - 1][j].cnt;
-  for(i = 2; i <= r; ++i) if(num[r][i].cnt > num[r][1].cnt) num[r][1].cnt = num[r][i].cnt;
-  cout << num[r][1].cnt << endl;
-  cin.clear();cout.clear();
-  cin.close();cout.close();
-  return 0;
+	freopen("numtri.in", "r", stdin);
+	freopen("numtri.out", "w", stdout);
+	int i, j;
+	scanf("%d", &n);
+	for(i = 1; i <= n; ++i)
+		for(j = 1; j <= i; ++j) scanf("%d", &f[i][j]);
+	for(i = 1; i <= n; ++i)
+		for(j = 1; j <= i; ++j) f[i][j] += f[i - 1][j - 1] > f[i - 1][j] ? f[i - 1][j - 1] : f[i - 1][j];
+	for(i = 2; i <= n; ++i) if(f[n][i] > f[n][1]) f[n][1] = f[n][i];
+	printf("%d\n", f[n][1]);
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
 }
