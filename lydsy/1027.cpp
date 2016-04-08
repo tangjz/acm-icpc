@@ -1,68 +1,120 @@
-/*
- * 由于a,b,c相加得1 可以去掉一维 抽象成平面上的点 
- * 某两种材料可以和成两点间的所有材料 以此类推 
- * 即求最少种材料组成的凸包 包含所有所需材料 
- * 找出在所有点同侧的线段 求有向图最小环 
- */
 #include <cstdio>
 #include <cstring>
-#include <algorithm>
-using namespace std;
+const int maxn = 510, maxm = 510, INF = 0x3f3f3f3f;
 const double eps = 1e-10;
-const int INF = 0x1f1f1f1f;
+int t, n, m, g[maxm][maxm], ans;
+int sgn(double x)
+{
+	return (x > eps) - (x < -eps);
+}
 struct Point
 {
 	double x, y;
-	bool operator != (const Point &a) const { return x != a.x || y != a.y; }
-	void init() { scanf("%lf%lf%lf", &x, &x, &y); }
-} data[501], user[501];
-int n, m, d[501][501], g[501][501], ans = INF;
-bool vis[501];
-inline double Area(Point a, Point b, Point c) { return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x); }
+	bool operator == (const Point &t) const
+	{
+		return !sgn(x - t.x) && !sgn(y - t.y);
+	}
+	double dot(const Point &t) const
+	{
+		return x * t.x + y * t.y;
+	}
+	double det(const Point &t) const
+	{
+		return x * t.y - y * t.x;
+	}
+	double mode2() const
+	{
+		return dot(*this);
+	}
+	Point operator + (const Point &t) const
+	{
+		return (Point){x + t.x, y + t.y};
+	}
+	Point operator - (const Point &t) const
+	{
+		return (Point){x - t.x, y - t.y};
+	}
+	Point operator * (const double &t) const
+	{
+		return (Point){x * t, y * t};
+	}
+} p[maxn], pp[maxm];
 int main()
 {
-	int i, j, k, tot = 0;
-	scanf("%d%d", &n, &m);
-	for(i = 0; i < n; ++i) data[i].init();
-	for(i = 0; i < m; ++i) user[i].init();
-	for(i = 0; i < n; ++i)
+	int tmp;
+	scanf("%d%d", &m, &n);
+	for(int i = 0; i < m; ++i)
+		scanf("%lf%lf%*lf", &pp[i].x, &pp[i].y);
+	for(int i = 0; i < n; ++i)
+		scanf("%lf%lf%*lf", &p[i].x, &p[i].y);
+	if(m == 1)
 	{
-		for(j = 0; j < m; ++j) if(data[i] != user[j]) break;
-		if(j >= m) { printf("1\n"); return 0; }
+		bool flag = 0;
+		for(int i = 0; i < n; ++i)
+			if(!(p[i] == pp[0]))
+			{
+				flag = 1;
+				break;
+			}
+		printf("%d\n", !flag ? 1 : -1);
+		return 0;
 	}
-	memset(d, 0x1f, sizeof(d));
-	for(i = 0; i < n; ++i)
-		for(j = 0; j < n; ++j) if(i != j)
-		{
-			for(k = 0; k < m; ++k) if(Area(data[i], data[j], user[k]) < -eps) break;
-			if(k >= m) vis[i] = vis[j] = 1;
-		}
-	for(i = 0; i < n; ++i) if(vis[i]) data[tot++] = data[i];
-	n = tot;
-	for(i = 0; i < n; ++i)
-		for(j = 0; j < n; ++j) if(i != j)
-		{
-			for(k = 0; k < m; ++k) if(Area(data[i], data[j], user[k]) < -eps) break;
-			if(k >= m) d[i][j] = 1;
-		}
-	for(i = 0; i < n; ++i)
-		for(j = 0; j < n; ++j) if(d[i][j] == 1 && d[j][i] == 1)
-		{
-			double maxx = max(data[i].x, data[j].x), minx = min(data[i].x, data[j].x), maxy = max(data[i].y, data[j].y), miny = min(data[i].y, data[j].y);
-			for(k = 0; k < m; ++k) if(user[k].x < minx || user[k].x > maxx || user[k].y < miny || user[k].y > maxy) break;
-			if(k >= m) { printf("2\n"); return 0; }
-		}
-	for(i = 0; i < n; ++i)
-		for(j = 0; j < n; ++j) g[i][j] = d[i][j];
-	for(k = 0; k < n; ++k)
+	memset(g, 0x3f, sizeof g);
+	for(int i = 0; i < m; ++i)
 	{
-		for(i = 0; i < n; ++i) if(i != k)
-			for(j = 0; j < n; ++j) if(j != i && j != k)
-				ans = min(ans, d[i][j] + g[j][k] + g[k][i]);
-		for(i = 0; i < n; ++i)
-			for(j = 0; j < n; ++j) d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+		int top = -1, dep = -1;
+		bool flag = 0;
+		for(int j = 0; j < n; ++j)
+		{
+			if(p[j] == pp[i])
+				continue;
+			if(top != -1 && top == dep && !sgn((p[top] - pp[i]).det(p[j] - pp[i])) && sgn((p[top] - pp[i]).dot(p[j] - pp[i])))
+			{
+				top = j;
+				flag = 1;
+				continue;
+			}
+			if(flag && sgn((p[top] - pp[i]).det(p[j] - pp[i])) > 0 && sgn((p[dep] - pp[i]).det(p[j] - pp[i])) < 0)
+			{
+				top = top + dep;
+				dep = top - dep;
+				top = top - dep;
+				flag = 0;
+				continue;
+			}
+			if(top == -1 || sgn((p[top] - pp[i]).det(p[j] - pp[i])) > 0)
+			{
+				top = j;
+				if(dep != -1 && sgn((p[dep] - pp[i]).det(p[top] - pp[i])) < 0)
+					break;
+			}
+			if(dep == -1 || sgn((p[dep] - pp[i]).det(p[j] - pp[i])) < 0)
+			{
+				dep = j;
+				if(sgn((p[dep] - pp[i]).det(p[top] - pp[i])) < 0)
+					break;
+			}
+		}
+		if(top != -1 && sgn((p[dep] - pp[i]).det(p[top] - pp[i])) < 0)
+			continue;
+		Point L = (p[top] - pp[i]) * -1.0, R = p[dep] - pp[i];
+		for(int j = 0; j < m; ++j)
+			if(i != j)
+			{
+				int sg1 = sgn(L.det(pp[j] - pp[i])), sg2 = sgn(R.det(pp[j] - pp[i]));
+				if(sg1 > 0 && sg2 <= 0 || sg1 >= 0 && sg2 < 0 || !sg1 && !sg2 && sgn(R.dot(pp[j] - pp[i])) >= 0)
+	 				g[i][j] = 1;// printf("edge %d to %d\n", i, j);
+			}
 	}
-	if(ans < INF) printf("%d\n", ans);
-	else printf("-1\n");
+	for(int k = 0; k < m; ++k)
+		for(int i = 0; i < m; ++i) if(g[i][k] != INF)
+			for(int j = 0; j < m; ++j) if(g[k][j] != INF)
+				if(g[i][j] > g[i][k] + g[k][j])
+					g[i][j] = g[i][k] + g[k][j];
+	ans = INF;
+	for(int i = 0; i < m; ++i)
+		if(ans > g[i][i])
+			ans = g[i][i];
+	printf("%d\n", ans == INF ? -1 : ans);
 	return 0;
 }
