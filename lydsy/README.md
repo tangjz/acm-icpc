@@ -10,6 +10,7 @@
 	1543	生成树计数
 	2027	[SHOI2009]巴士路线
 	2595	[Wc2008]游览计划
+	2715	[Violet 3]最优指令
 	2856	[ceoi2012]Printed Circuit Board
 	3100	排列
 	3154	Stilwell
