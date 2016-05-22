@@ -5,7 +5,6 @@
 	1039	X^3 Mod P
 	1111	01组成的N的倍数 V2
 	1359	循环探求
-	1387	移数字
 	1447	好记的字符串
 	1529	排列与编码
 
@@ -23,3 +22,4 @@
 	Algorithm_Marathon_11	ABCDEF
 	Algorithm_Marathon_12	ABCDEF
 	Algorithm_Marathon_13	finished
+	Baishan_Geek_Challenge	finished
