@@ -24,22 +24,21 @@
 	Algorithm_Marathon_13	finished
 	Baishan_Geek_Challenge	finished
 
-####Combinatorics List(34/37)
+####Combinatorics List(38/40)
 	1034	骨牌覆盖 
 	1152	跳蚤高手 
-	1327	棋盘游戏 
 
-####Graph Theory List(1/5)
+####Graph Theory List(3/7)
 	1076	2条不相交的路径 
 	1078	3条不相交的路径 
 	1212	无向图最小生成树 
 	1213	二维曼哈顿距离最小生成树 
 
 ####To be extend...
-	Data Structure (2/21) 
-	Number Theory (43/68)
-	Greedy (2/16)
-	Dynamic Programming (14/43)
+	Data Structure (7/26) 
+	Number Theory (52/77)
+	Greedy (4/19)
+	Dynamic Programming (17/45)
 
 ####Finished
 	Big Integer Operation, Game Theory
