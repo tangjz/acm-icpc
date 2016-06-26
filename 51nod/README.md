@@ -8,7 +8,7 @@
 	1447	好记的字符串 
 	1529	排列与编码 
 
-####Contest List(50/83)
+####Contest List(60/103)
 	Algorithm_Marathon_1	finished
 	Algorithm_Marathon_2	BCDEF
 	Algorithm_Marathon_3	finished
@@ -23,8 +23,11 @@
 	Algorithm_Marathon_12	ABCDEF
 	Algorithm_Marathon_13	finished
 	Baishan_Geek_Challenge	finished
+	Astar_2016_Practice		GH
+	Algorithm_Marathon_14	BCEF
+	Algorithm_Marathon_15	BCDE
 
-####Combinatorics List(38/40)
+####Combinatorics List(39/41)
 	1034	骨牌覆盖 
 	1152	跳蚤高手 
 
