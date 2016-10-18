@@ -25,25 +25,20 @@ full contest code in /complete
 	497	A/BCDE
 	515	C/ABDE
 	516	A/BCDE
-	520	CD/ABE
-	521	AB/CDE
+	521	ABC/DE
 	526	ABCD/EFG
 	533	CE/ABDF
-	535	CDE/AB
-	536	ABD/DE
+	536	ABC/DE
 	542	C/ABDEF
 	543	ABCD/E
-	551	D/ABCE
 	559	ABC/DE
-	560	CDE/AB
-	567	ABCDE/F
 	582	ABC/DE
-	662	BD/ACE
-	663	BC/ADE
-	664	CD/ABE
 	698	ABCE/DF
 	699	CDE/ABF
 	700	ABC/DE
+	704 A/BCDE
+	705 /ABCDE
+	718 ACD/E
 	100705	/A1A2A3A4A5A6B1B2B3C1C2C3
 
 #### Complete Contest
@@ -71,15 +66,25 @@ full contest code in /complete
 	500	7	Good Bye 2014
 	510	5	Codeforces Round #290 (Div. 2)
 	512	5	Codeforces Round #290 (Div. 1)
+	520	5	Codeforces Round #295 (Div. 2)
 	524	6	VK Cup 2015 - Round 1
 	529	5	VK Cup 2015 - Round 1 (unofficial online mirror, Div. 1 only)
+	535	5	Codeforces Round #299 (Div. 2)
 	544	5	Codeforces Round #302 (Div. 2)
 	547	5	Codeforces Round #305 (Div. 1)
 	548	5	Codeforces Round #305 (Div. 2)
+	551	5	Codeforces Round #307 (Div. 2)
+	560	5	Codeforces Round #313 (Div. 2)
+	567	6	Codeforces Round #Pi (Div. 2)
 	583	5	Codeforces Round #323 (Div. 2)
 	584	5	Codeforces Round #324 (Div. 2)
 	615	5	Codeforces Round #338 (Div. 2)
+	662	5	CROC 2016 - Final Round [Private, For Onsite Finalists Only]
+	663	5	Codeforces Round #347 (Div. 1)
+	664	5	Codeforces Round #347 (Div. 2)
 	701	6	Codeforces Round #364 (Div. 2)
+	719 4	Codeforces Round #373 (Div. 2)
+	722 6	Intel Code Challenge Elimination Round (Div.1 + Div.2, combined)
 
 #### Ignored Contest
 	532	541
