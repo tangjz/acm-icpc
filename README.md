@@ -1,37 +1,38 @@
-##Tangjz's code repository, for acm-icpc.
+## Tangjz's code repository, for acm-icpc.
 
-####count of solved problems
-	51nod			183
-	bestcoder		24
+#### count of solved problems
+	51nod			275 
+	bestcoder		46
 	codechef		6
-	codeforces		231
+	codeforces		324
 	hackerrank		9
-	hdu				56
+	hdu				95
 	lanqiao			6
-	lydsy			427
+	lydsy			485
 	oj3rd			135
-	poj				86
+	poj				89
 	projecteuler	5
 	timus			3
 	usaco			48
+	uvalive			111
 	zoj				5
 
-`total : 1224`
+`total : 1642`
 
-####count of trainings
-	self	23
-	TDL		46
+#### count of trainings
+	self	42 
+	TDL		98 
 
-`total : 69`
+`total : 140`
 
-####to be rebuild
-	codevs
-	contesthunter
+#### to be rebuild
+	topcoder
 	main
 	sgu
-	spoj
-	topcoder
-	tsinsen
 	uoj
-	uva/uvalive
+	uva
+	spoj
+	contesthunter
+	codevs
+	tsinsen
 	acdream/cogs/luogu/rqnoj/tyvj/vijos
