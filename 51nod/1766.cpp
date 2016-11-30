@@ -41,7 +41,7 @@ inline int dist(int u, int v)
 {
 	return Dist[u] + Dist[v] - 2 * Dist[lca(u, v)];
 }
-pair<int, int> seg[maxn << 1];
+pair<int, int> seg[maxd][maxn];
 inline int seg_idx(int L, int R)
 {
 	return L + R | L != R;
@@ -85,39 +85,10 @@ inline pair<int, int> merge(pair<int, int> a, pair<int, int> b, int flag = 0)
 	}
 	return ret;
 }
-void build(int L, int R)
-{
-	int o = seg_idx(L, R);
-	if(L == R)
-	{
-		seg[o] = make_pair(L, L);
-		return;
-	}
-	int M = L + R >> 1, lch = seg_idx(L, M), rch = seg_idx(M + 1, R);
-	build(L, M);
-	build(M + 1, R);
-	seg[o] = merge(seg[lch], seg[rch], 1);
-}
-int qL, qR;
 pair<int, int> query(int L, int R)
 {
-	if(qL <= L && R <= qR)
-		return seg[seg_idx(L, R)];
-	int M = L + R >> 1;
-	pair<int, int> ret;
-	if(qR <= M)
-		ret = query(L, M);
-	else if(qL > M)
-		ret = query(M + 1, R);
-	else
-		ret = merge(query(L, M), query(M + 1, R), 1);
-	return ret;
-}
-pair<int, int> query(int L, int R, int l, int r)
-{
-	qL = l;
-	qR = r;
-	return query(L, R);
+	register int d = Log[R - L + 1];
+	return merge(seg[d][L], seg[d][R - (1 << d) + 1], 1);
 }
 int main()
 {
@@ -143,13 +114,17 @@ int main()
 	for(int d = 1; d <= Log[tot]; ++d)
 		for(int i = 1; i + (1 << d - 1) <= tot; ++i)
 			st[d][i] = deepless(st[d - 1][i], st[d - 1][i + (1 << d - 1)]);
-	build(1, n);
+	for(int i = 1; i <= n; ++i)
+		seg[0][i] = make_pair(i, i);
+	for(int d = 1; d <= Log[n]; ++d)
+		for(int i = 1; i + (1 << (d - 1)) <= n; ++i)
+			seg[d][i] = merge(seg[d - 1][i], seg[d - 1][i + (1 << (d - 1))], 1);
 	scanf("%d", &m);
 	while(m--)
 	{
 		int a, b, c, d;
 		scanf("%d%d%d%d", &a, &b, &c, &d);
-		pair<int, int> s = query(1, n, a, b), t = query(1, n, c, d), r = merge(s, t);
+		pair<int, int> s = query(a, b), t = query(c, d), r = merge(s, t);
 		printf("%d\n", dist(r.first, r.second));
 	}
 	return 0;

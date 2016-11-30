@@ -2,11 +2,12 @@
 [51Nod](http://www.51nod.com/)
 
 #### To be solved
+	1078	3条不相交的路径
 	1111	01组成的N的倍数 V2 
 	1148	黑白图像 
 	1529	排列与编码 
 
-#### Contest List(69/121)
+#### Contest List (75/127)
 	Algorithm_Marathon_1	finished
 	Algorithm_Marathon_2	BCDEF
 	Algorithm_Marathon_3	finished
@@ -27,13 +28,14 @@
 	Algorithm_Marathon_16	DE
 	Algorithm_Marathon_17	BCDEF
 	Algorithm_Marathon_18	ABCDEF
+	Algorithm_Marathon_19	finished
 
-#### Combinatorics List(44/47)
+#### Combinatorics List (48/51)
 	1034	骨牌覆盖 
 	1152	跳蚤高手 
 	1667	概率好题 
 
-#### Graph Theory List(4/9)
+#### Graph Theory List (6/11)
 	1076	2条不相交的路径 
 	1078	3条不相交的路径 
 	1212	无向图最小生成树 
@@ -42,10 +44,10 @@
 	1816	小C的二分图 
 
 #### To be extend...
-	Data Structure (18/36) 
-	Number Theory (64/89)
-	Greedy (5/19)
-	Dynamic Programming (29/55)
+	Data Structure (19/37) 
+	Number Theory (68/91)
+	Greedy (6/21)
+	Dynamic Programming (32/56)
 
 #### Finished
 	Big Integer Operation, Game Theory
