@@ -30,6 +30,6 @@ int main()
 	for(int i = 1; i <= n; ++i)
 		if(i == find(i))
 			ans -= sz[i] * (sz[i] - 1LL) * (sz[i] - 2) / 6 + sz[i] * (sz[i] - 1LL) / 2 * (n - sz[i]);
-	printf("%d\n", ans % mod);
+	printf("%d\n", (int)(ans % mod));
 	return 0;
 }
