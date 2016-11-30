@@ -1,9 +1,18 @@
-#include <cstdio>
-int ans = 1;
-int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
+#include <stdio.h>
+#include <algorithm>
+typedef long long LL;
+int t, n;
+LL ans;
 int main()
 {
-	for(int i = 2; i <= 20; ++i) ans *= i / gcd(ans, i);
-	printf("%d\n", ans);
+	scanf("%d", &t);
+	while(t--)
+	{
+		scanf("%d", &n);
+		ans = 1;
+		for(int i = 2; i <= n; ++i)
+			ans *= i / std::__gcd(i, (int)(ans % i));
+		printf("%lld\n", ans);
+	}
 	return 0;
 }

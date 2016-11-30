@@ -1,15 +1,20 @@
-#include <cstdio>
-long long num = 600851475143ll;
+#include <stdio.h>
+typedef long long LL;
+int t;
+LL n, ans;
 int main()
 {
-	long long i, max = 1;
-	for(i = 2; i * i <= num; ++i)
-		if(num % i == 0)
-		{
-			max = i;
-			while(num % i == 0) num /= i;
-		}
-	if(num > 1) max = num;
-	printf("%lld\n", max);
+	scanf("%d", &t);
+	while(t--)
+	{
+		scanf("%lld", &n);
+		ans = 1;
+		for(LL i = 2; i * i <= n; ++i)
+			if(n % i == 0)
+				for(ans = i, n /= i; n % i == 0; n /= i);
+		if(n > 1)
+			ans = n;
+		printf("%lld\n", ans);
+	}
 	return 0;
 }
