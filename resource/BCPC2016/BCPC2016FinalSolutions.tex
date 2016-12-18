@@ -1,0 +1,551 @@
+\documentclass[notheorems]{beamer}
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{color,xcolor}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage[UTF8]{ctex}
+\usepackage{booktabs}
+\usepackage{setspace}
+%\usepackage{wallpaper}
+%\usepackage{pgfplots}
+
+%\usetheme{Warsaw}
+\usetheme{Madrid}
+%\usetheme{PaloAlto}
+\usefonttheme[onlymath]{serif}
+\usecolortheme{whale}
+
+\newtheorem{proposition}{命题}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{theorem}{定理}
+\newtheorem{corollary}{推论}
+%\newtheorem{proof}{证明}
+\newtheorem{example}{例}
+
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+
+\setbeamercovered{transparent}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{navigation symbols}{}
+
+% Problem (zh)					% Author (handle)
+\newcommand{\zhProbA}{浪哥的烦恼}	\newcommand{\AuthProbA}{\textbf{\underline{\href{http://codeforces.com/profile/shell0011}{shell0011}}}}
+\newcommand{\zhProbB}{前前前世}		\newcommand{\AuthProbB}{\textbf{\underline{\href{http://codeforces.com/profile/EZ_fwtt08}{ez\_fwtt08}}}}
+\newcommand{\zhProbC}{蚂蚁求偶}		\newcommand{\AuthProbC}{\textbf{\underline{\href{http://codeforces.com/profile/Phasianus}{Dshawn}}}}
+\newcommand{\zhProbD}{邋遢大王}		\newcommand{\AuthProbD}{\textbf{\underline{\href{http://codeforces.com/profile/Phasianus}{Dshawn}}} 和 \textbf{\underline{\href{http://codeforces.com/profile/Tangjz}{Tangjz}}}}
+\newcommand{\zhProbE}{文本替换}		\newcommand{\AuthProbE}{\textbf{\underline{\href{http://codeforces.com/profile/chffy}{chffy}}}}
+\newcommand{\zhProbF}{兔子抓狼}		\newcommand{\AuthProbF}{\textbf{\underline{\href{http://codeforces.com/profile/yaoling}{yaoling}}}}
+\newcommand{\zhProbG}{密码安全}		\newcommand{\AuthProbG}{\textbf{\underline{\href{http://codeforces.com/profile/Tangjz}{Tangjz}}}}
+\newcommand{\zhProbH}{最小交换次数}	\newcommand{\AuthProbH}{\textbf{\underline{\href{http://codeforces.com/profile/chffy}{chffy}}}}
+\newcommand{\zhProbI}{无影小姐}		\newcommand{\AuthProbI}{\textbf{\underline{\href{http://codeforces.com/profile/constroy}{constroy}}}}
+\newcommand{\zhProbJ}{两点之间}		\newcommand{\AuthProbJ}{\textbf{\underline{\href{http://codeforces.com/profile/Phasianus}{Dshawn}}}}
+% --------------------------------------------- manual ---------------------------------------------
+% Suggest: parse those with generator codes (before presentation) finished
+\newcommand{\TBD}{NaN}	\newcommand{\NONE}{佚名}	\newcommand{\INF}{$\infty$}
+% Accepted					% Submitted				% Ratio
+\newcommand{\AccInProbA}{89}	\newcommand{\SubInProbA}{118}	\newcommand{\RatInProbA}{75.42\%}
+\newcommand{\AccInProbB}{6}	\newcommand{\SubInProbB}{17}	\newcommand{\RatInProbB}{35.29\%}
+\newcommand{\AccInProbC}{76}	\newcommand{\SubInProbC}{120}	\newcommand{\RatInProbC}{63.33\%}
+\newcommand{\AccInProbD}{2}	\newcommand{\SubInProbD}{3}	\newcommand{\RatInProbD}{66.67\%}
+\newcommand{\AccInProbE}{3}	\newcommand{\SubInProbE}{7}	\newcommand{\RatInProbE}{42.86\%}
+\newcommand{\AccInProbF}{4}	\newcommand{\SubInProbF}{8}	\newcommand{\RatInProbF}{50.00\%}
+\newcommand{\AccInProbG}{3}	\newcommand{\SubInProbG}{9}	\newcommand{\RatInProbG}{33.33\%}
+\newcommand{\AccInProbH}{14}	\newcommand{\SubInProbH}{36}	\newcommand{\RatInProbH}{38.89\%}
+\newcommand{\AccInProbI}{50}	\newcommand{\SubInProbI}{71}	\newcommand{\RatInProbI}{70.42\%}
+\newcommand{\AccInProbJ}{10}	\newcommand{\SubInProbJ}{28}	\newcommand{\RatInProbJ}{35.71\%}
+% First Solved Penalty			% First Solved Person	
+\newcommand{\FirPenInProbA}{7}		\newcommand{\FirPerInProbA}{\NONE}
+\newcommand{\FirPenInProbB}{96}		\newcommand{\FirPerInProbB}{\NONE}
+\newcommand{\FirPenInProbC}{14}		\newcommand{\FirPerInProbC}{\NONE}
+\newcommand{\FirPenInProbD}{191}	\newcommand{\FirPerInProbD}{\NONE}
+\newcommand{\FirPenInProbE}{97}		\newcommand{\FirPerInProbE}{\NONE}
+\newcommand{\FirPenInProbF}{116}	\newcommand{\FirPerInProbF}{\NONE}
+\newcommand{\FirPenInProbG}{108}	\newcommand{\FirPerInProbG}{\NONE}
+\newcommand{\FirPenInProbH}{47}		\newcommand{\FirPerInProbH}{\NONE}
+\newcommand{\FirPenInProbI}{9}		\newcommand{\FirPerInProbI}{\NONE}
+\newcommand{\FirPenInProbJ}{123}	\newcommand{\FirPerInProbJ}{\NONE}
+% Last Solved Penalty				% Last Solved Person	
+\newcommand{\LasPenInProbA}{224}	\newcommand{\LasPerInProbA}{\NONE}
+\newcommand{\LasPenInProbB}{198}	\newcommand{\LasPerInProbB}{\NONE}
+\newcommand{\LasPenInProbC}{223}	\newcommand{\LasPerInProbC}{\NONE}
+\newcommand{\LasPenInProbD}{217}	\newcommand{\LasPerInProbD}{\NONE}
+\newcommand{\LasPenInProbE}{170}	\newcommand{\LasPerInProbE}{\NONE}
+\newcommand{\LasPenInProbF}{223}	\newcommand{\LasPerInProbF}{\NONE}
+\newcommand{\LasPenInProbG}{234}	\newcommand{\LasPerInProbG}{\NONE}
+\newcommand{\LasPenInProbH}{237}	\newcommand{\LasPerInProbH}{\NONE}
+\newcommand{\LasPenInProbI}{239}	\newcommand{\LasPerInProbI}{\NONE}
+\newcommand{\LasPenInProbJ}{228}	\newcommand{\LasPerInProbJ}{\NONE}
+% --------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Title Page (manual) finished
+\title[The 12th BCPC Final Round Solutions]{第十二届北航程序设计竞赛现场决赛题解}
+\author[BeihangU 2016 ACM-ICPC Training Team]{北航 2016 ACM-ICPC 集训队}
+\date[December 18th, 2016]{2016 年 12 月 18 日}
+\frame{\titlepage}
+
+% Table of Contents (auto)
+\begin{frame}[label = Overview]
+\frametitle{整体情况}
+\begin{center} \begin{spacing}{1.1}
+\begin{tabular}{lll}
+\toprule
+Problem					&	Accuracy							\\
+\midrule
+\hyperlink{ProbA}{A. \zhProbA}	&	\RatInProbA\ (\AccInProbA/\SubInProbA)	\\
+\hyperlink{ProbB}{B. \zhProbB}	&	\RatInProbB\ (\AccInProbB/\SubInProbB)	\\
+\hyperlink{ProbC}{C. \zhProbC}	&	\RatInProbC\ (\AccInProbC/\SubInProbC)	\\
+\hyperlink{ProbD}{D. \zhProbD}	&	\RatInProbD\ (\AccInProbD/\SubInProbD)	\\
+\hyperlink{ProbE}{E. \zhProbE}	&	\RatInProbE\ (\AccInProbE/\SubInProbE)	\\
+\hyperlink{ProbF}{F. \zhProbF}	&	\RatInProbF\ (\AccInProbF/\SubInProbF)	\\
+\hyperlink{ProbG}{G. \zhProbG}	&	\RatInProbG\ (\AccInProbG/\SubInProbG)	\\
+\hyperlink{ProbH}{H. \zhProbH}	&	\RatInProbH\ (\AccInProbH/\SubInProbH)	\\
+\hyperlink{ProbI}{I. \zhProbI}	&	\RatInProbI\ (\AccInProbI/\SubInProbI)	\\
+\hyperlink{ProbJ}{J. \zhProbJ}	&	\RatInProbJ\ (\AccInProbJ/\SubInProbJ)	\\
+\bottomrule
+\end{tabular}
+\end{spacing} \end{center}
+\hyperlink{End}{\beamerskipbutton{Skip to the End}}
+\end{frame}
+
+% Problem A Overview (auto)
+\begin{frame}[label = ProbA]
+\frametitle{A. \zhProbA\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbA\ 人，共 \SubInProbA\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbA\ 分钟，来自 \FirPerInProbA\ 
+\\ 最后一个通过出现于 \LasPenInProbA\ 分钟，来自 \LasPerInProbA\ 
+\item 出题人是 \AuthProbA\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem A Review (manual) finished
+\begin{frame}
+\frametitle{A. \zhProbA\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有 $1$ 到 $n$ 共 $n$ 个点
+\item 在 $i$ 到 $i + 1$ 之间移动需要 $t_i$ 时间
+\item 问从 $1$ 出发走到 $n$ 的耗时不超过 $m$ 的情况下，不可能是哪些时长
+\item $1 \leq T \leq 200, 2 \leq n \leq 100, 1 \leq m \leq 500$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem A Solution (manual) finished
+\begin{frame}
+\frametitle{A. \zhProbA\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 令 $f(i, j)$ 表示能否恰好用 $i$ 时间走到 $j$
+\item $f(i, j) \rightarrow f(i + t_j, j + 1) \text{ if } j < n$
+\item $f(i, j) \rightarrow f(i + t_{j - 1}, j - 1) \text{ if } j > 1$
+\item 从 $f(0, 1)$ 开始扩展，以广度优先搜索 (BFS) 的形式实现，时间复杂度 $O(nm)$
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem B Overview (auto)
+\begin{frame}[label = ProbB]
+\frametitle{B. \zhProbB\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbB\ 人，共 \SubInProbB\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbB\ 分钟，来自 \FirPerInProbB\ 
+\\ 最后一个通过出现于 \LasPenInProbB\ 分钟，来自 \LasPerInProbB\ 
+\item 出题人是 \AuthProbB\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem B Review (manual) finished
+\begin{frame}
+\frametitle{B. \zhProbB\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 给出一棵无穷结点的二叉树，根节点为 $1$ ，并且 \\ 对于结点 $i$ ，它的两个子结点分别是 $2 i$ 和 $2 i + 1$
+\item 在结点 $p$ 的前 $n$ 层子树中寻找两个结点 $x$ 和 $y$ ，满足 \\ $y$ 是 $x$ 的\alert{子结点的子结点的子结点}，且 \alert{$x \equiv y \equiv 1 \pmod{k}$}
+\item 问可能的二元组 $(x, y)$ 的数目模 $10^9 + 7$ 的值
+\item $1 \leq T < 1000, 2 \leq n < 50000, 1 < k < 10^{18}, 1 \leq p < 10^{18}$
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{B. \zhProbB\ Review}
+\begin{center}
+\includegraphics[scale = 0.6]{B.png}
+\end{center}
+\end{frame}
+% Problem B Solution (manual) finished
+\begin{frame}
+\frametitle{B. \zhProbB\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 由祖先关系可知 $y = 8 x + d, d \in [0, 2^3)$
+\item 由同余关系可知 $1 \equiv y \equiv 8 x + d \equiv 8 + d \pmod{k}$
+\item 当 $k \geq 15$ 时， $8 \leq 8 + d \leq 15$ ，\alert{无解}
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{B. \zhProbB\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 令 $f_k(i, j)$ 表示长度为 $2^i$ 且最小数字模 $k$ 意义下为 $j$ 的\alert{整数区间}里模 $k$ 意义下为 $1$ 的数字个数
+\item $f_k(0, 1) = 1, f_k(0, j) = 0\ (0 \leq j < k, j \neq 1)$
+\\ $f_k(i, j) = f_k(i - 1, j) + f_k(i - 1, (j + 2^{i - 1}) \bmod k)$
+\item 对于每个 $k$ 可以 $O(k n)$ 预处理，然后 $O(n)$ 回答询问
+\item 预处理的复杂度为 $O(k^2 n)$ ，预处理前缀和后可以 $O(1)$ 回答
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem C Overview (auto)
+\begin{frame}[label = ProbC]
+\frametitle{C. \zhProbC\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbC\ 人，共 \SubInProbC\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbC\ 分钟，来自 \FirPerInProbC\ 
+\\ 最后一个通过出现于 \LasPenInProbC\ 分钟，来自 \LasPerInProbC\ 
+\item 出题人是 \AuthProbC\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem C Review (manual) finished
+\begin{frame}
+\frametitle{C. \zhProbC\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有一个底面半径为 $R$ 、高度为 $H$ 的空心圆柱，无顶有底
+\item \alert{底面禁止通行}，从内表面某点走到外表面某点，求最短路径
+\item $1 \leq T \leq 10000, 1 \leq R, H \leq 10^6$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem C Solution (manual) finished
+\begin{frame}
+\frametitle{C. \zhProbC\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有了\alert{底面禁止通行}限制之后问题被简化了，为此蚂蚁要翻过上沿爬出来
+\item 将笔筒对于上表面做一个反射，变成两个无盖笔筒扣在一起 \\ 把笔筒侧面平铺，问题转化为：平面上两点，线段距离最短
+\item 注意：侧面展开时两点之间的\alert{角度差有两种}，应取较小值
+\item 可以思考一下，如果底面可以走，那么最短路径是怎样的
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem D Overview (auto)
+\begin{frame}[label = ProbD]
+\frametitle{D. \zhProbD\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbD\ 人，共 \SubInProbD\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbD\ 分钟，来自 \FirPerInProbD\ 
+\\ 最后一个通过出现于 \LasPenInProbD\ 分钟，来自 \LasPerInProbD\ 
+\item 出题人是 \AuthProbD\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem D Review (manual) finished
+\begin{frame}
+\frametitle{D. \zhProbD\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有一个 $n \times m$ 的点阵，左上角的坐标为 $(1,1)$ ，右下角的坐标为 $(n,m)$ ，每个点的半径忽略不计
+\item 最少需要多少段的有向折线能够将所有的顶点都\alert{至少穿过一次}，且每段\alert{至少经过两个点}
+\item $1 \leq T \leq 100, 1 \leq n, m \leq 1000, n m > 1$ \\ 不超过 10 组数据满足 $n>10$ 或 $m>10$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem D Solution (manual) finished
+\begin{frame}
+\frametitle{D. \zhProbD\ Solution}
+\begin{spacing}{2.0} \large
+先看几个 $n = m$ 的例子 (从黄点开始) \pause
+
+\visible<+->{\includegraphics[scale = 0.6]{D-1.png}}
+
+\visible<+->{答案看上去是 \alert{$2 n - 2$} ？ $n = 2$ 是个例外}
+\end{spacing}
+\end{frame}
+
+\begin{frame}
+\frametitle{D. \zhProbD\ Solution}
+\begin{spacing}{2.0} \large
+再看几个 $n \neq m$ 的例子 (从黄点开始) \pause
+
+\visible<+->{\includegraphics[scale = 0.6]{D-2.png}}
+
+\visible<+->{答案看上去是 \alert{$2 \min(n, m) - 1$} ？}
+\end{spacing}
+\end{frame}
+
+\begin{frame}
+\frametitle{D. \zhProbD\ Solution}
+\begin{itemize}
+\item<+-> 先证明 $n = m, n > 2$ 时答案为 $2 n - 2$ \\
+\visible<+->{
+\begin{proof}
+\begin{itemize}[<+->]
+\item 假设最优解使用 $H$ 条横线， $V$ 条竖线， $S$ 条斜线 (非正交)
+\item 若 $H = n$ 或 $V = n$ ，则至少要 $n - 1$ 条其他线\alert{连接这些线}，这样至少是 $2 n - 1$ 条线
+\item 若 $H = n - 1$ 或 $V = n - 1$ ，有 $n$ 个点未被覆盖，而能一笔连上它们的线已经不够，至少要 $n$ 条其他线\alert{连到这些点}，这样至少是 $2 n - 1$ 条线
+\item 若 $H, V \leq n - 2$ ，则剩下 $(n - H) \times (n - V)$ 点阵没有被横线或竖线覆盖，而边界上有 $2 (2n - 2 - H - V)$ 个点，一条斜线最多\alert{覆盖边界上的两个点}，这样至少是 $2n - 2$ 条线
+\end{itemize}
+\end{proof}}
+\visible<+->{\item 在上述证明过程中不难发现 $n \neq m$ 时答案比小的方阵大，下界至少为 $2 \min(n, m) - 1$ ，而两种情况的下界对应构造已经给出了}
+\end{itemize}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem E Overview (auto)
+\begin{frame}[label = ProbE]
+\frametitle{E. \zhProbE\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbE\ 人，共 \SubInProbE\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbE\ 分钟，来自 \FirPerInProbE\ 
+\\ 最后一个通过出现于 \LasPenInProbE\ 分钟，来自 \LasPerInProbE\ 
+\item 出题人是 \AuthProbE\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem E Review (manual) finished
+\begin{frame}
+\frametitle{E. \zhProbE\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有 $n$ 个正整数 $k_1, k_2, \cdots, k_n$
+\item 可以执行一种操作，每次任意选择一个正整数 $t$ \\ 使得所有不小于 $t$ 的数减去 $t$
+\item 问最少执行几次操作可以使所有数变成 $0$ \\ 并统计\alert{不同的方案}数量
+\item $1 \leq T \leq 10, 1 \leq n \leq 1000, 1 \leq k_i \leq 50$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem E Solution (manual) finished
+\begin{frame}
+\frametitle{E. \zhProbE\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 依次使用 $2^{x-1},2^{x-2}, \cdots, 1$ 操作 \\ 可以将 $[0, 2^x)$ 内的所有数字变为 $0$ 
+\item 设 $\max(k_i) = m$ ，则 $m \leq 50$ ，所以\alert{答案至多为 $6$}
+\item 操作的最后一步一定只有一种数字，压位\alert{枚举前 $5$ 步即可}
+\item 最坏时间复杂度为 $\displaystyle{O(\binom{m}{5}) = O(m^5)}$ ，常数很小
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem F Overview (auto)
+\begin{frame}[label = ProbF]
+\frametitle{F. \zhProbF\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbF\ 人，共 \SubInProbF\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbF\ 分钟，来自 \FirPerInProbF\ 
+\\ 最后一个通过出现于 \LasPenInProbF\ 分钟，来自 \LasPerInProbF\ 
+\item 出题人是 \AuthProbF\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem F Review (manual) finished
+\begin{frame}
+\frametitle{F. \zhProbF\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 有一只狼和 $N$ 只兔子，狼从 $(0, 0)$ 出发向 $(100, 0)$ 移动 \\ 兔子在平面上的初始位置给定，兔子和狼拥有\alert{相同的速度}
+\item 狼有血量 $HP$ ，不大于 $0$ 意味着死亡 \\ 狼进入兔子的视野后，兔子可以自爆降低狼的血量，并使得狼静止一段时间，问狼能否活着\alert{走过}终点
+\item $1 \leq T \leq 25, 1 \leq N \leq 10^5$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem F Solution (manual) finished
+\begin{frame}
+\frametitle{F. \zhProbF\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 注意到狼和兔子拥有\alert{相同的速度}
+\item 如果兔子可以炸到狼，它可以尾随狼到终点处再自爆
+\item 兔子能否在某时刻炸到狼等价于兔子能否炸到在终点处的狼
+\item 按每只兔子能炸到终点所需走的最少距离从小到大排序，依次考虑能否炸到在终点的狼即可，时间复杂度 $O(N \log N)$
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem G Overview (auto)
+\begin{frame}[label = ProbG]
+\frametitle{G. \zhProbG\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbG\ 人，共 \SubInProbG\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbG\ 分钟，来自 \FirPerInProbG\ 
+\\ 最后一个通过出现于 \LasPenInProbG\ 分钟，来自 \LasPerInProbG\ 
+\item 出题人是 \AuthProbG\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem G Review (manual) finished
+\begin{frame}
+\frametitle{G. \zhProbG\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 给定长度为 $n$ 的非负整数序列 $A_1, A_2, \cdots, A_n$
+\item 定义区间 $[L, R]$ 的价值是 $\displaystyle{\max_{L \leq i \leq R}(A_i)} (A_L \otimes A_{L+1} \otimes \cdots \otimes A_R)$
+\item 求所有区间的价值模 $10^9 + 61$ (不是质数) 的值
+\item $1 \leq n \leq 10^5, 1 \leq \sum{n} \leq 10^6, 0 \leq A_i \leq 10^9$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem G Solution (manual) finished
+\begin{frame}
+\frametitle{G. \zhProbG\ Solution}
+\begin{spacing}{1.8} \large
+\begin{itemize}[<+->]
+\item 计算 $B_0 = 0, B_i = B_{i - 1} \otimes A_i (i > 1)$ 可以将 $(A_L \otimes A_{L+1} \otimes \cdots \otimes A_R)$ 转化为 $B_{L - 1} \otimes B_{R}$
+\item  $A_i$ 作为 $\displaystyle{\max_{L \leq i \leq R}(A_i)}$ 的 $[L, R]$ 显然是连续的区间，即 \\ 存在 $l_i, r_i$ 使这些区间满足 $l_i \leq L \leq i \leq R \leq r_i$
+\item 枚举位数 $k$ ，计算有多少组 $B_{L-1}, B_R$ 二进制第 $k$ 位不同，可以得到对应的\alert{区间最大值}和\alert{二进制位}对答案的贡献
+\item $l_i, r_i$ 可以利用单调栈求得，再维护每个二进制位上前缀 $1$ 的个数，即可做到 $O(n \log \max(A_i))$
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem H Overview (auto)
+\begin{frame}[label = ProbH]
+\frametitle{H. \zhProbH\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbH\ 人，共 \SubInProbH\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbH\ 分钟，来自 \FirPerInProbH\ 
+\\ 最后一个通过出现于 \LasPenInProbH\ 分钟，来自 \LasPerInProbH\ 
+\item 出题人是 \AuthProbH\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem H Review (manual) finished
+\begin{frame}
+\frametitle{H. \zhProbH\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 对于字符串 $S$ ，定义 $f(S)$ 表示不断地任选两个相邻的不同字符并删掉靠后字符能得到的最短字符串长度
+\item 给出模式串 $C$ ，对于将 $C$ 中的 $\text{"."}$ 用任意小写字母替换能得到的不同字符串 $T$ ，将 $f(T)$ 在模 $10^9 + 7$ 意义下求和
+\item $C$ 中不同位置的 $\text{"."}$ 可以\alert{用不同字母替换}
+\item $1 \leq T \leq 15, 1 \leq |C| \leq 10^5$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem H Solution (manual) finished
+\begin{frame}
+\frametitle{H. \zhProbH\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 对于没有 $\text{"."}$ 的字符串 $S$ ，$f(S)$ 等于 $S$ 的\alert{前缀相同字符个数}
+\item 对于可能有 $\text{"."}$ 的字符串 $C$ ， \\ 只需要计算前缀相同字符个数不小于 $i$ 的字符串 $T$ 个数
+\item 利用期望的线性性加起来即可，时间复杂度 $O(n)$
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem I Overview (auto)
+\begin{frame}[label = ProbI]
+\frametitle{I. \zhProbI\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbI\ 人，共 \SubInProbI\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbI\ 分钟，来自 \FirPerInProbI\ 
+\\ 最后一个通过出现于 \LasPenInProbI\ 分钟，来自 \LasPerInProbI\ 
+\item 出题人是 \AuthProbI\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem I Review (manual) finished
+\begin{frame}
+\frametitle{I. \zhProbI\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 无穷平面上有间距为 $X$ 的水平直线和间距为 $Y$ 的竖直直线
+\item \alert{等概率地}在平面上的某个位置放置一个半径为 $R$ 的圆
+\item 求圆与直线的交点个数的\alert{期望值}
+\item $1 \leq T \leq 1000, 1 \leq X, Y, R \leq 10^5$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem I Solution (manual) finished
+\begin{frame}
+\frametitle{I. \zhProbI\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 若圆与直线交点在直线交叉点上，则圆心在以交叉点为圆心、半径为 $R$ 的圆上，几何概率趋近于 $0$
+\item 排除该种情况后，水平和竖直的交点可以分开算再相加
+\item 考虑在间距为 $D$ 的直线平面上随机放置一个半径为 $R$ 的圆 \\ 左边界在相邻两条直线间移动时，右边界\alert{至多跨过一条直线}
+\item 期望等于交点个数乘以移动距离与区间长度的比值，可得 $\frac{4 R}{D}$
+
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Problem J Overview (auto)
+\begin{frame}[label = ProbJ]
+\frametitle{J. \zhProbJ\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 通过人数 \AccInProbJ\ 人，共 \SubInProbJ\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbJ\ 分钟，来自 \FirPerInProbJ\ 
+\\ 最后一个通过出现于 \LasPenInProbJ\ 分钟，来自 \LasPerInProbJ\ 
+\item 出题人是 \AuthProbJ\ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem J Review (manual) finished
+\begin{frame}
+\frametitle{J. \zhProbJ\ Review}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 给出一个 $N \times M$ 的点阵，每个点有颜色 \\ 若选一个点消除，则与其\alert{四连通且颜色相同}的点同时被消除
+\item 有 $Q$ 个询问，每次指定一个点 $(x, y)$ ，可以给 $(x, y)$ 换颜色 \\ 问换完后消除这个点最多可以同时消除多少个点
+\item $1 \leq T \leq 200, 1 \leq NM \leq 10^6, 1 \leq Q \leq 1000$ \\ 不超过 25 组数据满足 $NM \geq 10^4$ 
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem J Solution (manual) finished
+\begin{frame}
+\frametitle{J. \zhProbJ\ Solution}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 为了处理多次询问，需要预处理\alert{四连通且颜色相同}的联通块 \\ 将联通块映射到一个数字上，并且计算联通块有多少个点
+\item 对于每个询问点，查询其上下左右四个点的颜色 \\ 枚举统计当前点变成某种颜色最多能消除多少个点
+\item 预处理可以用并查集，也可以用一遍广度/深度优先搜索
+\item 注意：数据很大， std::queue 可能超时， DFS 需要手写栈
+\end{itemize}
+\end{spacing}
+\visible<.->{\hyperlink{Overview}{\beamerreturnbutton{Go Back}}}
+\end{frame}
+
+% Thanks and Ends (manual) finished
+\begin{frame}[label = End]
+\frametitle{感谢}
+\begin{spacing}{2.0} \large
+感谢集训队成员和志愿者的辛勤付出 \pause
+
+感谢各位选手的耐心与聆听 \pause
+
+感谢到场的各位对赛事的支持，祝北航程序设计竞赛越办越好 \pause
+
+欢迎各位选手加入北航 ACM-ICPC 集训队
+\end{spacing}
+\end{frame}
+
+\end{document}
