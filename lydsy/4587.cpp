@@ -1,9 +1,7 @@
-#include <cassert>
 #include <cstdio>
-#include <cstring>
 #include <algorithm>
 typedef long long LL;
-const int maxp = 46341, maxc = 10, maxk = 10;
+const int maxp = 46341, maxc = 11, maxk = 11, maxe = 51;
 void exgcd(int a, int b, int &x, int &y)
 {
 	if(!b)
@@ -21,33 +19,21 @@ int mod_inv(int x, int p)
 	exgcd(x, p, s, t);
 	return s < 0 ? s + p : s;
 }
-int mod_pow(int x, int k, int p)
-{
-	int ret = 1 % p;
-	while(k)
-	{
-		if(k & 1)
-			ret = (LL)ret * x % p;
-		x = (LL)x * x % p;
-		k >>= 1;
-	}
-	return ret;
-}
-int tot, prime[maxp], mod, cnt, fact[maxc], Exp[maxc], Coeff;
-bool vis[maxp];
+int tot, prime[maxp], fir[maxp], mod, cnt, fact[maxc], Exp[maxc], Coeff, Lim[maxc], Pw[maxc][maxe];
 inline void mod_dec(int &x, int y, int c = 1)
 {
 	while(c--)
-	{
-		x -= y;
-		if(x < 0)
+		if((x -= y) < 0)
 			x += mod;
-	}
 }
 void init()
 {
 	Coeff = 1;
-	memset(Exp, 0, cnt * sizeof(int));	
+	for(int i = 0; i < cnt; ++i)
+	{
+		Exp[i] = Lim[i] = 0;
+		Pw[i][0] = 1;
+	}
 }
 void update(int val, int flag)
 {
@@ -59,8 +45,13 @@ int query()
 {
 	int ret = Coeff;
 	for(int j = 0; j < cnt && ret; ++j)
-		if(Exp[j])
-			ret = (LL)ret * mod_pow(fact[j], Exp[j], mod) % mod;
+	{
+		if(!Exp[j])
+			continue;
+		for( ; Lim[j] < Exp[j]; ++Lim[j])
+			Pw[j][Lim[j] + 1] = (LL)Pw[j][Lim[j]] * fact[j] % mod;
+		ret = (LL)ret * Pw[j][Exp[j]] % mod;
+	}
 	return ret;
 }
 int calc_1(int n, int m)
@@ -132,12 +123,12 @@ int main()
 {
 	for(int i = 2; i < maxp; ++i)
 	{
-		if(!vis[i])
-			prime[tot++] = i;
-		for(int j = 0; j < tot && i * prime[j] < maxp; ++j)
+		if(!fir[i])
+			prime[tot++] = fir[i] = i;
+		for(int j = 0, k; (k = i * prime[j]) < maxp; ++j)
 		{
-			vis[i * prime[j]] == 0;
-			if(i % prime[j] == 0)
+			fir[k] = prime[j];
+			if(fir[i] == prime[j])
 				break;
 		}
 	}
