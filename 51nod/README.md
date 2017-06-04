@@ -31,6 +31,7 @@
 	Algorithm_Marathon_21	ABCDEF
 	Happy_Hand_Speed_1  	ABDE
 	Algorithm_Marathon_22	ABDEF
+	Algorithm_Marathon_23	finished
 
 #### Game Theory List (13/15)
 	1831	п║C╣дсно╥ 
