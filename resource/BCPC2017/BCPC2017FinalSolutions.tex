@@ -1,0 +1,450 @@
+\documentclass[notheorems]{beamer}
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{color,xcolor}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{amsthm}
+\usepackage[UTF8]{ctex}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+%\usepackage{wallpaper}
+%\usepackage{pgfplots}
+
+\usetheme{Warsaw}
+%\usetheme{Madrid}
+%\usetheme{PaloAlto}
+\usefonttheme[onlymath]{serif}
+\usecolortheme{whale}
+
+\newtheorem{proposition}{命题}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{theorem}{定理}
+\newtheorem{corollary}{推论}
+%\newtheorem{proof}{证明}
+\newtheorem{example}{例}
+
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+
+\setbeamercovered{invisible}
+%\setbeamercovered{transparent}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{navigation symbols}{}
+\setlength{\parindent}{2em}
+
+% Problem (zh)						% Difficulty				% Author (handle)						% Tester (handle)
+\newcommand{\zhProbA}{Eva 的等边三角形}	\newcommand{\DiffA}{Easy}		\newcommand{\AuthProbA}{\texttt{Dshawn}}		\newcommand{\TestProbA}{\texttt{chitanda}}
+\newcommand{\zhProbB}{校赛签到}			\newcommand{\DiffB}{Medium}	\newcommand{\AuthProbB}{\texttt{coldwater}}	\newcommand{\TestProbB}{\texttt{chitanda}}
+\newcommand{\zhProbC}{简单的除法}		\newcommand{\DiffC}{Very Easy}	\newcommand{\AuthProbC}{\texttt{yic}}			\newcommand{\TestProbC}{\texttt{skywalkert, chitanda, duhao110101}}
+\newcommand{\zhProbD}{重建炮台}			\newcommand{\DiffD}{Easy}		\newcommand{\AuthProbD}{\texttt{quintessence}}	\newcommand{\TestProbD}{\texttt{zlc1114, chitanda, duhao110101}}
+\newcommand{\zhProbE}{御坂御坂}			\newcommand{\DiffE}{Medium}	\newcommand{\AuthProbE}{\texttt{skywalkert}}	\newcommand{\TestProbE}{\texttt{chitanda}}
+\newcommand{\zhProbF}{拔起树根然后出发吧！}\newcommand{\DiffF}{Medium}	\newcommand{\AuthProbF}{\texttt{ConnorZhong}}	\newcommand{\TestProbF}{\texttt{zlc1114}}
+\newcommand{\zhProbG}{方奶奶的市场之旅}	\newcommand{\DiffG}{Very Hard}	\newcommand{\AuthProbG}{\texttt{ShinriiTin}}	\newcommand{\TestProbG}{\texttt{skywalkert}}
+\newcommand{\zhProbH}{zzh 与宝可梦运动会}	\newcommand{\DiffH}{Hard}		\newcommand{\AuthProbH}{\texttt{zzh}}			\newcommand{\TestProbH}{\texttt{skywalkert}}
+\newcommand{\zhProbI}{夜晚的街区}		\newcommand{\DiffI}{Hard}		\newcommand{\AuthProbI}{\texttt{Chielo}}		\newcommand{\TestProbI}{\texttt{skywalkert}}
+\newcommand{\zhProbJ}{7 月 12 日}		\newcommand{\DiffJ}{Easy}		\newcommand{\AuthProbJ}{\texttt{Dshawn}}		\newcommand{\TestProbJ}{\texttt{skywalkert}}
+% --------------------------------------------- manual ---------------------------------------------
+% Suggest: parse those with generator codes (before presentation) TODO
+\newcommand{\TBD}{NaN}	\newcommand{\NONE}{没有人}	\newcommand{\INF}{$\infty$} \newcommand{\Someone}{佚名}
+% Accepted					% Submitted				% Ratio
+\newcommand{\AccInProbA}{52}	\newcommand{\SubInProbA}{89}	\newcommand{\RatInProbA}{58.43\%}
+\newcommand{\AccInProbB}{4}	\newcommand{\SubInProbB}{14}	\newcommand{\RatInProbB}{28.57\%}
+\newcommand{\AccInProbC}{57}	\newcommand{\SubInProbC}{123}	\newcommand{\RatInProbC}{46.34\%}
+\newcommand{\AccInProbD}{46}	\newcommand{\SubInProbD}{95}	\newcommand{\RatInProbD}{48.42\%}
+\newcommand{\AccInProbE}{7}	\newcommand{\SubInProbE}{13}	\newcommand{\RatInProbE}{53.85\%}
+\newcommand{\AccInProbF}{0}	\newcommand{\SubInProbF}{2}	\newcommand{\RatInProbF}{00.00\%}
+\newcommand{\AccInProbG}{3}	\newcommand{\SubInProbG}{3}	\newcommand{\RatInProbG}{100.0\%}
+\newcommand{\AccInProbH}{0}	\newcommand{\SubInProbH}{1}	\newcommand{\RatInProbH}{00.00\%}
+\newcommand{\AccInProbI}{1}	\newcommand{\SubInProbI}{4}	\newcommand{\RatInProbI}{25.00\%}
+\newcommand{\AccInProbJ}{13}	\newcommand{\SubInProbJ}{16}	\newcommand{\RatInProbJ}{81.25\%}
+% First Solved Penalty				% First Solved Person	
+\newcommand{\FirPenInProbA}{0:21:16}		\newcommand{\FirPerInProbA}{\Someone}
+\newcommand{\FirPenInProbB}{0:24:07(+1)}	\newcommand{\FirPerInProbB}{\Someone}
+\newcommand{\FirPenInProbC}{0:02:45}		\newcommand{\FirPerInProbC}{\Someone}
+\newcommand{\FirPenInProbD}{0:47:46(+1)}	\newcommand{\FirPerInProbD}{\Someone}
+\newcommand{\FirPenInProbE}{1:29:31(+1)}	\newcommand{\FirPerInProbE}{\Someone}
+\newcommand{\FirPenInProbF}{\TBD}		\newcommand{\FirPerInProbF}{\NONE}
+\newcommand{\FirPenInProbG}{1:37:07}		\newcommand{\FirPerInProbG}{\Someone}
+\newcommand{\FirPenInProbH}{\TBD}		\newcommand{\FirPerInProbH}{\NONE}
+\newcommand{\FirPenInProbI}{3:48:05(+3)}	\newcommand{\FirPerInProbI}{\Someone}
+\newcommand{\FirPenInProbJ}{0:53:52(+1)}	\newcommand{\FirPerInProbJ}{\Someone}
+% --------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Title Page (manual) finished
+\title[The 13th BCPC Final Round Solutions]{北京航空航天大学第十三届“美团点评”杯 \\ 程序设计竞赛现场决赛题解}
+\author[Beihang University 2017-2018 ACM-ICPC Training Team]{北航 2017-2018 ACM-ICPC 集训队}
+\date[December 24th, 2017]{2017 年 12 月 24 日}
+{\setbeamertemplate{logo}{\includegraphics[scale = 0.36]{hotdog.png}}\frame{\titlepage}}
+
+% Table of Contents (auto)
+\begin{frame}[label = Overview]
+\frametitle{\\ 情况概览}
+\begin{center} \begin{spacing}{1.1}
+\begin{tabular}{lll}
+\toprule
+Problem					&	Difficulty	&	Accuracy							\\
+\midrule
+\hyperlink{ProbA}{A. \zhProbA}	&	\DiffA	&	\RatInProbA\ (\AccInProbA/\SubInProbA)	\\
+\hyperlink{ProbB}{B. \zhProbB}	&	\DiffB	&	\RatInProbB\ (\AccInProbB/\SubInProbB)	\\
+\hyperlink{ProbC}{C. \zhProbC}	&	\DiffC	&	\RatInProbC\ (\AccInProbC/\SubInProbC)	\\
+\hyperlink{ProbD}{D. \zhProbD}	&	\DiffD	&	\RatInProbD\ (\AccInProbD/\SubInProbD)	\\
+\hyperlink{ProbE}{E. \zhProbE}	&	\DiffE	&	\RatInProbE\ (\AccInProbE/\SubInProbE)	\\
+\hyperlink{ProbF}{F. \zhProbF}	&	\DiffF	&	\RatInProbF\ (\AccInProbF/\SubInProbF)	\\
+\hyperlink{ProbG}{G. \zhProbG}	&	\DiffG	&	\RatInProbG\ (\AccInProbG/\SubInProbG)	\\
+\hyperlink{ProbH}{H. \zhProbH}	&	\DiffH	&	\RatInProbH\ (\AccInProbH/\SubInProbH)	\\
+\hyperlink{ProbI}{I. \zhProbI}	&	\DiffI	&	\RatInProbI\ (\AccInProbI/\SubInProbI)	\\
+\hyperlink{ProbJ}{J. \zhProbJ}	&	\DiffJ	&	\RatInProbJ\ (\AccInProbJ/\SubInProbJ)	\\
+\bottomrule
+\end{tabular}
+\end{spacing} \end{center}
+\end{frame}
+
+% Problem A Overview (auto)
+\begin{frame}[label = ProbA]
+\frametitle{\\ A. \zhProbA\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbA\ 人，共 \SubInProbA\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbA\ ，来自 \FirPerInProbA\ 
+\item 出题人是 \AuthProbA\ ，验题人是 \TestProbA\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem A Review (manual) finished
+\begin{frame}
+\frametitle{\\ A. \zhProbA\ Review \& Solution (\AccInProbA/\SubInProbA)}
+\begin{spacing}{1.5} \large
+\noindent 给定三条平行线，画一个端点分别在三线上的等边三角形 \pause
+\begin{wrapfigure}{r}{3.8cm}
+\vspace{0.8cm}
+\includegraphics[scale=0.25]{A.png}
+\end{wrapfigure}
+\vspace{-0.8cm}
+\begin{enumerate}[1.]
+\item $L1$ 上任取一点 $A$
+\item 做 $L1$ 过 $A$ 的垂线交 $L3$ 于 $B$
+\item 在 $AB$ 中垂线上取一点 $C$ \\ 使得 $AB = AC$
+\item 做 $AC$ 过 $C$ 的垂线交 $L2$ 于 $C'$
+\item $L3$ 上取一点 $B'$ 使得 $AB' = AC'$
+\item 可以证明 $BB' = CC'$，可以用中间的直角三角形推出三点坐标
+\end{enumerate}
+\end{spacing}
+\end{frame}
+
+% Problem B Overview (auto)
+\begin{frame}[label = ProbB]
+\frametitle{\\ B. \zhProbB\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbB\ 人，共 \SubInProbB\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbB\ ，来自 \FirPerInProbB\ 
+\item 出题人是 \AuthProbB\ ，验题人是 \TestProbB\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem B Review (manual) finished
+\begin{frame}
+\frametitle{\\ B. \zhProbB\ Review \& Solution (\AccInProbB/\SubInProbB)}
+\begin{spacing}{1.5} \large
+在一个 $n \times m$ 的 $0/1$ 矩阵上操作 $q$ 次，支持单个位置赋值、翻转整行、取反整行以及回到历史版本，每次操作后统计 $1$ 的个数，最后输出将它们经过某种加密后的值
+\begin{itemize}[<+->]
+\item 其实是想看大家有没有学数据结构学傻了 \visible<1>{\\ \vspace{1.5cm}\hspace{7.2cm}\includegraphics[scale=0.6]{lovedog.png}} \vspace{-5cm}
+\item 建状态树：对于前三种操作，从状态 $t - 1$ 连一条边到状态 $t$；对于第四种操作，从状态 $k$ 连一条边到状态 $t$
+\item 遍历这棵树（边表示操作），向下走时第一种操作直接进行，第二、三种操作打标记，向上走时恢复信息
+\item 时间复杂度 $\mathcal{O}(q)$，空间复杂度 $\mathcal{O}(n m + q)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem C Overview (auto)
+\begin{frame}[label = ProbC]
+\frametitle{\\ C. \zhProbC\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbC\ 人，共 \SubInProbC\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbC\ ，来自 \FirPerInProbC\ 
+\item 出题人是 \AuthProbC\ ，验题人是 \TestProbC\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem C Review (manual) finished
+\begin{frame}
+\frametitle{\\ C. \zhProbC\ Review \& Solution (\AccInProbC/\SubInProbC)}
+\begin{spacing}{2.0} \large
+给定一个整数数列和若干询问，每次询问各项的乘积除以其中某一项对 $2^{32}$ 取模的值 \pause
+\begin{itemize}
+\item 预处理出前、后缀乘积，询问时用一段前缀乘以一段后缀得到答案，可以利用 \texttt{unsigned int} 自然溢出
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem D Overview (auto)
+\begin{frame}[label = ProbD]
+\frametitle{\\ D. \zhProbD\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbD\ 人，共 \SubInProbD\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbD\ ，来自 \FirPerInProbD\ 
+\item 出题人是 \AuthProbD\ ，验题人是 \TestProbD\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem D Review (manual) finished
+\begin{frame}
+\frametitle{\\ D. \zhProbD\ Review \& Solution (\AccInProbD/\SubInProbD)}
+\begin{spacing}{1.5} \large
+有 $2 n - 1$ 个点，在点 $i$ 与点 $(i + n) \bmod (2 n - 1) + 1$ 之间连一条边，共 $(2 n - 1)$ 条边，问至少要选择多少个点才能保证一定存在至少一条边的两个点都被选 \pause
+\begin{itemize}[<+->]
+\item 每个点恰好与两条边相连，点 $i$ 与点 $(i + 2) \bmod (2 n - 1) + 1$ 与同一个点相连
+\item $3 \nmid 2 n - 1$ 时，整个图是 $(2n - 1)$ 个点的环，任选 $n$ 个点一定存在相邻点
+\item $3 \mid 2 n - 1$ 时，有 $3$ 个 $\frac{2 n - 1}{3}$ 点的环，任选 $n - 1$ 个点一定存在某个环至少选了 $\frac{n + 1}{3}$ 个点，也一定存在相邻点
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem E Overview (auto)
+\begin{frame}[label = ProbE]
+\frametitle{\\ E. \zhProbE\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbE\ 人，共 \SubInProbE\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbE\ ，来自 \FirPerInProbE\ 
+\item 出题人是 \AuthProbE\ ，验题人是 \TestProbE\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem E Review (manual) finished
+\begin{frame}
+\frametitle{\\ E. \zhProbE\ Review \& Solution (\AccInProbE/\SubInProbE)}
+\begin{spacing}{2.0} \large
+$T$ 组询问，每次询问 $\underbrace{\mathrm{id}(\mathrm{id}(\cdots(\mathrm{id}}_{m\text{ times}}(n) + 1)\cdots) + 1) + 1$ 的值，其中 $\mathrm{id}(n) = \begin{cases}0&\text{if }n = 1 \\ (\mathrm{id}(n - 1) + k) \bmod n&\text{if }n > 1\end{cases}$
+\\ $1 \leq T \leq 2 \times 10^5, 1 \leq n, m \leq 10^{18}, k = 3$ \pause
+\begin{itemize}[<+->]
+\item $\mathrm{id}(n)$ 是分段线性函数，段数 $\mathcal{O}(k \log n)$
+\item $n \to \mathrm{id}(n) + 1$ 迭代 $\mathcal{O}(k \log n)$ 次便会到达不动点
+\\ 用数组维护一些信息可以做到时间复杂度 $\mathcal{O}(T k \log n)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{\\ E. \zhProbE\ Explanation (\AccInProbE/\SubInProbE)}
+\begin{center}
+\includegraphics[scale=0.6]{E.png}
+\end{center}
+\end{frame}
+
+% Problem F Overview (auto)
+\begin{frame}[label = ProbF]
+\frametitle{\\ F. \zhProbF\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbF\ 人，共 \SubInProbF\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbF\ ，来自 \FirPerInProbF\ 
+\item 出题人是 \AuthProbF\ ，验题人是 \TestProbF\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem F Review (manual) finished
+\begin{frame}
+\frametitle{\\ F. \zhProbF\ Review (\AccInProbF/\SubInProbF)}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 给定 $N$ 堆石子，质量为 $a_1, a_2, \cdots, a_N$
+\item 每次可以合并至多 $P$ 堆石子成为新的一堆石子，代价是这些石子质量之和
+\item 计算 $P = 2, 3, \cdots, N$ 时将这 $N$ 堆石子进行多次合并之后合并成一堆的总代价
+\item $2 \leq N \leq 2 \times 10^5$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem F Review (manual) finished
+\begin{frame}
+\frametitle{\\ F. \zhProbF\ Solution (\AccInProbF/\SubInProbF)}
+\begin{spacing}{1.5} \large
+\begin{itemize}[<+->]
+\item $P = 2$ 为哈夫曼树经典问题，贪心地每次选出最小的两个取出合并后放回即可
+\item $P > 2$ 时贪心策略依旧成立，但不一定每一次都恰好选 $P$ 个，先补充一些质量为 $0$ 的石子，不改变答案
+\item 原序列排升序，建立一个新的空队列，每次从原序列和新队列头部选 $P$ 个最小的，合并后放到新队列末尾
+\item 维护原序列前缀和，每次合并尽量选自原序列，只会合并（放入）$\left\lceil\frac{n - 1}{P - 1}\right\rceil$ 次，均摊复杂度为 $\mathcal{O}(\frac{n}{P})$，总时间复杂度 $\mathcal{O}(\sum_{P = 2}^{n}{\frac{n}{P}}) = \mathcal{O}(n \log n)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem G Overview (auto)
+\begin{frame}[label = ProbG]
+\frametitle{\\ G. \zhProbG\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbG\ 人，共 \SubInProbG\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbG\ ，来自 \FirPerInProbG\ 
+\item 出题人是 \AuthProbG\ ，验题人是 \TestProbG\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem G Review (manual) finished
+\begin{frame}
+\frametitle{\\ G. \zhProbG\ Review (\AccInProbG/\SubInProbG)}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 给长度为 $n$ 的数列填入 $1$ 到 $m$ 之间的整数
+\item 要求一些位置填入给定的某个在 $1$ 到 $m$ 之间的数字
+\item 问使得数列的最长严格上升子序列长度为 $k$ 的填法有多少种，给出 $k = 1, 2, \cdots, m$ 的方案数模 $998244353$
+\item $1 \leq n \leq 2000, 1 \leq m \leq 10$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem G Solution (manual) finished
+\begin{frame}
+\frametitle{\\ G. \zhProbG\ Solution (\AccInProbG/\SubInProbG)}
+\begin{spacing}{2.0} \large
+\begin{itemize}[<+->]
+\item 若数列给定，记为 $a_1, a_2, \cdots, a_n$，如何求最长长度？
+\item 令 $f(i, j)$ 表示从数列前 $i$ 项中选出最后一个数是 $j$ 且最长的严格上升子序列长度，则有 $f(i, j) = \begin{cases}\max\limits_{k < j}\{f(i - 1, k)\} + 1 &\text{if }j = a_i \\ f(i - 1, j) &\text{if }j \neq a_i\end{cases}$
+\item 令 $g(i, j) = \max\limits_{k \leq j}\{f(i, k)\}$，则有 $0 \leq g(i, 1) \leq 1,$ $0 \leq g(i, t + 1) - g(i, t) \leq 1$ $(t = 1, 2, \cdots, m - 1)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{\\ G. \zhProbG\ Solution (cont.) (\AccInProbG/\SubInProbG)}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 对任意的 $a_1, a_2, \cdots, a_n$ 来说，$g(i, \ast)$ 只有 $2^m$ 种可能，可以用一个 $m$ 位二进制数记录 \pause
+\item 预处理 $g(i) = s, a_{i + 1} = x$ 时 $g(i + 1)$ 状态为 $\mathrm{trans}(s, x)$
+\item 定义 $h(i, s)$ 表示确定数列前 $i$ 项时 $g(i) = s$ 的方案数，枚举 $a_{i + 1}$ 可能的取值转移即可，答案信息在 $h(n, s)$ 中
+\item 时间复杂度 $\mathcal{O}(n m 2^m)$，空间复杂度 $\mathcal{O}(m 2^m)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem H Overview (auto)
+\begin{frame}[label = ProbH]
+\frametitle{\\ H. \zhProbH\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbH\ 人，共 \SubInProbH\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbH\ ，来自 \FirPerInProbH\ 
+\item 出题人是 \AuthProbH\ ，验题人是 \TestProbH\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem H Review (manual) finished
+\begin{frame}
+\frametitle{\\ H. \zhProbH\ Review (\AccInProbH/\SubInProbH)}
+\begin{spacing}{1.8} \large
+\begin{itemize}
+\item 往 $1\times n$ 的网格中每个格子填入一种属性，一共 $t$ 种可选属性，其中单属性是 $[1, m]$ 中的整数，双属性是分布在 $k$ 个区间中的整数数对
+\item 填好后，将这个网格分割成尽可能少的连续几组，使每组内相邻位置至少有一个共同的属性
+\item 设每个位置任意填入一种属性，问所有情况下分成组数的和是多少，答案对 $(10^9 + 7)$ 取模
+\item $1 \leq n, m \leq 10^{18}, 1 \leq k \leq 10^5$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem H Solution (manual) finished
+\begin{frame}
+\frametitle{\\ H. \zhProbH\ Solution (\AccInProbH/\SubInProbH)}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 设不相近的属性有序对数量为 $p$（可选属性数量为 $t$）
+\item 对于一个固定的填法，分成的组数是 $(n - 1)$ 对相邻位置中属性不相近的对数加 $1$
+\item $(n - 1)$ 对位置中，每一对位置的不相近对数量都为 $p t^{n - 2}$，因此答案是 $t^n + (n - 1) p t^{n - 2}$
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{\\ H. \zhProbH\ Solution (cont.) (\AccInProbH/\SubInProbH)}
+\begin{spacing}{1.5} \large
+\begin{itemize}
+\item 对于 $[1, m]$ 中的每个数 $i$，设能够与 $i$ 配成双属性的另一个数组成的集合为 $S_{i}$，有 $S_i = \bigcup\limits_{i \in [l_j, r_j]}{[l_j, r_j]} - \{i\}$ $= \left[\min\limits_{i \in [l_j, r_j]} \{l_j\}, \max\limits_{i \in [l_j, r_j]}\{r_j\}\right] - \{i\}$ 以及 $t = \frac{1}{2}\sum\limits_{i = 1}^{m}{|S_i|} + m$ \pause
+\item 两种属性不完全相同的情况有 $2 \sum_{i = 1}^{m}{|S_i| + 1 \choose 2}$ 种，完全相同的情况有 $t$ 种，因此 $p = t^2 - \left(t + 2 \sum_{i = 1}^{m}{|S_i| + 1 \choose 2}\right)$ \pause
+\item 将 $k$ 个区间的 $l_i$ 和 $r_i + 1$ 及 $1$ 和 $m + 1$ 离散化处理，可以发现每个区间内的 $|S_i|$ 相同，可在对区间排序后用双指针或其它方法求解 $|S_i|$
+\item 时间复杂度 $\mathcal{O}(\log n + k \log k)$，空间复杂度 $\mathcal{O}(k)$
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem I Overview (auto)
+\begin{frame}[label = ProbI]
+\frametitle{\\ I. \zhProbI\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbI\ 人，共 \SubInProbI\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbI\ ，来自 \FirPerInProbI\ 
+\item 出题人是 \AuthProbI\ ，验题人是 \TestProbI\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem I Review (manual) finished
+\begin{frame}
+\frametitle{\\ I. \zhProbI\ Review (\AccInProbI/\SubInProbI)}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 给定一棵 $n$ 个节点的有向树，每条边有整数权值
+\item 对于每个节点，统计有多少个严格祖先满足该点到祖先路径上所有边权的最小值与所有边权的 \texttt{AND} 和相等
+\item $1 \leq n \leq 10^5,$ 权值 $\in [0, 10^9],$ 树的深度不超过 $5 \times 10^4$
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem I Solution (manual) finished
+\begin{frame}
+\frametitle{\\ I. \zhProbI\ Solution (\AccInProbI/\SubInProbI)}
+\begin{spacing}{1.5} \large
+\begin{itemize}[<+->]
+\item 对于任意节点，设其向根移动依次经过的边权为 $a_1, a_2, \cdots, a_m$，记 $b_1 = a_1,$ $b_i = b_{i - 1}\texttt{ AND }a_i,$ $c_1 = a_1,$ $c_i = \max\{c_{i - 1}, a_i\}$ $(i = 2, 3, \cdots, m)$，所求即统计 $b_i = c_i$ $(i = 1, 2, \cdots, m)$ 的数量
+\item $b_i$ 最多有 $\mathcal{O}(\log a_1)$ 种取值，且 $b_i \geq b_{i + 1}$
+\item $c_i$ 最多有 $\mathcal{O}(m)$ 种取值，但是 $b_i \leq c_i$
+\item 若 $i \in [L, R]$ 时满足 $b_i$ 相等，且 $j = \min\limits_{a_k = b_i}\{k\}$，那么 $i \in [j, R]$ 时 $b_i = c_i$，$i \in [L, \min\{R, j - 1\}]$ 时 $b_i < c_i$
+\end{itemize}
+\end{spacing}
+\end{frame}
+\begin{frame}
+\frametitle{\\ I. \zhProbI\ Solution (cont.) (\AccInProbI/\SubInProbI)}
+\begin{spacing}{1.5} \large
+\begin{itemize}
+\item 用数组或链表维护 $b_i$ 相等的下标区间，可以根据直接祖先的信息 $\mathcal{O}(\log a)$ 计算得出
+\item 用哈希表或有序表维护当前节点到根路径上每种权值出现的最深位置，向上回退时需要恢复信息
+\item 时间复杂度 $\mathcal{O}(n \log a)$（哈希表）或 $\mathcal{O}(n \log n \log a)$（有序表），空间复杂度 $\mathcal{O}(n \log a)$
+\item 注意答案为 $\mathcal{O}(n^2)$ 级别，\texttt{int} 可能无法表示
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Problem J Overview (auto)
+\begin{frame}[label = ProbJ]
+\frametitle{\\ J. \zhProbJ\ Overview}
+\begin{spacing}{2.0} \large
+\begin{itemize}
+\item 通过人数 \AccInProbJ\ 人，共 \SubInProbJ\ 人尝试此题
+\item 第一个通过出现于 \FirPenInProbJ\ ，来自 \FirPerInProbJ\ 
+\item 出题人是 \AuthProbJ\ ，验题人是 \TestProbJ\
+\end{itemize}
+\end{spacing}
+\end{frame}
+% Problem J Review (manual) finished
+\begin{frame}
+\frametitle{\\ J. \zhProbJ\ Review \& Solution (\AccInProbJ/\SubInProbJ)}
+\begin{spacing}{2.0} \large
+\texttt{Dshawn} 有个可爱的妹子，于是出了这个题。请你找出不超过 $N$ 的正整数里有多少数字的十进制表示里连续子串表示的数字均不是 $7$ 或 $12$ 的倍数
+\visible<1>{\vspace{-4cm}\hspace{7cm}\includegraphics[scale=0.6]{rejectfeed.png}} \pause \vspace{-1.5cm}
+\begin{itemize}[<+->]
+\item 基于状态压缩的数位动态规划可过，状态记录前缀串在模意义下出现的全部取值，复杂度 $\mathcal{O}(2^{7 + 12} \log N)$
+\item 长度为 $7$ 的所有十进制数都不合法，所以不存在长度超过 $6$ 的合法数，合法数很少，枚举、打表均可通过
+\end{itemize}
+\end{spacing}
+\end{frame}
+
+% Thanks and Ends (manual) finished
+{\setbeamertemplate{logo}{\includegraphics[scale = 0.72]{coffeedog.png}}
+\begin{frame}[label = End]
+\frametitle{\\ 表演结束}
+\begin{spacing}{2.0} \centering \Huge
+\textcolor{blue}{\textbf{Thanks for listening!}}
+\end{spacing}
+\end{frame}}
+
+\end{document}
