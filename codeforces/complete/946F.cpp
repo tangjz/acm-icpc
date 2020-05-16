@@ -6,7 +6,6 @@ int n, m, nxt[maxn], f[2][maxn][maxn];
 char buf[maxn];
 int main() {
 	scanf("%d%d%s", &n, &m, buf);
-	clock_t t1 = clock();
 	for(int i = 1, j; i < n; ++i) {
 		for(j = nxt[i]; j && buf[j] != buf[i]; j = nxt[j]);
 		nxt[i + 1] = j + (buf[i] == buf[j]);
@@ -65,7 +64,5 @@ int main() {
 	for(int i = 0; i < n; ++i)
 		(ans += F[0][i << 1 | 1]) >= mod && (ans -= mod);
 	printf("%d\n", ans);
-	clock_t t2 = clock();
-	fprintf(stderr, "%f s\n", (t2 - t1) / (double)CLOCKS_PER_SEC);
 	return 0;
 }

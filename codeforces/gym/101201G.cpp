@@ -88,11 +88,3 @@ int main()
 	printf("%d\n", ans);
 	return 0;
 }
-/*
-5 4
-LLWL
-CCCC
-CCCC
-CCCC
-LWLL
-*/
