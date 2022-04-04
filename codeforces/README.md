@@ -176,7 +176,7 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 
 #### Gym Contest
 
-- `Y` means solved by me
+- `Y` means solved or upsolved by me
 - `O` means solved by team or solved only at other website
 - `X` means attempted but failed
 - `-` means not attempted
@@ -184,7 +184,7 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |ID|Problems|Name|
 |--|--------|----|
 |100285|OOOYYOOYOO|2013-2014 ACM-ICPC, NEERC, Eastern Subregional Contest|
-|100443|OYOOYOYOYX|2013-2014 ACM-ICPC Southwestern Europe Regional Contest (SWERC 13)|
+|100443|YYYYYYYYYY|2013-2014 ACM-ICPC Southwestern Europe Regional Contest (SWERC 13)|
 |100506|YYYYYYYYYY|2014-2015 CT S02E06: Codeforces Trainings Season 2 Episode 6 - 2007 Benelux Algorithm Programming Contest (BAPC 2007)|
 |100540|YYYYYYYYYYYYY|2014-2015 CT S02E11: Codeforces Trainings Season 2 Episode 11 (2011-2012 ACM-ICPC Latin American Regional Contest + Extended)|
 |100554|OX-O-Y-XO-O|2014-2015 ACM-ICPC, Asia Mudanjiang Regional Contest|
