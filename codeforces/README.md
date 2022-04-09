@@ -239,7 +239,7 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |100956|--YO-O-OOOOY|2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest|
 |100959|YYYYYYYYYYYYY|2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4|
 |101064|YYYYYYYYYYYY|2016 USP Try-outs|
-|101081|--YY---XX-X|2011 USP Try-outs|
+|101081|YYYYYYYYYYY|2011 USP Try-outs|
 |101174|-OOYYY-YY-Y|2016-2017 ACM-ICPC Southwestern European Regional Programming Contest (SWERC 2016)|
 |101194|OOOOOOYOYY-O|2016-2017 ACM-ICPC CHINA-Final|
 |101201|OOOYYYYOOOOY|2016-2017 ACM-ICPC Pacific Northwest Regional Contest (Div. 1)|
