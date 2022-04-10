@@ -233,7 +233,7 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |100685|O-O-OOY-YY-|2012-2013 ACM-ICPC, NEERC, Moscow Subregional Contest|
 |100705|YYYYYYYYYYYY|Codeshark round #1|
 |100825|YYYYYYYYY|2015-2016 ACM-ICPC East Central North America Regional Contest (ECNA 2015)|
-|100827|OOOOOOYOY--O|2014-2015 ACM-ICPC Pacific Northwest Regional Contest (Div. 1)|
+|100827|YYYYYYYYYYYY|2014-2015 ACM-ICPC Pacific Northwest Regional Contest (Div. 1)|
 |100851|O---OOO--O-O|2015-2016 ACM-ICPC Northeastern European Regional Contest (NEERC 15)|
 |100917|O-OY-X-OYY-O-|2015-2016 XVI Open Cup, Grand Prix of Bashkortostan, SKB Kontur Cup Stage 2|
 |100956|--YO-O-OOOOY|2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest|
