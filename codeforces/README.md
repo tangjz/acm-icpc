@@ -3,7 +3,7 @@
 - codes of completed contests are stored in `/complete`
 - codes of contests on Gym are stored in `/gym`
 
-Updated time: 2019-01-08 01:10 (UTC +8)
+Updated time: 2022-04-11 04:00 (UTC +8)
 
 #### TODO-List
 
@@ -11,8 +11,6 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |--|-----|--------|
 |71|4|BCDE|
 |82|4|BCDE|
-|89|5|ABCDE|
-|90|5|ABCDE|
 |109|4|ABCD|
 |110|5|ABCDE|
 |113|4|ABCD|
@@ -21,7 +19,7 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |116|4|BCDE|
 |118|4|BCDE|
 |119|4|BCDE|
-|177|6|ABCDEF|
+|177|12|A1A2B1B2C1C2D1D2E1E2F1F2|
 |220|4|BCDE|
 |221|5|ABCDE|
 |225|4|ABCD|
@@ -30,14 +28,12 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |270|2|DE|
 |277|4|BCDE|
 |278|2|DE|
-|280|4|ACDE|
+|280|4|ACE|
 |281|4|ABCE|
 |303|2|DE|
 |311|4|BCDE|
 |312|2|DE|
 |325|3|BCE|
-|340|5|ABCDE|
-|341|5|ABCDE|
 |437|5|ABCDE|
 |438|4|ABCD|
 |453|4|ABCD|
@@ -45,33 +41,51 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |455|3|ABC|
 |456|5|ABCDE|
 |468|3|ACE|
-|469|5|ABCDE|
+|469|4|ABCE|
 |482|4|ACDE|
-|483|5|ABCDE|
+|483|4|ABCE|
 |487|4|ABDE|
-|488|5|ABCDE|
+|488|4|ABCD|
 |496|4|ABDE|
 |497|4|BCDE|
 |515|4|ABDE|
 |516|4|BCDE|
 |521|2|DE|
-|533|4|ABDF|
+|533|2|AD|
 |542|4|ABEF|
 |559|2|DE|
-|670|5|ABCDE|
+|605|4|ABDE|
+|606|4|ABCD|
+|670|6|ABCD1D2E|
 |698|2|DF|
 |699|3|ABF|
 |704|4|BCDE|
-|705|5|ABCDE|
+|705|4|ABDE|
 |725|3|EFG|
 |848|3|CDE|
-|849|5|ABCDE|
+|849|3|ABE|
 |852|7|BCDEFGI|
 |887|3|DEF|
-|963|4|ABDE|
-|964|5|ABCDE|
 |1010|6|ABCDEF|
 |1011|6|ABCDEF|
+|1190|5|ABCDE|
+|1191|6|ABCDEF|
+|1239|5|BCDEF|
+|1248|6|ABD1D2EF|
+|1408|2|HI|
+|1427|3|FGH|
+|1479|2|DE|
+|1500|3|CEF|
+|1501|3|ABE|
+|1517|3|FGH|
+|1530|4|EFGH|
+|1544|4|EFGH|
+|1545|3|E1E2F|
+|1556|2|GH|
+|1558|6|ABCDEF|
+|1578|11|BCDEFGHIJKM|
+|1615|2|GH|
+|1628|2|EF|
 
 #### Completed Contest
 
@@ -82,6 +96,8 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |3|4|Codeforces Beta Round #3|
 |4|4|Codeforces Beta Round #4 (Div. 2 Only)|
 |5|5|Codeforces Beta Round #5|
+|89|5|Codeforces Beta Round #74 (Div. 1 Only)|
+|90|5|Codeforces Beta Round #74 (Div. 2 Only)|
 |158|5|VK Cup 2012 Qualification Round 1|
 |193|5|Codeforces Round #122 (Div. 1)|
 |194|5|Codeforces Round #122 (Div. 2)|
@@ -97,6 +113,8 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |315|5|Codeforces Round #187 (Div. 2)|
 |317|5|Codeforces Round #188 (Div. 1)|
 |318|5|Codeforces Round #188 (Div. 2)|
+|340|5|Codeforces Round #198 (Div. 2)|
+|341|5|Codeforces Round #198 (Div. 1)|
 |471|5|Codeforces Round #269 (Div. 2)|
 |472|7|Codeforces Round #270|
 |475|6|Bayan 2015 Contest Warm Up|
@@ -162,6 +180,8 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |946|7|Educational Codeforces Round 39 (Rated for Div. 2)|
 |956|6|Codeforces Round #472 (rated, Div. 1, based on VK Cup 2018 Round 2)|
 |957|5|Codeforces Round #472 (rated, Div. 2, based on VK Cup 2018 Round 2)|
+|963|5|Tinkoff Internship Warmup Round 2018 and Codeforces Round #475 (Div. 1)|
+|964|5|Tinkoff Internship Warmup Round 2018 and Codeforces Round #475 (Div. 2)|
 |1030|7|Technocup 2019 - Elimination Round 1|
 |1033|7|Lyft Level 5 Challenge 2018 - Elimination Round|
 |1034|5|Codeforces Round #511 (Div. 1)|
@@ -173,6 +193,17 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |1067|5|Codeforces Round #518 (Div. 1) [Thanks, Mail.Ru!]|
 |1068|6|Codeforces Round #518 (Div. 2) [Thanks, Mail.Ru!]|
 |1091|8|Good Bye 2018|
+|1175|7|Educational Codeforces Round 66 (Rated for Div. 2)|
+|1334|7|Educational Codeforces Round 85 (Rated for Div. 2)|
+|1335|7|Codeforces Round #634 (Div. 3)|
+|1466|9|Good Bye 2020|
+|1480|6|Codeforces Round #700 (Div. 2)|
+|1546|6|Codeforces Round #732 (Div. 2)|
+|1551|8|Codeforces Round #734 (Div. 3)|
+|1552|9|Codeforces Global Round 15|
+|1554|5|Codeforces Round #735 (Div. 2)|
+|1629|7|Codeforces Round #767 (Div. 2)|
+|1638|6|Codeforces Round #771 (Div. 2)|
 
 #### Gym Contest
 
@@ -206,6 +237,7 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |101205|YOYYY-Y---OO|2012 ACM-ICPC World Finals|
 |101206|OYYYOOYOOOYO|CCPC 2016-2017, Finals|
 |101234|O-O-O----O|2016-2017 National Taiwan University World Final Team Selection Contest|
+|101367|------Y--|2007-2008 Summer Petrozavodsk Camp, Petr Mitrichev Contest 3|
 |101385|YYOYOYOOY|2014-2015 Summer Petrozavodsk Camp, Petr Mitrichev Contest 12|
 |101412|YYYYYYYYYY|2012-2013 ACM-ICPC, Asia Tokyo Regional Contest|
 |101471|YYYYYYYYYYYY|2017 ACM-ICPC World Finals|
@@ -213,6 +245,5 @@ Updated time: 2019-01-08 01:10 (UTC +8)
 |101955|YYYYYYYYYYYYY|2018-2019 ACM-ICPC, Asia Shenyang Regional Contest|
 |102012|----YY-------|2018-2019 ACM-ICPC, Asia Xuzhou Regional Contest|
 |102028|YYYYYYYYYYYY|2018-2019 ACM-ICPC, Asia Jiaozuo Regional Contest|
-
-|102055|---------O--|2018 China Collegiate Programming Contest Final (CCPC-Final 2018)|
+|102055|---------Y--|2018 China Collegiate Programming Contest Final (CCPC-Final 2018)|
 |102056|-OOO-OO-OOOO|2018-2019 ACM-ICPC, Asia East Continent Finals|
