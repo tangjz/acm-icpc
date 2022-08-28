@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.player_id, ifnull(max(T1.dt), 0) as longest_streak from (select distinct player_id from Matches) A left join (select player_id, count(result) as dt from (select player_id, result, (sum(result <> 'Win') over(partition by player_id order by match_day)) as sft from Matches) T2 where result = 'Win' group by player_id, sft) T1 on A.player_id = T1.player_id group by A.player_id;

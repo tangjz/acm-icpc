@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+with A as (select employee_id, experience, (sum(salary) over(partition by experience order by salary asc, employee_id asc)) as agg_salary from Candidates), B as (select employee_id, agg_salary from A where experience = 'Senior' and agg_salary <= 70000), C as (select employee_id from A where experience = 'Junior' and agg_salary <= 70000 - ifnull((select max(agg_salary) from B), 0)) (select employee_id from B) union all (select employee_id from C);

@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.member_id, A.name, (case when conversion_rate >= 0.8 then 'Diamond' when conversion_rate >= 0.5 then 'Gold' when conversion_rate is not null then 'Silver' else 'Bronze' end) as category from Members A left join (select C.member_id, (count(D.visit_id) / count(C.visit_id)) as conversion_rate from Visits C left join Purchases D on C.visit_id = D.visit_id group by C.member_id) B on A.member_id = B.member_id group by A.member_id;

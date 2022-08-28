@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.invoice_id, B.customer_name, A.price, ifnull(C.contacts_cnt, 0) as contacts_cnt, ifnull(C.trusted_contacts_cnt, 0) as trusted_contacts_cnt from (Invoices A inner join Customers B on A.user_id = B.customer_id) left join (select D.user_id, count(D.contact_email) as contacts_cnt, count(E.email) as trusted_contacts_cnt from Contacts D left join Customers E on D.contact_email = E.email group by D.user_id) C on A.user_id = C.user_id order by A.invoice_id;

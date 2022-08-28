@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.team_id, A.team_name, ifnull(sum(B.score), 0) as num_points from Teams A left join ((select host_team as team_id, (case when host_goals > guest_goals then 3 when host_goals = guest_goals then 1 else 0 end) as score from Matches) union all (select guest_team as team_id, (case when host_goals > guest_goals then 0 when host_goals = guest_goals then 1 else 3 end) as score from Matches)) B on A.team_id = B.team_id group by A.team_id order by num_points desc, A.team_id asc;

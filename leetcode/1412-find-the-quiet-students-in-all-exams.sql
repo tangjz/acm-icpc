@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.student_id, A.student_name from Student A inner join (select student_id, (rank() over(partition by exam_id order by score asc)) as up_rnk, (rank() over(partition by exam_id order by score desc)) as down_rnk from Exam) B on A.student_id = B.student_id group by A.student_id having sum(up_rnk = 1) = 0 and sum(down_rnk = 1) = 0 order by A.student_id asc;

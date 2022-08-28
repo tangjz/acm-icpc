@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select date_format(trans_date, '%Y-%m') as month, country, count(id) as approved_count, ifnull(sum(amount), 0) as approved_amount, count(trans_id) as chargeback_count, ifnull(sum(back_amount), 0) as chargeback_amount from ((select trans_date, country, id, amount, null as trans_id, null as back_amount from Transactions where state = 'approved') union (select A.trans_date, country, null as id, null as amount, A.trans_id, amount as back_amount from Chargebacks A inner join Transactions B on A.trans_id = B.id)) T group by month, country;
