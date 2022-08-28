@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.user1_id, A.user2_id, count(B.user1_id) as common_friend from (Friendship A inner join ((select user1_id, user2_id from Friendship) union (select T.user2_id as user1_id, T.user1_id as user2_id from Friendship T)) B on A.user1_id = B.user2_id) inner join ((select user1_id, user2_id from Friendship) union (select T.user2_id as user1_id, T.user1_id as user2_id from Friendship T)) C on A.user2_id = C.user2_id and B.user1_id = C.user1_id group by A.user1_id, A.user2_id having common_friend >= 3;

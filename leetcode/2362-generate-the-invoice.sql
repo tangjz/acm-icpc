@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+with cte as (select A.invoice_id, sum(A.quantity * B.price) as total from Purchases A inner join Products B on A.product_id = B.product_id group by A.invoice_id order by total desc, invoice_id asc limit 1) select A.product_id, A.quantity, (A.quantity * B.price) as price from (cte C inner join Purchases A on C.invoice_id = A.invoice_id) inner join Products B on A.product_id = B.product_id;

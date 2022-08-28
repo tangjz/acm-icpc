@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select group_id, player_id from (select A.player_id, A.group_id, ifnull(sum(B.score), 0) as score, (row_number() over(partition by A.group_id order by ifnull(sum(B.score), 0) desc, A.player_id asc)) as rnk from Players A left join ((select first_player as player_id, first_score as score from Matches) union all (select second_player as player_id, second_score as score from Matches)) B on A.player_id = B.player_id group by player_id) T where T.rnk = 1;

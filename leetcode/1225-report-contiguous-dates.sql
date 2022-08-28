@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.status as period_state, min(A.tim) as start_date, max(A.tim) as end_date from ((select 'failed' as status, fail_date as tim, date_sub(fail_date, interval (row_number() over(order by fail_date asc)) day) as rnk from Failed) union (select 'succeeded' as status, success_date as tim, date_sub(success_date, interval (row_number() over(order by success_date asc)) day) as rnk from Succeeded)) A where year(A.tim) = '2019' group by A.status, A.rnk order by start_date;

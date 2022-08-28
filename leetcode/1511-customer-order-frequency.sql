@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.customer_id, A.name from (Customers A inner join Orders B on A.customer_id = B.customer_id and B.order_date between '2020-06-01' and '2020-07-31') inner join Product C on B.product_id = C.product_id group by A.customer_id having sum(if(month(B.order_date) = 6, B.quantity * C.price, 0)) >= 100 and sum(if(month(B.order_date) = 7, B.quantity * C.price, 0)) >= 100;

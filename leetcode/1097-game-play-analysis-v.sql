@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.event_date as install_dt, count(A.player_id) as installs, round(count(B.player_id) / count(A.player_id), 2) as Day1_retention from (select player_id, event_date, (row_number() over(partition by player_id order by event_date asc)) as rnk from Activity) A left join Activity B on A.rnk = 1 and A.player_id = B.player_id and date_add(A.event_date, interval 1 day) = B.event_date where A.rnk = 1 group by A.event_date;

@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select A.user_id, A.user_name, sum(B.amount) as credit, if(sum(B.amount) < 0, 'Yes', 'No') as credit_limit_breached from Users A inner join ((select user_id, credit as amount from Users) union all (select paid_by as user_id, -amount as amount from Transactions) union all (select paid_to as user_id, amount from Transactions)) B on A.user_id = B.user_id group by A.user_id;

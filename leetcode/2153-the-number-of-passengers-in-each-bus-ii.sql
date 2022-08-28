@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select bus_id, passengers_cnt from (select C.bus_id, (@las_adt := least(C.agg_cnt - @las_cnt, C.capacity)) as passengers_cnt, @las_cnt := @las_cnt + @las_adt from (select B.bus_id, B.capacity, count(A.passenger_id) as agg_cnt from Buses B left join Passengers A on A.arrival_time <= B.arrival_time group by B.bus_id order by B.arrival_time) C, (select @las_cnt := 0, @las_adt := 0) T) D order by bus_id;
