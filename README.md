@@ -1,6 +1,9 @@
 ## Tangjz's code repository, for acm-icpc.
 
-#### count of solved problems
+#### count of solved problems (work in progress)
+
+[aggregated stat](https://clist.by/coder/skywalkert/)
+
 	51nod			275 
 	bestcoder		46
 	codechef		6
@@ -8,6 +11,7 @@
 	hackerrank		9
 	hdu				95
 	lanqiao			6
+	leetcode		2884
 	lydsy			485
 	oj3rd			135
 	poj				89
@@ -17,7 +21,7 @@
 	uvalive			111
 	zoj				5
 
-`total : 1642`
+`total : 4522`
 
 #### count of trainings
 	self	42 

@@ -1,12 +1,6 @@
 class Solution {
     map<vector<int>, int> Hash;
-    int dp(vector<int> &cur) {
-        int pos = 0, sum = 0, cnt = 0;
-        for(int x: cur) {
-            sum += x * pos;
-            cnt += x;
-            ++pos;
-        }
+    int dp(vector<int> &cur, int sum, int cnt) {
         if(!cnt)
             return 0;
         auto it = Hash.find(cur);
@@ -14,11 +8,11 @@ class Solution {
             return it -> second;
         int rem = sum % cur.size();
         int &ret = Hash[cur];
-        pos = 0;
+        int pos = 0;
         for(int &x: cur) {
             if(x > 0) {
                 --x;
-                ret = max(ret, dp(cur) + (pos == rem));
+                ret = max(ret, dp(cur, sum - pos, cnt - 1) + (pos == rem));
                 ++x;
             }
             ++pos;
@@ -30,8 +24,13 @@ public:
         vector<int> vec(batchSize);
         for(int x: groups)
             ++vec[x % batchSize];
-        int adt = vec[0];
+        int adt = vec[0], pos = 0, sum = 0, cnt = 0;
         vec[0] = 0;
-        return adt + dp(vec);
+        for(int x: vec) {
+            sum += x * pos;
+            cnt += x;
+            ++pos;
+        }
+        return adt + dp(vec, sum, cnt);
     }
 };
