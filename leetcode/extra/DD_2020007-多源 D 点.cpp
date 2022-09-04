@@ -3,92 +3,9 @@ using namespace std;
 typedef long long LL;
 const int maxn = (int)1e5 + 1;
 int n, lim, tot, ord[maxn], par[maxn];
+pair<int, int> f[2][maxn];
 vector<int> e[maxn];
-bool ban[maxn], sp[maxn], ans[maxn];
-void bfs(int rt) { // par[rt] was set
-	tot = 0;
-	ord[tot++] = rt;
-	for(int i = 0; i < tot; ++i) {
-		int u = ord[i];
-		for(int v: e[u])
-			if(v != par[u] && !ban[v]) {
-				par[v] = u;
-				ord[tot++] = v;
-			}
-	}
-}
-int getRoot(int rt) {
-	int pos = -1, cnt = maxn;
-	static int sz[maxn];
-	bfs(rt);
-	for(int i = tot - 1; i >= 0; --i) {
-		int u = ord[i], mx = 0;
-		sz[u] = 1;
-		for(int v: e[u])
-			if(v != par[u] && !ban[v]) {
-				sz[u] += sz[v];
-				mx = max(mx, sz[v]);
-			}
-		mx = max(mx, tot - sz[u]);
-		if(mx < cnt) {
-			pos = u;
-			cnt = mx;
-		}
-	}
-	return pos;
-}
-void dfs(int rt) {
-	par[rt] = -1;
-	rt = getRoot(rt);
-	ban[rt] = 1;
-    int qtot = 0;
-    static int dis[maxn], pre[maxn], suf[maxn];
-    dis[rt] = 0;
-    for(int u: e[rt]) {
-        if(ban[u])
-            continue;
-        pre[qtot] = -1;
-        par[u] = rt;
-        bfs(u);
-        for(int i = 0; i < tot; ++i) {
-            int u = ord[i], p = par[u];
-            dis[u] = dis[p] + 1;
-            if(sp[u])
-                pre[qtot] = max(pre[qtot], dis[u]);
-        }
-        suf[qtot] = pre[qtot];
-        ++qtot;
-    }
-    for(int i = 1; i < qtot; ++i)
-        pre[i] = max(pre[i - 1], pre[i]);
-    for(int i = qtot - 2; i >= 0; --i)
-        suf[i] = max(suf[i], suf[i + 1]);
-    if(!sp[rt] && pre[qtot - 1] > lim)
-        ans[rt] = 0;
-    int qidx = 0;
-	for(int u: e[rt]) {
-		if(ban[u])
-			continue;
-        int upp = sp[rt] ? 0 : -1;
-        if(qidx > 0)
-            upp = max(upp, pre[qidx - 1]);
-        if(qidx < qtot - 1)
-            upp = max(upp, suf[qidx + 1]);
-        ++qidx;
-        if(upp == -1)
-            continue;
-        par[u] = rt;
-        bfs(u);
-        for(int i = 0; i < tot; ++i) {
-            int u = ord[i];
-            if(dis[u] + upp > lim)
-                ans[u] = 0;
-        }
-	}
-	for(int u: e[rt])
-		if(!ban[u])
-			dfs(u);
-}
+bool sp[maxn];
 int main() {
     int m;
     assert(scanf("%d%d%d", &n, &m, &lim) == 3);
@@ -105,12 +22,47 @@ int main() {
         e[i].push_back(x);
         e[x].push_back(i);
     }
-    for(int i = 1; i <= n; ++i)
-        ans[i] = 1;
-    dfs(1);
+	tot = 0;
+    par[1] = -1;
+	ord[tot++] = 1;
+	for(int i = 0; i < tot; ++i) {
+		int u = ord[i];
+		for(int v: e[u])
+			if(v != par[u]) {
+				par[v] = u;
+				ord[tot++] = v;
+			}
+        f[0][u] = f[1][u] = {-1, -1};
+        if(sp[u])
+            f[0][u] = {0, u};
+	}
+    assert(tot == n);
+    for(int i = n - 1; i >= 0; --i) {
+        int u = ord[i], p = par[u];
+        if(p == -1 || f[0][u].first < 0)
+            continue;
+        pair<int, int> tmp = {f[0][u].first + 1, u};
+        if(f[0][p] < tmp)
+            swap(f[0][p], tmp);
+        if(f[1][p] < tmp)
+            swap(f[1][p], tmp);
+    }
     int cnt = 0;
+    for(int i = 0; i < n; ++i) {
+        int u = ord[i], p = par[u];
+        if(p == -1)
+            continue;
+        int o = f[0][p].second == u;
+        if(f[o][p].first < 0)
+            continue;
+        pair<int, int> tmp = {f[o][p].first + 1, p};
+        if(f[0][u] < tmp)
+            swap(f[0][u], tmp);
+        if(f[1][u] < tmp)
+            swap(f[1][u], tmp);
+    }
     for(int i = 1; i <= n; ++i)
-        cnt += ans[i];
+        cnt += f[0][i].first <= lim;
     printf("%d\n", cnt);
 	return 0;
 }

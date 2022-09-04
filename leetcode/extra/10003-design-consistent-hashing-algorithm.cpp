@@ -64,3 +64,12 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your ConsistentHashing object will be instantiated and called as such:
+ * ConsistentHashing* obj = new ConsistentHashing(initialNodes);
+ * int param_1 = obj->getNodeForKey(key);
+ * int param_2 = obj->removeNode(node);
+ * vector<int> param_3 = obj->addNode();
+ * vector<int> param_4 = obj->getKeysInNode(node);
+ */

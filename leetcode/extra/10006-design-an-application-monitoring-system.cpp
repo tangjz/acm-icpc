@@ -45,3 +45,12 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your MonitoringSystem object will be instantiated and called as such:
+ * MonitoringSystem* obj = new MonitoringSystem();
+ * obj->logLatency(applicationName,api,latencyInMills);
+ * obj->logError(applicationName,api,errorCode);
+ * int param_3 = obj->getPercentileLatency(percentile,applicationName,api);
+ * vector<int> param_4 = obj->getTopErrors(applicationName,api);
+ */

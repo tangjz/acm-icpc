@@ -49,3 +49,10 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your Tinder object will be instantiated and called as such:
+ * Tinder* obj = new Tinder();
+ * obj->signup(userId,gender,preferredGender,age,minPreferredAge,maxPreferredAge,interests);
+ * vector<int> param_2 = obj->getMatches(userId);
+ */

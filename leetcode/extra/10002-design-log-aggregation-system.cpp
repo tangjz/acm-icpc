@@ -32,3 +32,12 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your LogAggregator object will be instantiated and called as such:
+ * LogAggregator* obj = new LogAggregator(machines, services);
+ * obj->pushLog(logId,machineId,serviceId,message);
+ * vector<int> param_2 = obj->getLogsFromMachine(machineId);
+ * vector<int> param_3 = obj->getLogsOfService(serviceId);
+ * vector<string> param_4 = obj->search(serviceId,searchString);
+ */
