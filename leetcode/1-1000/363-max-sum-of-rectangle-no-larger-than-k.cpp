@@ -17,6 +17,8 @@ public:
                     if(it != sp.end()) {
                         // printf("found %d: %d\n", *it, cur - *it);
                         ans = max(ans, cur - *it);
+                        if(ans == dt)
+                            return ans;
                     }
                 }
             }

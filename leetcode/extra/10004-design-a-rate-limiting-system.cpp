@@ -17,3 +17,9 @@ public:
         return 0;
     }
 };
+
+/**
+ * Your RateLimiter object will be instantiated and called as such:
+ * RateLimiter* obj = new RateLimiter(n, t);
+ * bool param_1 = obj->shouldAllow(timestamp);
+ */

@@ -77,3 +77,13 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your DCLoadBalancer object will be instantiated and called as such:
+ * DCLoadBalancer* obj = new DCLoadBalancer();
+ * obj->addMachine(machineId,capacity);
+ * obj->removeMachine(machineId);
+ * int param_3 = obj->addApplication(appId,loadUse);
+ * obj->stopApplication(appId);
+ * vector<int> param_5 = obj->getApplications(machineId);
+ */

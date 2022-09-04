@@ -36,3 +36,13 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your WhatsApp object will be instantiated and called as such:
+ * WhatsApp* obj = new WhatsApp();
+ * obj->sendMessage(toUser,message);
+ * int param_2 = obj->createGroup(initialUsers);
+ * obj->addUserToGroup(groupId,userId);
+ * obj->sendGroupMessage(fromUser,groupId,message);
+ * vector<string> param_5 = obj->getMessagesForUser(userId);
+ */

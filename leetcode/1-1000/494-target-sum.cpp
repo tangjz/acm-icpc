@@ -1,17 +1,21 @@
 class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int target) {
-        int n = nums.size(), m = 1 << n, ans = 0;
-        vector<pair<int, int> > seq(m);
-        for(int i = 1; i < m; ++i) {
-            int j = seq[i].first = i & 1 ? 0 : seq[i >> 1].first + 1;
-            seq[i].second = seq[i ^ (1 << j)].second + nums[j];
-            j = m - 1 - i;
-            if(i > j) {
-                int k = seq[i].second - seq[j].second;
-                ans += (k == target) + (-k == target);
-            }
+        int n = nums.size(), R = accumulate(nums.begin(), nums.end(), 0), L = -R;
+        if(target < L || target > R)
+            return 0;
+        int len = R - L + 1;
+        vector<int> f(len), g;
+        f[-L] = 1;
+        for(int x: nums) {
+            g.assign(len, 0);
+            for(int i = 0; i < len; ++i)
+                if(f[i]) {
+                    g[i + x] += f[i];
+                    g[i - x] += f[i];
+                }
+            f.swap(g);
         }
-        return ans;
+        return f[target - L];
     }
 };

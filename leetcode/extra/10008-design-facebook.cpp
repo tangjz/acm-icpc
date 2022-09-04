@@ -28,3 +28,11 @@ public:
         return ret;
     }
 };
+
+/**
+ * Your Facebook object will be instantiated and called as such:
+ * Facebook* obj = new Facebook();
+ * obj->writePost(userId,postContent);
+ * obj->addFriend(user1,user2);
+ * vector<string> param_3 = obj->showPosts(userId);
+ */
