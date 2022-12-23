@@ -9,7 +9,7 @@
 class Solution {
 public:
     void findSecretWord(vector<string>& wordlist, Master& master) {
-        const int maxt = 10, maxl = 6;
+        const int maxt = 30, maxl = 6;
         int n = (int)wordlist.size();
         vector<int> ban(n, 0);
         vector<vector<int> > same(n, vector<int>(n, 0));

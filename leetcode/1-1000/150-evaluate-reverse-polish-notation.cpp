@@ -1,15 +1,16 @@
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
-        stack<int> stk;
+        typedef long long LL;
+        stack<LL> stk;
         for(auto &it: tokens) {
             if(it.back() >= '0' && it.back() <= '9') {
                 stk.push(stoi(it));
                 continue;
             }
-            int v = stk.top();
+            LL v = stk.top();
             stk.pop();
-            int u = stk.top();
+            LL u = stk.top();
             stk.pop();
             switch(it[0]) {
                 case '+': {
