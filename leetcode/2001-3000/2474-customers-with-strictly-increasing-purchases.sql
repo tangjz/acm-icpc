@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+with cte1 as (select customer_id, year(order_date) as year, sum(price) as total from Orders group by customer_id, year), cte2 as (select customer_id, year, total, (lag(year, 1) over(partition by customer_id order by year)) as last_year, (lag(total, 1) over(partition by customer_id order by year)) as last_total from cte1) select customer_id from cte2 group by customer_id having sum(last_year is null or last_year != year - 1 or last_total >= total) = 1;
