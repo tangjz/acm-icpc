@@ -74,6 +74,7 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |1248|6|ABD1D2EF|
 |1408|2|HI|
 |1427|3|FGH|
+|1451|6|ABCDE1E2|
 |1479|2|DE|
 |1500|3|CEF|
 |1501|3|ABE|
@@ -240,12 +241,12 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |100959|YYYYYYYYYYYYY|2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4|
 |101064|YYYYYYYYYYYY|2016 USP Try-outs|
 |101081|YYYYYYYYYYY|2011 USP Try-outs|
-|101174|-OOYYY-YY-Y|2016-2017 ACM-ICPC Southwestern European Regional Programming Contest (SWERC 2016)|
+|101174|YOOYYY-YY-Y|2016-2017 ACM-ICPC Southwestern European Regional Programming Contest (SWERC 2016)|
 |101194|OOOOOOYOYY-O|2016-2017 ACM-ICPC CHINA-Final|
 |101201|OOOYYYYOOOOY|2016-2017 ACM-ICPC Pacific Northwest Regional Contest (Div. 1)|
 |101205|YOYYY-Y---OO|2012 ACM-ICPC World Finals|
 |101206|OYYYOOYOOOYO|CCPC 2016-2017, Finals|
-|101234|O-O-O----O|2016-2017 National Taiwan University World Final Team Selection Contest|
+|101234|Y-OYOY---O|2016-2017 National Taiwan University World Final Team Selection Contest|
 |101367|------Y--|2007-2008 Summer Petrozavodsk Camp, Petr Mitrichev Contest 3|
 |101385|YYOYOYOOY|2014-2015 Summer Petrozavodsk Camp, Petr Mitrichev Contest 12|
 |101412|YYYYYYYYYY|2012-2013 ACM-ICPC, Asia Tokyo Regional Contest|
@@ -260,3 +261,5 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |102114|------------|2018 Chinese Multi-University Training, BeihangU Contest|
 |102253|------------|2017 Chinese Multi-University Training, BeihangU Contest|
 |103652|------------|2019 Summer Petrozavodsk Camp, Day 8: XIX Open Cup Onsite|
+|104021|OOOOOOOOOOOOYO|The 2019 ICPC Asia Yinchuan Regional Contest|
+|104022|OOYOOYOOYOYOO|The 2020 ICPC Asia Yinchuan Regional Programming Contest|
