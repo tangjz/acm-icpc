@@ -1,6 +1,6 @@
 /*
- * ¼òµ¥dp 
- */ 
+ * ç®€å•dp
+ */
 #include <cstdio>
 const int mod = 2012;
 int f[1001];

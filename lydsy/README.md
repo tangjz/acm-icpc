@@ -1,17 +1,11 @@
-#### Website Link
-[Lydsy Online Judge](http://www.lydsy.com/JudgeOnline/)
+[Lydsy Online Judge](http://www.lydsy.com/JudgeOnline/): deprecated
 
 #### To be solved
-	1142	[POI2009]Tab
-	1165	[Baltic2008]Gates
-	1166	[Baltic2008]Magical Stones
-	1351	[Baltic2006]COUNTRIES
-	1356	[Baltic2009]Rectangle
-	1541	[POI2005]Lus- Mirror trap
-	1543	Éú³ÉÊ÷¼ÆÊı
-	2027	[SHOI2009]°ÍÊ¿Â·Ïß
-	2595	[Wc2008]ÓÎÀÀ¼Æ»®
-	2715	[Violet 3]×îÓÅÖ¸Áî
-	2856	[ceoi2012]Printed Circuit Board
-	3100	ÅÅÁĞ
-	3154	Stilwell
+
+|PID|Name|Note|
+|--|--|--|
+|1894|Srm444 avoidfour|çŸ©é˜µä¹˜æ³•+å®¹æ–¥|
+|1905|Soldier å£«å…µæ§åˆ¶çš„æ£‹ç›˜|å®¹æ–¥+æ‰«æçº¿+çº¿æ®µæ ‘|
+|2256|Fibonacci System|Fibonacciæ•°ä½dp|
+|1882|Pku2150 Crossing Prisms|å‡½æ•°åå¯¼ç§¯åˆ†|
+|1868/4519|MinCut Query|å…¨å±€æœ€å°å‰²å®¹é‡ä¹‹å’Œ|

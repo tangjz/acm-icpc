@@ -91,7 +91,7 @@ int main()
 		p = 1;
 		x[sa[0]] = 0;
 		for(int i = 1; i < len; ++i)
-			x[sa[i]] = (y[sa[i - 1]] == y[sa[i]] 
+			x[sa[i]] = (y[sa[i - 1]] == y[sa[i]]
 			&& (sa[i - 1] + k < len ? y[sa[i - 1] + k] : -1) == (sa[i] + k < len ? y[sa[i] + k] : -1) ? p - 1 : p++);
 		if(p >= len)
 			break;

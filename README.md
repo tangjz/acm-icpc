@@ -1,42 +1,77 @@
 ## Tangjz's code repository, for acm-icpc.
 
-#### count of solved problems (work in progress)
+#### count of solved problems
 
 [aggregated stat](https://clist.by/coder/skywalkert/)
 
-	51nod			275 
-	bestcoder		46
-	codechef		6
-	codeforces		324
-	hackerrank		9
-	hdu				95
-	lanqiao			6
-	leetcode		2884
-	lydsy			485
-	oj3rd			135
-	poj				89
-	projecteuler	5
-	timus			3
-	usaco			48
-	uvalive			111
-	zoj				5
+|OJ|Count|
+|--|--|
+|51nod|448|
+|buaa/oj3rd|135|
+|codechef|65|
+|codeforces (+gym, +sgu)|1086|
+|hackerrank|56|
+|hdu (+bestcoder)|287|
+|lanqiao|6|
+|leetcode|3026|
+|loj|29|
+|luogu|56|
+|lydsy|894|
+|openjudge|7|
+|poj|104|
+|projecteuler|71|
+|spoj (+challenge, +tutorial)|21|
+|timus|22|
+|uoj|23|
+|usaco|54|
+|uvalive|164|
+|zoj|20|
 
-`total : 4522`
+`total: 6574`
 
-#### count of trainings
-	self	42 
-	TDL		98 
+#### count of misc trainings
 
-`total : 140`
+|Category|Count|
+|--|--|
+|*self|39|
+|*Summer|3|
+|*TDL|22|
+
+`*total: 64`
+
+*: updating in progress
 
 #### to be rebuild
-	topcoder
-	main
-	sgu
-	uoj
-	uva
-	spoj
-	contesthunter
-	codevs
-	tsinsen
-	acdream/cogs/luogu/rqnoj/tyvj/vijos
+
+high prior:
+
+|Name|Type|
+|--|--|
+|atcoder|OJ|
+|baidu/astar|Compete|
+|google/codejam|Compete|
+|google/kickstart|Compete|
+|meta/hackercup|Compete|
+|nowcoder|OJ|
+|topcoder|OJ|
+|yandex|Compete|
+
+mid prior:
+
+|Name|Type|
+|--|--|
+|cccc|Compete|
+|csp|Compete|
+|ipsc|Compete|
+|kattis|OJ|
+|oi|Compete|
+|opencup|Compete|
+|ptzcamp|Compete|
+|poland|OJ|
+|static|Materials|
+|tool|Tools|
+|training|Compete|
+|uva|OJ|
+|xcpc|Compete|
+
+deprecated: acdream/codevs/cogs/contesthunter/hihocoder/ifrog/jisuanke/rqnoj/tsinsen/tyvj/vijos

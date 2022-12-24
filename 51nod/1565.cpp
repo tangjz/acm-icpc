@@ -16,7 +16,7 @@ inline int popcount(ULL x)
 {
 	return popcount((UL)(x >> 32)) + popcount((UL)x);
 }
-int main() 
+int main()
 {
 	for(int i = 1; i < 1 << 16; ++i)
 		cnt[i] = cnt[i >> 1] + (i & 1);

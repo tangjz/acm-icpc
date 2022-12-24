@@ -37,4 +37,4 @@ int main()
 	scanf("%d%d", &a, &b); //assert(scanf("%d%d", &a, &b) == 2 && 1 <= a && a <= b && b <= maxb);
 	printf("%lld\n", calc(b) - calc(a - 1));
 	return 0;
-}   
+}

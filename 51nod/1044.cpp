@@ -66,4 +66,4 @@ int main()
 	scanf("%d%d", &x, &y);
 	printf("%d\n", solve(x, y));
 	return 0;
-} 
+}

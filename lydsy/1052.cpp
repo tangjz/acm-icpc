@@ -11,7 +11,7 @@ bool dfs(int dep, int d)
 				return 0;
 		return 1;
 	}
-	int x1 = INF, y1 = INF, x2 = -INF, y2 = -INF; 
+	int x1 = INF, y1 = INF, x2 = -INF, y2 = -INF;
 	for(int i = 0; i < n; ++i)
 		if(!tag[i])
 		{
@@ -79,4 +79,4 @@ int main()
 	}
 	printf("%d\n", L);
 	return 0;
-} 
+}

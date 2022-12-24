@@ -1,5 +1,5 @@
 /*
- * 神构造吓哭了 http://blog.sina.com.cn/s/blog_49f9e4fc0100c6n4.html 
+ * 绁炴瀯閫犲悡鍝簡 http://blog.sina.com.cn/s/blog_49f9e4fc0100c6n4.html
  */
 #include <cstdio>
 int n;

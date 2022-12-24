@@ -2,8 +2,9 @@
 
 - codes of completed contests are stored in `/complete`
 - codes of contests on Gym are stored in `/gym`
+- codes of SGU problemset are stored in `/sgu`
 
-Updated time: 2022-04-15 03:15 (UTC +8)
+Updated time: 2022-12-26 14:05 (UTC +8)
 
 #### TODO-List
 
@@ -261,5 +262,8 @@ Updated time: 2022-04-15 03:15 (UTC +8)
 |102114|------------|2018 Chinese Multi-University Training, BeihangU Contest|
 |102253|------------|2017 Chinese Multi-University Training, BeihangU Contest|
 |103652|------------|2019 Summer Petrozavodsk Camp, Day 8: XIX Open Cup Onsite|
+|103957|YYYYYYYYYYYYY|2015 ACM-ICPC Asia EC-Final Contest|
 |104021|OOOOOOOOOOOOYO|The 2019 ICPC Asia Yinchuan Regional Contest|
 |104022|OOYOOYOOYOYOO|The 2020 ICPC Asia Yinchuan Regional Programming Contest|
+|104023|OYOOYOYYOOYOO|2022 China Collegiate Programming Contest (CCPC) Weihai Site|
+|104068|YYYYYYYYYYYYY|The 17-th Beihang University Collegiate Programming Contest (BCPC 2022) - Preliminary|

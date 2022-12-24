@@ -1,4 +1,4 @@
-#pragma comment(linker, "/STACK:102400000,102400000")  
+#pragma comment(linker, "/STACK:102400000,102400000")
 #include <vector>
 #include <stdio.h>
 #include <algorithm>

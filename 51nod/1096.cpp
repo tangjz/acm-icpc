@@ -15,4 +15,4 @@ int main()
 		ret += abs(p[i] - x);
 	printf("%lld\n", ret);
 	return 0;
-} 
+}

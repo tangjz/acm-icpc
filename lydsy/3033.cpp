@@ -1,5 +1,5 @@
 /*
- * dfs×ÖµäĞò×îĞ¡¹şÃÜ¶Ù»ØÂ· 
+ * dfså­—å…¸åºæœ€å°å“ˆå¯†é¡¿å›è·¯
  */
 #include <cstdio>
 #include <cstring>
@@ -21,7 +21,7 @@ void dfs()
 				if(!tused[temp]) ++tused[temp];
 				else { ++fail; break; }
 			}
-			if(!fail)	
+			if(!fail)
 			{
 				for(i = 1; i <= n; ++i) printf("%d", a[i]);
 				return;
@@ -32,7 +32,7 @@ void dfs()
 			temp = 0;
 			if(a[cur] > 1) a[cur] = 0;
 			else ++a[cur];
-			if(cur >= k)	
+			if(cur >= k)
 			{
 				for(i = 1; i <= k; ++i) temp += a[cur - i + 1] << (i - 1);
 				if(!used[temp])

@@ -1,14 +1,14 @@
 /*
- * Áîf[a, b, c, d]±íÊ¾Ç°a + b¸öÈËÀïÓĞa¸öÄĞº¢£¬b¸öÅ®º¢£¬ÆäÖĞÄ³Ò»¶ÎÖĞÄĞÉú×î¶à±ÈÅ®Éú¶àc¸ö£¬Ä³Ò»¶ÎÖĞÅ®Éú×î¶à±ÈÄĞÉú¶àd¸ö 
- * Ôòf[a, b, c, d]¿ÉÒÔ×ªÒÆµ½f[a + 1, b, c + 1, d - 1]ºÍf[a, b + 1, c - 1, d + 1]
- * ×¢Òâc»òdÎª¸ºÊ±´ğ°¸Ó¦Îª0
+ * ä»¤f[a, b, c, d]è¡¨ç¤ºå‰a + bä¸ªäººé‡Œæœ‰aä¸ªç”·å­©ï¼Œbä¸ªå¥³å­©ï¼Œå…¶ä¸­æŸä¸€æ®µä¸­ç”·ç”Ÿæœ€å¤šæ¯”å¥³ç”Ÿå¤šcä¸ªï¼ŒæŸä¸€æ®µä¸­å¥³ç”Ÿæœ€å¤šæ¯”ç”·ç”Ÿå¤šdä¸ª
+ * åˆ™f[a, b, c, d]å¯ä»¥è½¬ç§»åˆ°f[a + 1, b, c + 1, d - 1]å’Œf[a, b + 1, c - 1, d + 1]
+ * æ³¨æ„cæˆ–dä¸ºè´Ÿæ—¶ç­”æ¡ˆåº”ä¸º0
  */
 #include <cstdio>
 const int maxn = 152, maxk = 21, mod = 12345678;
 int n, m, k, f[maxn][maxn][maxk][maxk], ans;
 inline int abs(int x) { return x < 0 ? -x : x; }
 inline int max(int x, int y) { return x < y ? y : x; }
-inline void add(int &x, int y) { x += y; if(x >= mod) x -= mod; } 
+inline void add(int &x, int y) { x += y; if(x >= mod) x -= mod; }
 inline void upd(int i, int j, int p, int q, int v) { if(abs(i - j + p) <= k && abs(i - j - q) <= k) add(i < j ? f[i][j][max(j - i, p)][q] : f[i][j][p][max(i - j, q)], v); }
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 					if(f[i][j][p][q])
 					{
 						upd(i + 1, j, p, q, f[i][j][p][q]);
-						upd(i, j + 1, p, q, f[i][j][p][q]); 
+						upd(i, j + 1, p, q, f[i][j][p][q]);
 					}
 	for(int p = 0; p <= k; ++p)
 		for(int q = 0; q <= k; ++q) add(ans, f[n][m][p][q]);

@@ -14,4 +14,4 @@ int main()
 		printf("%lld/%lld\n", c / r, d / r);
 	}
 	return 0;
-} 
+}

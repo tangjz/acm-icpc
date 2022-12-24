@@ -21,4 +21,4 @@ int main()
 	}
 	printf("%lld\n", ret);
 	return 0;
-} 
+}

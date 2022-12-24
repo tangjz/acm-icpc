@@ -1,5 +1,5 @@
 /*
- * 取中位数即可 
+ * 鍙栦腑浣嶆暟鍗冲彲
  */
 #include <cstdio>
 #include <algorithm>

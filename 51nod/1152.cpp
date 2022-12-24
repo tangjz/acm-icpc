@@ -29,7 +29,7 @@ int min_rep() // seq to num
 {
 	static int col[maxn];
 	int ret = 0;
-	for(int j = 1; j <= 7; ++j) // color from [1, 7] 
+	for(int j = 1; j <= 7; ++j) // color from [1, 7]
 		col[j] = 0;
 	for(int j = 0, c = 0; j < 6; ++j)
 	{
@@ -131,7 +131,7 @@ void getStatus() // try any possible transform
 }
 inline void mod_inc(int &x, int y)
 {
-	(x += y) >= mod && (x -= mod); 
+	(x += y) >= mod && (x -= mod);
 }
 int tot, ord[maxp];
 struct Matrix {
