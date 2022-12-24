@@ -19,4 +19,4 @@ int main()
 		ret += (long long)abs(p[i].first - p[x].first) * p[i].second;
 	printf("%lld\n", ret);
 	return 0;
-} 
+}

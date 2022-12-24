@@ -1,5 +1,7 @@
-####Website Link
-[hackerrank](https://www.hackerrank.com/)
+[HackerRank](https://www.hackerrank.com/)
 
-####To be solved
-	NONE
+#### To be solved
+
+|PID|Name|Note|
+|--|--|--|
+|spies-revised|Spies, Revised​|Challenge type|

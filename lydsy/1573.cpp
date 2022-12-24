@@ -1,7 +1,7 @@
 /*
- * ÉèÖ±ÏßÓëÔ²µÄ½»µãÏà¶ÔÓÚÏòÁ¿(-1,0)µÄ¼«½ÇÎªl,r(l < r) 
- * Ö±ÏßL1ºÍÖ±ÏßL2Ïà½»µÄ³äÒªÌõ¼þÊÇl1 ¡Ül2 ¡Ür1 ¡Ür2
- * Í³¼ÆÇø¼ä[lj,rj]ÀïÃæriµÄ¸öÊý 
+ * è®¾ç›´çº¿ä¸Žåœ†çš„äº¤ç‚¹ç›¸å¯¹äºŽå‘é‡(-1,0)çš„æžè§’ä¸ºl,r(l < r)
+ * ç›´çº¿L1å’Œç›´çº¿L2ç›¸äº¤çš„å……è¦æ¡ä»¶æ˜¯l1 â‰¤l2 â‰¤r1 â‰¤r2
+ * ç»Ÿè®¡åŒºé—´[lj,rj]é‡Œé¢riçš„ä¸ªæ•°
  */
 #include <cmath>
 #include <vector>

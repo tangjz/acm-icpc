@@ -1,6 +1,6 @@
 /*
- * Éè¡Æ¶È = sum£¬ÓÉprufer±àÂë¿ÉÖªÈôsum > n - 2ÎŞ½â 
- * ·ñÔòÉèmÎªÎ´Öª¶ÈÊıµã£¬ans = C(n - 2, num) / ¡Çdegree[i] * m ^ (n - 2 - num) 
+ * è®¾âˆ‘åº¦ = sumï¼Œç”±pruferç¼–ç å¯çŸ¥è‹¥sum > n - 2æ— è§£
+ * å¦åˆ™è®¾mä¸ºæœªçŸ¥åº¦æ•°ç‚¹ï¼Œans = C(n - 2, num) / âˆdegree[i] * m ^ (n - 2 - num)
  */
 #include <cstdio>
 const int mod = 10000;

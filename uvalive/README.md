@@ -1,6 +1,8 @@
-####Website Link
-[UVaLive](https://icpcarchive.ecs.baylor.edu/index.php) (another name of ACM-ICPC Live Archive)
+[UVaLive](https://icpcarchive.ecs.baylor.edu/index.php) (also known as ACM-ICPC Live Archive): depecated
 
-####To be solved
-	7216 - Counting Partition (Runtime Error)
-	7508 - Champions League (Time Limited Exceeded)
+#### To be solved
+
+|PID|Name|Note|
+|--|--|--|
+|7216|Counting Partition|No data|
+|7231|Odd Cycle|WA|

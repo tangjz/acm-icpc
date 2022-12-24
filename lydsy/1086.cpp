@@ -1,9 +1,9 @@
 /*
- * ��Ŀû��Ҫ��ʡ�����٣�dfs���ɣ�ÿ��ȡ��b��ʡ��������ʡ�ᣬ�����ʡ��಻����b��������С��3b������ 
+ * 题目没有要求省会最少，dfs即可，每次取够b个省立即添加省会，多余的省最多不超过b个，满足小于3b的条件
  */
 #include <stack>
 #include <cstdio>
-#include <vector> 
+#include <vector>
 #include <algorithm>
 using namespace std;
 const int maxn = 1001;
