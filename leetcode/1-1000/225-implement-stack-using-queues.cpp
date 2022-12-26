@@ -4,7 +4,7 @@ public:
     MyStack() {
         queue<int>().swap(que);
     }
-    
+
     void push(int x) {
         int n = que.size();
         que.push(x);
@@ -14,17 +14,17 @@ public:
             que.push(x);
         }
     }
-    
+
     int pop() {
         int x = que.front();
         que.pop();
         return x;
     }
-    
+
     int top() {
         return que.front();
     }
-    
+
     bool empty() {
         return que.empty();
     }

@@ -41,7 +41,7 @@ public:
             jt = vis[it.first].begin();
         return cyc[it.first][*jt].second;
     }
-    
+
     void close(int index) {
         for(int dir = -1; dir <= 1; dir += 2) {
             auto &it = pos[dir > 0][index];

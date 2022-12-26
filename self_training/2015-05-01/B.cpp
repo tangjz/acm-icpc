@@ -1,5 +1,5 @@
 #include <queue>
-#include <vector> 
+#include <vector>
 #include <cstdio>
 #include <algorithm>
 using namespace std;
@@ -42,5 +42,5 @@ int main()
 		}
 	}
 	printf("%I64d\n", ans);
-	return 0; 
+	return 0;
 }

@@ -117,7 +117,7 @@ int main()
 						ret = sum(n, d) - sum(a - 1, d) + sum(c, d)
 							- sum(n, b - 1) + sum(a - 1, b - 1) - sum(c, b - 1);
 					else
-						ret = sum(n, n) - sum(n, b - 1) + sum(n, d) 
+						ret = sum(n, n) - sum(n, b - 1) + sum(n, d)
 							- sum(a - 1, n) + sum(a - 1, b - 1) - sum(a - 1, d)
 							+ sum(c, n) - sum(c, b - 1) + sum(c, d);
 				printf("%d\n", ret);

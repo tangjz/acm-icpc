@@ -1,8 +1,8 @@
 /*
- * ËùÌîÊý±ØÈ»²»ÏÂ½µ ·ñÔòÄæÐò¶Ô»áÔö¶à 
- * ÏÈÔ¤´¦Àí³öµÚiÎ»Ç°±Èj´óµÄÊý¸öÊýmore[i][j]ÓëµÚiÎ»ºó±ÈjÐ¡µÄÊý¸öÊýsmall[i][j]
- * ¼Çf[i][j]Îªi¸ö¿Õ×îºóÒ»¸öÌîµÄÊýÎªjµÄÐÂÔö ÌýÖ®¼äµÄÄæÐò¶ÔÊý 
- * f[j] = Min{f[w] + more[b[i]][j] + small[b[i]][j] (w = j ¡ú 1} (b[i]ÎªµÚi¸ö¿ÕµÄÎ»ÖÃ) 
+ * æ‰€å¡«æ•°å¿…ç„¶ä¸ä¸‹é™ å¦åˆ™é€†åºå¯¹ä¼šå¢žå¤š
+ * å…ˆé¢„å¤„ç†å‡ºç¬¬iä½å‰æ¯”jå¤§çš„æ•°ä¸ªæ•°more[i][j]ä¸Žç¬¬iä½åŽæ¯”jå°çš„æ•°ä¸ªæ•°small[i][j]
+ * è®°f[i][j]ä¸ºiä¸ªç©ºæœ€åŽä¸€ä¸ªå¡«çš„æ•°ä¸ºjçš„æ–°å¢ž å¬ä¹‹é—´çš„é€†åºå¯¹æ•°
+ * f[j] = Min{f[w] + more[b[i]][j] + small[b[i]][j] (w = j â†’ 1} (b[i]ä¸ºç¬¬iä¸ªç©ºçš„ä½ç½®)
  */
 #include <cstdio>
 #include <cstring>

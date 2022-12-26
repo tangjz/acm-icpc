@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std; 
+using namespace std;
 const int maxn = (int)1e6 + 1, maxl = 25;
 int n, m, sta[maxl], dif[maxl], cnt[maxl];
 pair<int, int> f[maxn], g[maxn];

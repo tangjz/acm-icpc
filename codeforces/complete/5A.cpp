@@ -12,4 +12,4 @@ int main()
 		else ans += (str.substr(str.find(':')).size() - 1) * cnt;
 	cout << ans << endl;
 	return 0;
-} 
+}

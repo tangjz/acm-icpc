@@ -18,7 +18,7 @@ public:
         pos = {0, (int)1e9};
         ctr = {0, 0};
     }
-    
+
     bool book(int start, int end) {
         for(int i = 0; i + 1 < n; ++i) {
             if(max(pos[i], start) >= min(pos[i + 1], end))

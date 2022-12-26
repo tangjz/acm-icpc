@@ -8,7 +8,7 @@ public:
     Trie() {
         rt = new Node();
     }
-    
+
     void insert(string word) {
         Node *cur = rt;
         for(char ch: word) {
@@ -21,7 +21,7 @@ public:
         ++(cur -> sub);
         ++(cur -> cnt);
     }
-    
+
     int countWordsEqualTo(string word) {
         Node *cur = rt;
         for(char ch: word) {
@@ -32,7 +32,7 @@ public:
         }
         return cur -> cnt;
     }
-    
+
     int countWordsStartingWith(string prefix) {
         Node *cur = rt;
         for(char ch: prefix) {
@@ -43,7 +43,7 @@ public:
         }
         return cur -> sub;
     }
-    
+
     void erase(string word) {
         Node *cur = rt;
         for(char ch: word) {

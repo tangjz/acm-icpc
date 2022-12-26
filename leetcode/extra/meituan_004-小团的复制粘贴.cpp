@@ -9,7 +9,7 @@ public:
     void init() {
         seg.clear();
     }
-    
+
     void addRange(int left, int right, int offset) { // [left, right): offset
         if(queryRange(left, right) == offset)
             return;
@@ -28,12 +28,12 @@ public:
         // printf("insert %d %d %d\n", left, right, offset);
         seg.insert({left, {right, offset}});
     }
-    
+
     int queryRange(int left, int right) { // [left, right): same ? offset : INT_MAX
         auto it = seg.upper_bound(left);
         return it != seg.begin() && (--it) -> second.first >= right ? it -> second.second : INT_MAX;
     }
-    
+
     void removeRange(int left, int right) { // clean [left, right)
         for(auto it = seg.upper_bound(left); it != seg.end() && it -> first < right; ) {
             pair<int, pair<int, int> > rem = {right, it -> second};

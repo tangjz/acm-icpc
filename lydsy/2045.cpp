@@ -1,7 +1,7 @@
 /*
- * ²»Ïë·´ÑÝ¿ÉÒÔÖ±½ÓÓÃÈÝ³â ·´ÑÝÍ¬1101
- * Áîf[i]±íÊ¾gcd(x,y)=iµÄÓÐÐò¶ÔÊý 
- * f[i] = [n / i] * [m / i] - f[i * 2] - f[i * 3]... 
+ * ä¸æƒ³åæ¼”å¯ä»¥ç›´æŽ¥ç”¨å®¹æ–¥ åæ¼”åŒ1101
+ * ä»¤f[i]è¡¨ç¤ºgcd(x,y)=içš„æœ‰åºå¯¹æ•°
+ * f[i] = [n / i] * [m / i] - f[i * 2] - f[i * 3]...
  */
 #include <cstdio>
 typedef long long LL;

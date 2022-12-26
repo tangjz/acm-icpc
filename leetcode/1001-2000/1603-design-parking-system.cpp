@@ -6,7 +6,7 @@ public:
         ctr[1] = medium;
         ctr[2] = small;
     }
-    
+
     bool addCar(int carType) {
         if(ctr[--carType] <= 0)
             return 0;

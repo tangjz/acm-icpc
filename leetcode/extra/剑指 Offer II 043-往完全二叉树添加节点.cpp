@@ -24,14 +24,14 @@ public:
             seq.push_back(rt -> right);
         }
     }
-    
+
     int insert(int val) {
         int x = seq.size();
         seq.push_back(new TreeNode(val));
         (x & 1 ? seq[x >> 1] -> right : seq[x >> 1] -> left) = seq[x];
         return seq[x >> 1] -> val;
     }
-    
+
     TreeNode* get_root() {
         return seq[1];
     }

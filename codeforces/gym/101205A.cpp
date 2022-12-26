@@ -5,7 +5,7 @@ const int maxn = 51, maxm = 1251, maxe = 1562501;
 const DB eps = 1e-9;
 inline int sgn(DB x) {
 	return (x > eps) - (x < -eps);
-} 
+}
 inline DB sqr(DB x) {
 	return x * x;
 }

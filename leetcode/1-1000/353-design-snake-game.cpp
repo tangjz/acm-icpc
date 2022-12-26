@@ -18,7 +18,7 @@ public:
         vis[cur] = 1;
         vis[{(*head)[0], (*head)[1]}] = 2;
     }
-    
+
     int move(string direction) {
         static const char *pat = "ULRD";
         static const int maxd = 4, dx[] = {-1, 0, 0, 1}, dy[] = {0, -1, 1, 0};

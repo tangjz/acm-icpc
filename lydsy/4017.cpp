@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
-using namespace std; 
+using namespace std;
 typedef long long LL;
 const int maxn = 100010, mod = 998244353;
 int n, a[maxn], x[maxn], bit[maxn], ans1;

@@ -55,7 +55,7 @@ def solve(d, xL, yL, xR, yR, bound) :
     cA, cB = seq[-1][0], seq[-1][1]
     print("%d: %d %d" % (d, cA, cB))
     return cA
-    
+
 rt = 0
 ans = 0
 for i in range(100) :

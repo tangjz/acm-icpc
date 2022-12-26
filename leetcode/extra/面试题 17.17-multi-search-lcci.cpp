@@ -9,7 +9,7 @@ class Solution {
     vector<Trie> nodes;
     vector<int> bcnt;
     int cur;
-    
+
     void parse(vector<string> &words) {
         int n = words.size();
         vector<int> ord(n);
@@ -53,7 +53,7 @@ class Solution {
             }
         }
     }
-    
+
     void build() {
         if(!nodes[0].cnt) {
             return;
@@ -87,7 +87,7 @@ class Solution {
             }
         }
     }
-    
+
 public:
     vector<vector<int>> multiSearch(string big, vector<string>& smalls) {
         bcnt.resize(maxm);

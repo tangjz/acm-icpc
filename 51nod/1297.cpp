@@ -15,7 +15,7 @@ void addEdge(int u, int v) {
 	e[m] = (Edge){lnk[v], u};
 	lnk[v] = m++;
 }
-void bfs(int rt) { // fa[rt], dep[rt] have been set 
+void bfs(int rt) { // fa[rt], dep[rt] have been set
 	tot = 0;
 	ord[tot++] = rt;
 	for(int i = 0; i < tot; ++i) {

@@ -75,7 +75,7 @@ public:
         }
         sort(cand.begin(), cand.end());
         if(cand.empty()) {
-            cand.push_back(*min_element(cost.begin(), cost.end()));            
+            cand.push_back(*min_element(cost.begin(), cost.end()));
         } else {
             cand.pop_back();
         }

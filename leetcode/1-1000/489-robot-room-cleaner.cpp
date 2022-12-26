@@ -20,7 +20,7 @@
 class Solution {
     static const int maxd = 4;
     static constexpr int dx[maxd] = {-1, 0, 1, 0}, dy[maxd] = {0, 1, 0, -1};
-    
+
     void dfs(int x, int y, Robot &bot, int &d, set<pair<int, int> > &sp) {
         int r = (d + 2) % maxd;
         bot.clean();

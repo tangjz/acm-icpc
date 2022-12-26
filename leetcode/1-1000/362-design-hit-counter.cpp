@@ -7,7 +7,7 @@ public:
         tot = 0;
         for( ; !que.empty(); que.pop());
     }
-    
+
     void hit(int timestamp) {
         while(!que.empty() && timestamp - que.front().first >= maxd) {
             tot -= que.front().second;
@@ -20,7 +20,7 @@ public:
         }
         ++tot;
     }
-    
+
     int getHits(int timestamp) {
         while(!que.empty() && timestamp - que.front().first >= maxd) {
             tot -= que.front().second;

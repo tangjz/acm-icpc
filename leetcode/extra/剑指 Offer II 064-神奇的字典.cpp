@@ -3,9 +3,9 @@ class MagicDictionary {
     unordered_map<string, int> ctr;
 public:
     MagicDictionary() {
-        
+
     }
-    
+
     void buildDict(vector<string> dictionary) {
         sp.clear();
         ctr.clear();
@@ -19,7 +19,7 @@ public:
             }
         }
     }
-    
+
     bool search(string searchWord) {
         int low = sp.count(searchWord);
         for(char &ch: searchWord) {

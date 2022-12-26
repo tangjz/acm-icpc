@@ -14,7 +14,7 @@ int main()
 {
 	inv[1] = 1;
 	for(int i = 2; i < maxn; ++i)
-		inv[i] = mod - (LL)mod / i * inv[mod % i] % mod; 
+		inv[i] = mod - (LL)mod / i * inv[mod % i] % mod;
 	inv[0] = fact[0] = 1;
 	for(int i = 1; i < maxn; ++i)
 	{
@@ -78,7 +78,7 @@ int main()
 			ans -= tmp;
 			if(ans < 0)
 				ans += mod;
-		} 
+		}
 		printf("%d\n", ans);
 	}
 	return 0;

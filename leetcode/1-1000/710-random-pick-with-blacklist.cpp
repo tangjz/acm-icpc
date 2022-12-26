@@ -10,7 +10,7 @@ public:
         K = blacklist.end() - head;
         sort(head, head + K);
     }
-    
+
     int pick() {
         int x = rnd() % M, L = 0, R = K;
         while(L < R) {

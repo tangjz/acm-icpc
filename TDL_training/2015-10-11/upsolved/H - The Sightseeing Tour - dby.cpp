@@ -11,7 +11,7 @@ inline bool cmp(int x,int y){
 	else return r[x] < r[y];
 }
 inline long long calc(int x,int tot,int cur){
-	if(x > tot) return (long long)sum[tot] + (long long)(x - tot) * cur;	
+	if(x > tot) return (long long)sum[tot] + (long long)(x - tot) * cur;
 	else return sum[x];
 }
 void dfs(int far,int co,int prel,int cur){
@@ -32,10 +32,10 @@ int main(){
 		scanf("%d%d%d",&n,&m,&k);
 		int tot = 0;
 		for(int i = 0;i < m;++ i){
-			scanf("%d%d%d",&l[i],&r[i],&c[i]); ord[i] = i;	
+			scanf("%d%d%d",&l[i],&r[i],&c[i]); ord[i] = i;
 			tot += c[i];
 		}
-		sort(ord,ord + m,cmp);	
+		sort(ord,ord + m,cmp);
 		for(int i = 0;i <= tot;++ i) sum[i] = -1;
 		dfs(0,0,0,0);
 		int cur = 0;

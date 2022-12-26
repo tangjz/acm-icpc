@@ -42,7 +42,7 @@ public:
                 bitUpd(out[it[1]] + 1, mod - it[2]);
             } else {
                 int ans = bitQue(out[it[1]]) - bitQue(in[it[1]] - 1);
-                ret.push_back(ans < 0 ? ans + mod : ans);                
+                ret.push_back(ans < 0 ? ans + mod : ans);
             }
         }
         return ret;

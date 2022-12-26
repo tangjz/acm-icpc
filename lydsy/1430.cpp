@@ -1,6 +1,6 @@
 /*
- * 带标号n点的生成树个数为n ^ (n - 2)
- * 此题还有加边顺序 
+ * 甯︽爣鍙穘鐐圭殑鐢熸垚鏍戜釜鏁颁负n ^ (n - 2)
+ * 姝ら杩樻湁鍔犺竟椤哄簭
  */
 #include <cstdio>
 typedef long long LL;
@@ -19,5 +19,5 @@ int main()
 		k >>= 1;
 	}
 	printf("%d\n", ans);
-	return 0; 
+	return 0;
 }

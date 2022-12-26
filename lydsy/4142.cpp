@@ -84,6 +84,6 @@ int main()
 	}
 	printf("%lld\n%lld\n", ans1, ans2);
 	for(int i = 1; i <= n; ++i)
-		printf("%lld%c", ans3[i], " \n"[i == n]);	
+		printf("%lld%c", ans3[i], " \n"[i == n]);
 	return 0;
 }

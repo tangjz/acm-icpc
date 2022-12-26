@@ -6,9 +6,9 @@ class AutocompleteSystem {
         map<char, TrieNode *> childs;
         TrieNode() : val(0), cand(), childs(map<char, TrieNode *>()) {}
     } *root, *cur;
-    
+
     string buf;
-    
+
     void insert(string key, int val = 1) {
         TrieNode *cur = root;
         auto extend = [&]() {
@@ -40,8 +40,8 @@ class AutocompleteSystem {
         }
         cur -> val = val;
     }
-    
-    
+
+
 public:
     AutocompleteSystem(vector<string>& sentences, vector<int>& times) {
         root = new TrieNode();
@@ -56,7 +56,7 @@ public:
         cur = root;
         buf = "";
     }
-    
+
     vector<string> input(char ch) {
         vector<string> ret;
         if(ch == '#') {

@@ -17,7 +17,7 @@ public class Main {
 			hpB -= i + 1;
 		}
 		if(hpB > 0) {
-			int upp = (int)((long)timA * (timA + 1) / 2) - hpA;			
+			int upp = (int)((long)timA * (timA + 1) / 2) - hpA;
 			ans[upp - 1] = 'B';
 		}
 		return String.valueOf(ans);

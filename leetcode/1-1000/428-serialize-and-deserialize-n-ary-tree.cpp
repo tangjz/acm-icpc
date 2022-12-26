@@ -45,7 +45,7 @@ public:
         ret.pop_back();
         return ret;
     }
-	
+
     // Decodes your encoded data to tree.
     Node* deserialize(string_view data) {
         Node *ret = nullptr;

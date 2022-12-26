@@ -23,7 +23,7 @@ public:
             }
         }
     }
-    
+
     int f(string prefix, string suffix) {
         LL cur = 0;
         for(char ch: prefix)

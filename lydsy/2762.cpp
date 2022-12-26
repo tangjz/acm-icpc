@@ -1,5 +1,5 @@
 /*
- * 区间修改 单点询问 注意方程的解 (吐魂 
+ * 鍖洪棿淇敼 鍗曠偣璇㈤棶 娉ㄦ剰鏂圭▼鐨勮В (鍚愰瓊
  */
 #include <cstdio>
 const int m = 1 << 21, maxn = 1000000, add = 1000001;
@@ -64,7 +64,7 @@ int main()
 		else if(ch[0] == 'D')
 		{
 			scanf("%d", &x);
-			
+
 			if(!vis[x]) continue;
 			Tree.change(num[x][0] + add, -1);
 			if(num[x][1] < maxn) Tree.change(num[x][1] + 1 + add, 1);

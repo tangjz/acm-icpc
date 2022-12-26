@@ -5,7 +5,7 @@ class VideoSharingPlatform {
 public:
     VideoSharingPlatform() {
     }
-    
+
     int upload(string video) {
         int videoId;
         if(cand.empty()) {
@@ -21,7 +21,7 @@ public:
         seq[videoId] = move(video);
         return videoId;
     }
-    
+
     void remove(int videoId) {
         if(videoId < seq.size() && !seq[videoId].empty()) {
             seq[videoId] = "";
@@ -29,30 +29,30 @@ public:
             cand.push(-videoId);
         }
     }
-    
+
     string watch(int videoId, int startMinute, int endMinute) {
         if(videoId >= seq.size() || seq[videoId].empty())
             return "-1";
         ++ctr[0][videoId];
         return seq[videoId].substr(startMinute, min(endMinute + 1, (int)seq[videoId].size()) - startMinute);
     }
-    
+
     void like(int videoId) {
         if(videoId < seq.size() && !seq[videoId].empty())
             ++ctr[1][videoId];
     }
-    
+
     void dislike(int videoId) {
         if(videoId < seq.size() && !seq[videoId].empty())
             ++ctr[2][videoId];
     }
-    
+
     vector<int> getLikesAndDislikes(int videoId) {
         if(videoId >= seq.size() || seq[videoId].empty())
             return {-1};
         return {ctr[1][videoId], ctr[2][videoId]};
     }
-    
+
     int getViews(int videoId) {
         if(videoId >= seq.size() || seq[videoId].empty())
             return -1;

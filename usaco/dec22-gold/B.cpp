@@ -147,7 +147,7 @@ void solve() {
                         }
                     }
                 }
-                
+
                 ans[k] += seg[rt].first;
             }
         }

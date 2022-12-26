@@ -9,7 +9,7 @@ class Tinder {
 
 public:
     Tinder() {
-        
+
     }
 
     void signup(int userId, int gender, int preferredGender, int age, int minPreferredAge, int maxPreferredAge, vector<string> interests) {

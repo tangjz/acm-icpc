@@ -19,7 +19,7 @@ int main() {
 		LL ans = 0;
 		for(int i = 1; i < mx; ++i)
 			ans += f[3][i];
-		printf("%lld\n", ans % mod);	
+		printf("%lld\n", ans % mod);
 	}
 	return 0;
 }

@@ -1,5 +1,5 @@
 /*
- * 逆着来加边就比较简单了... 
+ * 閫嗙潃鏉ュ姞杈瑰氨姣旇緝绠�鍗曚簡...
  */
 #include <cstdio>
 struct Line { int v, next; } line[400002];

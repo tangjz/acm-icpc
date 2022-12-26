@@ -4,11 +4,11 @@ public:
     TimeMap() {
         Hash.clear();
     }
-    
+
     void set(string key, string value, int timestamp) {
         Hash[key].push_back({timestamp, value});
     }
-    
+
     string get(string key, int timestamp) {
         if(!Hash.count(key))
             return "";

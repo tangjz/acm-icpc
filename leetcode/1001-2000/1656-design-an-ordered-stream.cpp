@@ -6,7 +6,7 @@ public:
         pos = 0;
         vector<string>(n).swap(seq);
     }
-    
+
     vector<string> insert(int idKey, string value) {
         seq[idKey - 1] = value;
         vector<string> ret;

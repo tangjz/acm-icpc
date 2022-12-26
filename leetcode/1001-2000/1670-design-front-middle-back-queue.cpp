@@ -5,7 +5,7 @@ public:
         deque<int>().swap(lft);
         deque<int>().swap(rht);
     }
-    
+
     void pushFront(int val) {
         lft.push_front(val);
         while(lft.size() - 1 >= rht.size() + 1) {
@@ -13,7 +13,7 @@ public:
             lft.pop_back();
         }
     }
-    
+
     void pushMiddle(int val) {
         if(lft.size() > rht.size()) {
             rht.push_front(lft.back());
@@ -21,7 +21,7 @@ public:
         }
         lft.push_back(val);
     }
-    
+
     void pushBack(int val) {
         rht.push_back(val);
         while(lft.size() < rht.size()) {
@@ -29,7 +29,7 @@ public:
             rht.pop_front();
         }
     }
-    
+
     int popFront() {
         if(lft.empty())
             return -1;
@@ -41,7 +41,7 @@ public:
         }
         return ret;
     }
-    
+
     int popMiddle() {
         if(lft.empty())
             return -1;
@@ -53,7 +53,7 @@ public:
         }
         return ret;
     }
-    
+
     int popBack() {
         if(lft.empty())
             return -1;

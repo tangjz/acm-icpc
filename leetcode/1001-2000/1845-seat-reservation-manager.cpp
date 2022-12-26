@@ -7,13 +7,13 @@ public:
         for(int i = 1; i <= n; ++i)
             que.push(-i);
     }
-    
+
     int reserve() {
         int ret = -que.top();
         que.pop();
         return ret;
     }
-    
+
     void unreserve(int seatNumber) {
         que.push(-seatNumber);
     }

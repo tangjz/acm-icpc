@@ -7,7 +7,7 @@ public:
         for( ; !low.empty(); low.pop());
         for( ; !upp.empty(); upp.pop());
     }
-    
+
     void addNum(int num) {
         if(upp.empty() || upp.top() <= num) {
             upp.push(num);
@@ -22,7 +22,7 @@ public:
             upp.pop();
         }
     }
-    
+
     double findMedian() {
         if(upp.empty())
             return 0.0;

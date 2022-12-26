@@ -1,5 +1,5 @@
 /*
- * 外向树的连通块个数 
+ * 澶栧悜鏍戠殑杩為�氬潡涓暟
  */
 #include <cstdio>
 int n, fa[1000001], ans;

@@ -1,5 +1,5 @@
 /*
- * KMPÔ¤´¦Àí³öµÝÍÆ¾ØÕó È»ºó¼ÓËÙ 
+ * KMPé¢„å¤„ç†å‡ºé€’æŽ¨çŸ©é˜µ ç„¶åŽåŠ é€Ÿ
  */
 #include<cstdio>
 int n, m, K, a[30], p[30];

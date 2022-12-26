@@ -6,12 +6,12 @@ public:
         mex = 0;
         vis.assign(n + 1, false);
     }
-    
+
     void upload(int video) {
         vis[--video] = 1;
         for( ; vis[mex]; ++mex);
     }
-    
+
     int longest() {
         return mex;
     }

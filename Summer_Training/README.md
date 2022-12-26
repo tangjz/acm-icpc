@@ -7,10 +7,12 @@
 /self-train/TRAIN_DATE : accepted codes for self-training
 
 ## Training List (self/team/total)
-	2016-07-17	04/06/09	2012 Multi-University Training Contest 4
+	2016-07-17	05/07/09	2012 Multi-University Training Contest 4
 	https://acm.bnu.edu.cn/v3/contest_show.php?cid=8018
 	2016-07-19	11/11/11	2016 Multi-University Training Contest 1
 	http://acm.hdu.edu.cn/contests/contest_show.php?cid=704
+	2016-07-21	04/08/13	2016 Multi-University Training Contest 2
+	http://acm.hdu.edu.cn/contests/contest_show.php?cid=705
 
 ## Tangjz self-train List (self/total)
 	2016-07-11	09/09		2015-2016 ACM-ICPC East Central North America Regional Contest (ECNA 2015)

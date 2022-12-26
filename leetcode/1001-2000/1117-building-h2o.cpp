@@ -4,7 +4,7 @@ class H2O {
     mutex lock;
     bool typ;
     sem_t s_h, s_o;
-    
+
     void check() {
         lock_guard cur(lock);
         typ = !typ;
@@ -14,7 +14,7 @@ class H2O {
             sem_post(&s_o);
         }
     }
-    
+
 public:
     H2O() {
         typ = 0;

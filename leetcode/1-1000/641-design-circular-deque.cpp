@@ -7,7 +7,7 @@ public:
         que.resize(cap + 1);
         L = R = 0;
     }
-    
+
     bool insertFront(int value) {
         int nxtL = L - 1;
         nxtL < 0 && (nxtL = cap);
@@ -17,7 +17,7 @@ public:
         que[L] = value;
         return 1;
     }
-    
+
     bool insertLast(int value) {
         int nxtR = R + 1;
         nxtR > cap && (nxtR = 0);
@@ -27,27 +27,27 @@ public:
         R = nxtR;
         return 1;
     }
-    
+
     bool deleteFront() {
         if(L == R)
             return 0;
         (++L) > cap && (L = 0);
         return 1;
     }
-    
+
     bool deleteLast() {
         if(L == R)
             return 0;
         (--R) < 0 && (R = cap);
         return 1;
     }
-    
+
     int getFront() {
         if(L == R)
             return -1;
         return que[L];
     }
-    
+
     int getRear() {
         if(L == R)
             return -1;
@@ -55,11 +55,11 @@ public:
         preR < 0 && (preR = cap);
         return que[preR];
     }
-    
+
     bool isEmpty() {
         return L == R;
     }
-    
+
     bool isFull() {
         int nxtR = R + 1;
         nxtR > cap && (nxtR = 0);

@@ -54,7 +54,7 @@ public:
         for(int i = 0; i < n; ++i)
             pos[arr[i]].push_back(i);
     }
-    
+
     int query(int left, int right, int threshold) {
         pair<int, int> ans = seg_que(0, n - 1, left, right);
         // printf("%d %d %d\n", ans.first, ans.second, pos_cnt(ans.first, left, right));

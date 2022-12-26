@@ -1,7 +1,7 @@
 /*
- * ¶ñÐÄÌâ ×¢ÒâÄÚ´æ
- * ´ð°¸ÔÚ2^3 ~ 2^64Ö®¼ä 
- * ¶ÔÓÚÒç³öunsigned long longµÄ2^64½øÐÐÌØÅÐÊä³ö 
+ * æ¶å¿ƒé¢˜ æ³¨æ„å†…å­˜
+ * ç­”æ¡ˆåœ¨2^3 ~ 2^64ä¹‹é—´
+ * å¯¹äºŽæº¢å‡ºunsigned long longçš„2^64è¿›è¡Œç‰¹åˆ¤è¾“å‡º
  */
 #include <stdio.h>
 #include <string.h>

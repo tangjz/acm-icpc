@@ -28,17 +28,17 @@ public:
         vector<vector<int> >().swap(child);
         root = getIndex(kingName);
     }
-    
+
     void birth(string parentName, string childName) {
         int par = getIndex(parentName), chd = getIndex(childName);
         child[par].push_back(chd);
     }
-    
+
     void death(string name) {
         int cur = getIndex(name);
         alive[cur] = 0;
     }
-    
+
     vector<string> getInheritanceOrder() {
         vector<string> ret;
         dfs(root, ret);

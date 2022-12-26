@@ -46,7 +46,7 @@ public class Main {
 		}
 		return c;
 	}
-	
+
 	static final int sftLen = 300;
 	static final BigInteger pi = new BigInteger("6399537258350533155033943479672909410430835048980332607456213094006036735347581777115873280");
 	static final BigInteger one = BigInteger.ONE.shiftLeft(sftLen);
@@ -112,7 +112,7 @@ public class Main {
 		val = val.subtract(rem[0].multiply(ln10));
 		return exp(val).shiftRight(sftLen);
 	}
-	
+
 	static final int lown = 101;
 	public static void main(String[] args) {
 		Scanner cin = new Scanner(System.in);

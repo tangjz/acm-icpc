@@ -1,6 +1,6 @@
 /*
- * Ö±½ÓËã 
- */ 
+ * ç›´æ¥ç®—
+ */
 #include <cstdio>
 int ans, dep;
 char ch[100010];

@@ -8,11 +8,11 @@ public:
         map<int, int>().swap(times);
         for( ; !queue.empty(); queue.pop());
     }
-    
+
     void push(int x) {
         queue.push(make_pair(++times[x], make_pair(++counter, x)));
     }
-    
+
     int pop() {
         int ret = queue.top().second.second;
         queue.pop();

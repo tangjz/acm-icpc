@@ -29,15 +29,15 @@ void init_eps(int n)
 		inv_eps[i] = inv_eps[i - 1] * inv_base % mod;
 	}
 }
-LL mod_add(LL x, LL d) 
+LL mod_add(LL x, LL d)
 {
-	x += d; 
-	return x >= mod ? x - mod : x; 
+	x += d;
+	return x >= mod ? x - mod : x;
 }
-LL mod_sub(LL x, LL d) 
+LL mod_sub(LL x, LL d)
 {
-	x -= d; 
-	return x < 0 ? x + mod : x; 
+	x -= d;
+	return x < 0 ? x + mod : x;
 }
 void NTT(int n, LL *x, LL *w)
 {

@@ -41,7 +41,7 @@ int main() {
 				xR += L * xL;
 				yR += L * yL;
 			} else {
-				int L = 1, R = min(xR ? (xMax - xL) / xR : INF, yR ? (yMax - yL) / yR : INF); 
+				int L = 1, R = min(xR ? (xMax - xL) / xR : INF, yR ? (yMax - yL) / yR : INF);
 				while(L < R) {
 					int M = (L + R + 1) >> 1;
 					xM = xL + M * xR;

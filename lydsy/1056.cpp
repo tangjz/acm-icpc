@@ -1,7 +1,7 @@
 /*
- * °´·ÖÊýºÍ²åÈëÊ±¼äÎª¹Ø¼ü×Ö×öSBT
- * Ö¸ÕëµÄÔö¼õÀË·ÑÊ±¼ä 
- */ 
+ * æŒ‰åˆ†æ•°å’Œæ’å…¥æ—¶é—´ä¸ºå…³é”®å­—åšSBT
+ * æŒ‡é’ˆçš„å¢žå‡æµªè´¹æ—¶é—´
+ */
 #include <map>
 #include <cstdio>
 #include <cstring>

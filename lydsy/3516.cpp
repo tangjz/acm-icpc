@@ -1,5 +1,5 @@
 /*
- * ͬ3157 
+ * 3157
  */
 #include <cstdio>
 typedef long long LL;
@@ -41,7 +41,7 @@ int main()
 		for(int j = 0; j < i; ++j)
 		{
 			s[i] = (s[i] + ((i - j) & 1 ? -1 : 1) * (LL)c[i][j] * s[j]) % mod;
-			if(s[i] < 0) s[i] += mod; 
+			if(s[i] < 0) s[i] += mod;
 		}
 		s[i] = (LL)s[i] * inv % mod;
 	}

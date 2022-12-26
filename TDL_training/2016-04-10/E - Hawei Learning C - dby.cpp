@@ -4,7 +4,7 @@
 using namespace std;
 const int MAXN = 100000 + 5;
 char buf[MAXN];
- 
+
 int main(){
 	int TT;
 	scanf("%d",&TT);

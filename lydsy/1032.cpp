@@ -1,11 +1,11 @@
 /*
- * 能Ac的某种区间dp，但是这个有后效性的，所以数据太弱了 
+ * 鑳紸c鐨勬煇绉嶅尯闂磀p锛屼絾鏄繖涓湁鍚庢晥鎬х殑锛屾墍浠ユ暟鎹お寮变簡
  */
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
 using namespace std;
-const int maxn = 501, INF = 0x3f3f3f3f; 
+const int maxn = 501, INF = 0x3f3f3f3f;
 int n, cnt, a[maxn], b[maxn], f[maxn][maxn];
 int dp(int l, int r)
 {

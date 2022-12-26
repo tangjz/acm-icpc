@@ -11,14 +11,14 @@ class Solution {
     }
 public:
     Solution(int n_rows, int n_cols) : R(n_rows), C(n_cols), M(n_rows * n_cols), perm({}), rnd(time(NULL)) {}
-    
+
     vector<int> flip() {
         int pos = rnd() % (M--), u = getID(pos), v = getID(M);
         setID(pos, v);
         setID(M, u);
         return {u / C, u % C};
     }
-    
+
     void reset() {
         M = R * C;
     }

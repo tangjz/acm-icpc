@@ -47,7 +47,7 @@ int main() {
             sum[i] = sum[i - 1] + log(p[i][mx - pL[i]]) - log(maxv);
         }
         for(int i = 1; i <= m; ++i) {
-            scanf("%d", seq[1] + i); 
+            scanf("%d", seq[1] + i);
             hh[1][i] = hh[1][i - 1] * BASE + (Hash){{seq[1][i], seq[1][i]}};
         }
         printf("Case #%d:\n", Case);

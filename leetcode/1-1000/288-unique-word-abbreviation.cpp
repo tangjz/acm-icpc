@@ -1,6 +1,6 @@
 class ValidWordAbbr {
     unordered_map<string, string> Hash;
-    
+
     string abbr(string key) {
         if(key.size() <= 2)
             return key;
@@ -10,7 +10,7 @@ class ValidWordAbbr {
         ret.push_back(key.back());
         return ret;
     }
-    
+
 public:
     ValidWordAbbr(vector<string>& dictionary) {
         Hash.clear();
@@ -24,7 +24,7 @@ public:
             }
         }
     }
-    
+
     bool isUnique(string word) {
         string pat = abbr(word);
         auto it = Hash.find(pat);

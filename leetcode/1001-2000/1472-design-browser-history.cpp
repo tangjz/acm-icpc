@@ -7,18 +7,18 @@ public:
         his.push_back(homepage);
         pos = 0;
     }
-    
+
     void visit(string url) {
         his.resize(pos + 1);
         his.push_back(url);
         ++pos;
     }
-    
+
     string back(int steps) {
         pos = max(pos - steps, 0);
         return his[pos];
     }
-    
+
     string forward(int steps) {
         pos = min(pos + steps, (int)his.size() - 1);
         return his[pos];

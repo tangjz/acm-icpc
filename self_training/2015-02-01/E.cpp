@@ -33,7 +33,7 @@ int main()
 	{
 		scanf("%d%lld", &k, &n);
 		for(int i = 0; i < k; ++i)
-			scanf("%lld", a + i); 
+			scanf("%lld", a + i);
 		L = 1, R = maxr;
 		while(L < R)
 		{

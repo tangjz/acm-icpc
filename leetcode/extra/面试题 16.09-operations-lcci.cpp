@@ -2,7 +2,7 @@ class Operations {
 public:
     Operations() {
     }
-    
+
     int minus(int a, int b) {
         if(b == INT_MIN)
             return (a + 1) + INT_MAX;
@@ -25,7 +25,7 @@ public:
             c += b < 0 ? 1 : -1;
         return c;
     }
-    
+
     int multiply(int a, int b) {
         if(!a || !b)
             return 0;
@@ -69,7 +69,7 @@ public:
         }
         return res;
     }
-    
+
     int divide(int a, int b) {
         if(!a)
             return 0;

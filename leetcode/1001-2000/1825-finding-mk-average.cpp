@@ -12,7 +12,7 @@ public:
         vector<int>(tot).swap(seq);
         sumM = 0;
     }
-    
+
     void addElement(int num) {
         if(seq[pos] > 0) {
             assert(sumM > 0);
@@ -76,7 +76,7 @@ public:
         }
         // printf("sumM %lld pos %d seq[pos] %d\n", sumM, pos, seq[pos]);
     }
-    
+
     int calculateMKAverage() {
         return seq[pos] > 0 ? sumM / (tot - sz - sz) : -1;
     }

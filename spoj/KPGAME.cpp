@@ -7,7 +7,7 @@ int main()
 	while(t--)
 	{
 		scanf("%d%lf%lf", &n, &p, &q);
-		if(n > 100) n = 100;//exp < 10^-30 
+		if(n > 100) n = 100;//exp < 10^-30
 		tmp = p + q - p * q;
 		e1 = p / tmp; e2 = 1 - e1;
 		e4 = q / tmp; e3 = 1 - e4;
@@ -26,7 +26,7 @@ int main()
 				f[i] = f[i - 1] * e6 + g[i - 1] * e5;
 				g[i] = f[i - 1] * e8 + g[i - 1] * e7;
 			}
-		printf("%.6lf\n", f[n]); 
+		printf("%.6lf\n", f[n]);
 	}
 	return 0;
 }

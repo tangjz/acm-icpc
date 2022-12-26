@@ -29,7 +29,7 @@ LL exgcd(LL a, LL b, LL &x, LL &y)
 	return r;
 }
 //x = a1 + m1 * t1
-//x = a2 + m2 * t2 
+//x = a2 + m2 * t2
 //m1 * t1 - m2 * t2 = a2 - a1
 //x = a1 + m1 * t1 = a1 + m1 * t10 + m1 * m2 / gcd(m1, m2)
 LL CRT(LL a1, LL m1, LL a2, LL m2, LL &mod)

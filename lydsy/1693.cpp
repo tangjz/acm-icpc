@@ -1,6 +1,6 @@
 /*
- * 行与列的二分图匹配，某行与某列连边当且仅当交叉处有一个点 
- */ 
+ * 琛屼笌鍒楃殑浜屽垎鍥惧尮閰嶏紝鏌愯涓庢煇鍒楄繛杈瑰綋涓斾粎褰撲氦鍙夊鏈変竴涓偣
+ */
 #include <vector>
 #include <cstdio>
 #include <cstring>

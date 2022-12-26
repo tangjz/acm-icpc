@@ -1,6 +1,6 @@
 /*
- * 先枚举一部分 然后容斥 
- */ 
+ * 鍏堟灇涓句竴閮ㄥ垎 鐒跺悗瀹规枼
+ */
 #include <cstdio>
 int tot;
 long long n, p[80001];

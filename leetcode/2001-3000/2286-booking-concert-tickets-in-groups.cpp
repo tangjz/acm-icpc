@@ -72,7 +72,7 @@ public:
         seg.resize(n << 1);
         segInit(0, n - 1);
     }
-    
+
     vector<int> gather(int k, int maxRow) {
         Node ret = segQue(0, n - 1, 0, maxRow);
         if(ret.upp < k)
@@ -81,7 +81,7 @@ public:
         segDec(0, n - 1, pos, pos, k);
         return {pos, m - rem};
     }
-    
+
     bool scatter(int k, int maxRow) {
         Node ret = segQue(0, n - 1, 0, maxRow);
         if(ret.sum < k)

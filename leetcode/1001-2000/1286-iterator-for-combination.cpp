@@ -11,7 +11,7 @@ public:
         iota(cur.begin(), cur.end(), 0);
         pos = 0;
     }
-    
+
     string next() {
         string ret = "";
         for(int x : cur)
@@ -24,7 +24,7 @@ public:
         }
         return ret;
     }
-    
+
     bool hasNext() {
         return pos >= 0;
     }

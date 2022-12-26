@@ -1,5 +1,5 @@
 /*
- * ͬ1045 
+ * 1045
  */
 #include <cstdio>
 #include <algorithm>

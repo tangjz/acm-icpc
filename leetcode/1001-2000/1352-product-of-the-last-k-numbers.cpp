@@ -7,7 +7,7 @@ public:
         las = -1;
         vector<pair<int, int> >().swap(que);
     }
-    
+
     void add(int num) {
         if(!num) {
             las = tot;
@@ -16,7 +16,7 @@ public:
         }
         ++tot;
     }
-    
+
     int getProduct(int k) {
         int low = tot - k;
         if(las >= low)

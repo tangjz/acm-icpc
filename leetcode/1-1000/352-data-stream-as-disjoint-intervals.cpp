@@ -7,7 +7,7 @@ public:
         pL.clear();
         pR.clear();
     }
-    
+
     void addNum(int val) {
         if(sp.count(val))
             return;
@@ -28,7 +28,7 @@ public:
         pL.insert({R, L});
         pR.insert({L, R});
     }
-    
+
     vector<vector<int>> getIntervals() {
         vector<vector<int> > ret;
         ret.reserve(pR.size());

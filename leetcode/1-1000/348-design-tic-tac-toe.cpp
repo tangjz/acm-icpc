@@ -10,7 +10,7 @@ public:
         c[0].assign(n, 0);
         c[1].assign(n, 0);
     }
-    
+
     int move(int row, int col, int player) {
         --player;
         if((++r[player][row]) == n)

@@ -9,13 +9,13 @@ public:
         sem_init(&rem, 0, capacity);
         queue<int>().swap(que);
     }
-    
+
     void enqueue(int element) {
         sem_wait(&rem);
         que.push(element);
         sem_post(&ctr);
     }
-    
+
     int dequeue() {
         sem_wait(&ctr);
         int x = que.front();
@@ -23,7 +23,7 @@ public:
         sem_post(&rem);
         return x;
     }
-    
+
     int size() {
         return que.size();
     }

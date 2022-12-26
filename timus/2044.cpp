@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std; 
+using namespace std;
 const int maxn = (int)3e5 + 3, maxl = 25, BLEN = 31, BMSK = 0x7FFFFFFF, S = 0x55555555;
 int n, m, f[2][maxn], g[2][maxn];
 char str[maxn];

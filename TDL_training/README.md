@@ -43,6 +43,8 @@
 	2015-09-26	2015 Asia Online Shanghai
 	2015-09-27	2015 Asia Online Hefei
 	2015-10-30	2012 NEERC Moscow Subregional Contest
+	2015-11-02	2008 Asia Hefei
+	2016-05-22	XVI OpenCup SPB
 
 ####Offline Contest
 	2015-04-19	2015 BUPT Programming Contest

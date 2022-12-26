@@ -7,7 +7,7 @@ public:
         head = encoding.begin() + 1;
         tail = encoding.end();
     }
-    
+
     int next(int n) {
         while(n > 0 && head != tail) {
             if(!rem) {

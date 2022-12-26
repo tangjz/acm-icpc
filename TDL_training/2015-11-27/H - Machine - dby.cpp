@@ -31,6 +31,6 @@ int main(){
 			son[f[i]][tot[f[i]] ++] = w[i];
 		}
 		printf("%d\n",w[1]);
-	}	
+	}
 	return 0;
 }

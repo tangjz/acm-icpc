@@ -2,7 +2,7 @@ class NumMatrix {
     int n, m;
     vector<vector<int> > mat;
     vector<vector<long long> > bits;
-    
+
     long long query(int row, int col) {
         if(row < 0 || col < 0)
             return 0;
@@ -24,7 +24,7 @@ public:
                         bits[x - 1][y - 1] += matrix[i][j];
         mat = move(matrix);
     }
-    
+
     void update(int row, int col, int val) {
         int dt = val - mat[row][col];
         for(int x = row + 1; x <= n; x += x & -x)
@@ -32,7 +32,7 @@ public:
                 bits[x - 1][y - 1] += dt;
         mat[row][col] = val;
     }
-    
+
     int sumRegion(int row1, int col1, int row2, int col2) {
         return query(row2, col2) - query(row1 - 1, col2) - query(row2, col1 - 1) + query(row1 - 1, col1 - 1);
     }

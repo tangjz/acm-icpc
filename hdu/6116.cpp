@@ -7,7 +7,7 @@ void conv(int alen, int a[], int blen, int b[], int f[]) {
         f[i] = 0;
     for(int i = 0; i < alen; ++i)
         for(int j = 0; j < blen; ++j)
-            f[i + j] = (f[i + j] + (LL)a[i] * b[j]) % mod; 
+            f[i + j] = (f[i + j] + (LL)a[i] * b[j]) % mod;
 }
 int main() {
     iact[1] = 1;

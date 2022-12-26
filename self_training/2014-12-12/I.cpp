@@ -26,7 +26,7 @@ void fact()
 		}
 	}
 	flag = X > 1 || a[0] > 54 || a[1] > 36 || a[2] > 18 || a[3] > 18;
-} 
+}
 long long sum(long long M)
 {
 	if(M <= 0 || flag)
@@ -96,6 +96,6 @@ int main()
 		fact();
 		printf("%lld\n", sum(R) - sum(L - 1));
 	}
-	return 0; 
+	return 0;
 }
 

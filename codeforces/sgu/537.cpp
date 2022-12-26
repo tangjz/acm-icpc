@@ -63,7 +63,7 @@ void solve() {
 		p[pcnt++] = {com, 1};
 		// printf("div (%lld, %d)\n", p[pcnt - 1].first, p[pcnt - 1].second);
 	}
-	
+
 	int dcnt = 0;
 	static LL fct[maxm + 1];
 	dfs(pcnt, p, dcnt, fct, 1LL);

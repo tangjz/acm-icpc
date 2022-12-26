@@ -1,6 +1,6 @@
 /*
- * ������У�ͳ�������ͺ͸����� 
- * ��Сֵ�β�����������е�ֵ���ֿ��� 
+ * 差分序列，统计正数和和负数和
+ * 最小值次操作后才有序列的值多种可能
  */
 #include <cstdio>
 int n, ch, last, now;
@@ -20,7 +20,7 @@ int main()
 	{
 		scan(now);
 		calc(now - last);
-		last = now; 
+		last = now;
 	}
 	if(x < y) { long long t = x; x = y; y = t; }
 	printf("%lld\n%lld\n", x, x - y + 1);

@@ -7,7 +7,7 @@ public:
         n = m = 0;
         stk[n++] = make_pair(INT_MAX, -1);
     }
-    
+
     int next(int price) {
         for( ; stk[n - 1].first <= price; --n);
         int ans = m - stk[n - 1].second;

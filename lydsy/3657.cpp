@@ -65,7 +65,7 @@ int main()
 		}
 		ans += tmp;
 		if(ans >= mod)
-			ans -= mod;		
+			ans -= mod;
 	}
 	printf("%d\n", ans);
 	return 0;

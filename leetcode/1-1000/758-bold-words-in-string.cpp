@@ -45,7 +45,7 @@ public:
                 len[v] = max(len[v], len[k]);
             }
         }
-        
+
         const int maxn = (int)1e3 + 1, maxl = (int)1e4 + 1;
         static int bold[maxn];
         static char buf[maxl];

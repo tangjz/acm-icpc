@@ -17,7 +17,7 @@ public:
         }
         for(mx = 1; (mx << 1) <= n + maxd; mx <<= 1);
     }
-    
+
     int fetch(int k) {
         int pos = 0;
         for(int i = mx, nxt; i > 0; i >>= 1) {

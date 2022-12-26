@@ -6,12 +6,12 @@ public:
         stack<int>().swap(vals);
         sp.clear();
     }
-    
+
     void push(int x) {
         sp.insert({x, vals.size()});
         vals.push(x);
     }
-    
+
     int pop() {
         int x;
         do {
@@ -20,17 +20,17 @@ public:
         } while(!sp.erase({x, vals.size()}));
         return x;
     }
-    
+
     int top() {
         while(!sp.count({vals.top(), vals.size() - 1}))
             vals.pop();
         return vals.top();
     }
-    
+
     int peekMax() {
         return sp.rbegin() -> first;
     }
-    
+
     int popMax() {
         pair<int, int> ret = *sp.rbegin();
         sp.erase(ret);

@@ -4,7 +4,7 @@ public:
         static const int maxn = 101;
         static int n, a[maxn], c[maxn], idx[maxn], pL[maxn];
         static int st = 0, tim[maxn][maxn][maxn], dp[maxn][maxn][maxn];
-        
+
         n = 0;
         for(int x: boxes)
             if(!n || a[n - 1] != x) {
@@ -18,7 +18,7 @@ public:
             pL[i] = idx[a[i]];
             idx[a[i]] = i;
         }
-        
+
         auto sqr = [](int x) -> int {
             return x * x;
         };

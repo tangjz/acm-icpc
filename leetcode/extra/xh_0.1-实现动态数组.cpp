@@ -19,24 +19,24 @@ public:
     ~LCArray() {
         delete[] arr;
     }
-    
+
     void push_back(int n) {
         if(len == cap)
             rescale(cap + max(cap >> 1, 1));
         arr[len++] = n;
     }
-    
+
     void pop_back() {
         if(len > 0)
             --len;
         if(len > lowCap && len + len < cap)
             rescale(cap >> 1);
     }
-    
+
     int size() {
         return len;
     }
-    
+
     int index(int idx) {
         return idx < len ? arr[idx] : -1;
     }

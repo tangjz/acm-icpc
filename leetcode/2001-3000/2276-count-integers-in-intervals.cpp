@@ -24,12 +24,12 @@ class CountIntervals {
         cnt += right - left;
         seg.insert({left, right});
     }
-    
+
     bool queryRange(int left, int right) {
         auto it = seg.upper_bound({left, INT_MAX});
         return it != seg.begin() && (--it) -> second >= right;
     }
-    
+
     void removeRange(int left, int right) {
         while(true) {
             auto it = seg.upper_bound({left, INT_MAX});
@@ -71,11 +71,11 @@ public:
         cnt = 0;
         seg.clear();
     }
-    
+
     void add(int left, int right) {
         addRange(left, right + 1);
     }
-    
+
     int count() {
         return cnt;
     }

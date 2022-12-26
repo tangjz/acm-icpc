@@ -86,7 +86,7 @@ int main()
 		M = 0;
 		S = N - 2;
 		T = N - 1;
-		memset(lnk, -1, N * sizeof(int));		
+		memset(lnk, -1, N * sizeof(int));
 		int sum = 0;
 		for(int i = 0; i < n; ++i)
 		{

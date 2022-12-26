@@ -1,5 +1,5 @@
 /*
- * 把大的丢进尽量小的容器里 
+ * 鎶婂ぇ鐨勪涪杩涘敖閲忓皬鐨勫鍣ㄩ噷
  */
 #include <cstdio>
 #include <algorithm>

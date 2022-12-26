@@ -77,7 +77,7 @@ int main()
 			for(int j = 1; j <= n; ++j)
 				cur_e[i][j] = e[1][i][j] + std::max(tim[0][i], tim[0][cur_match[j]]);
 		cur_match = match[1];
-		memset(match[1] + 1, 0, n * sizeof(int));		
+		memset(match[1] + 1, 0, n * sizeof(int));
 		KM();
 		total = 0;
 		for(int i = 1; i <= n; ++i)

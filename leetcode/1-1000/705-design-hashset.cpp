@@ -6,15 +6,15 @@ public:
     MyHashSet() {
         ++tim;
     }
-    
+
     void add(int key) {
         vis[key] = tim;
     }
-    
+
     void remove(int key) {
         vis[key] = tim - 1;
     }
-    
+
     /** Returns true if this set contains the specified element */
     bool contains(int key) {
         return vis[key] == tim;

@@ -9,6 +9,6 @@ int gcd(int a, int b) {
 
 int main() {
 	scanf("%d%d", &n, &k);
-	printf("%d\n", gcd(n,k)); 
+	printf("%d\n", gcd(n,k));
 	return 0;
 }

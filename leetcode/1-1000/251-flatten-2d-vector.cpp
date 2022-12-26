@@ -1,7 +1,7 @@
 class Vector2D {
     vector<vector<int> >::const_iterator vecB, vecE;
     vector<int>::const_iterator eleB, eleE;
-    
+
     void adjust() {
         while(eleB == eleE) {
             if(vecB == vecE)
@@ -19,14 +19,14 @@ public:
         if(!vec.empty())
             adjust();
     }
-    
+
     int next() {
         int x = *eleB;
         ++eleB;
         adjust();
         return x;
     }
-    
+
     bool hasNext() {
         return vecB != vecE || eleB != eleE;
     }

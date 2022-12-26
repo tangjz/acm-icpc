@@ -16,7 +16,7 @@ bitset<maxr> flip(bitset<maxr> tmp)
 {
 	return tmp.flip();
 }
-void Find(string s, bool flag) // ·Ç = 1 
+void Find(string s, bool flag) // é = 1
 {
 	bitset<maxr> mass(0);
 	bitset<maxr> &res = Hash.find(s) != Hash.end() ? mask[Hash[s]] : ZERO;
@@ -38,9 +38,9 @@ void Find(string s, bool flag) // ·Ç = 1
 			puts(str[i]);
 			last = mark[i];
 		}
-	puts("=========="); 
+	puts("==========");
 }
-void Find(string s, string t, bool flag) // Óë = 0 »ò = 1 
+void Find(string s, string t, bool flag) // ä¸ = 0 æˆ– = 1
 {
 	bitset<maxr> mass1(0), mass2(0), mass(0);
 	bitset<maxr> &res1 = Hash.find(s) != Hash.end() ? mask[Hash[s]] : ZERO;
@@ -65,7 +65,7 @@ void Find(string s, string t, bool flag) // Óë = 0 »ò = 1
 			puts(str[i]);
 			last = mark[i];
 		}
-	puts("=========="); 
+	puts("==========");
 }
 int main()
 {

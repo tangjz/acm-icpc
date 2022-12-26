@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
 const int maxn = (int)2e5 + 1, maxv = (int)1e9;
 const char *pat = "RPS";
- 
+
 int ptot;
 struct Node {
 	int cL, cR, key, cnt;
@@ -68,7 +68,7 @@ inline void print(int rt, int sta) {
 	dfs(rt);
 	puts("");
 }
- 
+
 void solve() {
 	int n, m;
 	static char buf[maxn];
@@ -239,7 +239,7 @@ void solve() {
 		}
 	}
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

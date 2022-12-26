@@ -1,5 +1,5 @@
 /*
- * ¾ÝËµÊÇlogNÈ¡ÉÏÕû 
+ * æ®è¯´æ˜¯logNå–ä¸Šæ•´
  */
 #include <cstdio>
 long long n, x = 1;

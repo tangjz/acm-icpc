@@ -1,5 +1,5 @@
 /*
- * 区间修改区间求和的简单线段树 
+ * 鍖洪棿淇敼鍖洪棿姹傚拰鐨勭畝鍗曠嚎娈垫爲
  */
 #include <cstdio>
 const int maxn = 1 << 18;

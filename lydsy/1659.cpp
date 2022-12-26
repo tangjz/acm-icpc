@@ -53,7 +53,7 @@ int main()
 			ans[cnt++] = i - m + 1;
 		pos = ((o ? pos ^ msk2 : pos) << 1 | p[i][pos]) & all;
 	}
-	printf("%d\n", cnt); 
+	printf("%d\n", cnt);
 	for(int i = cnt - 1; i >= 0; --i)
 		printf("%d\n", ans[i]);
 	return 0;

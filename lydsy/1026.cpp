@@ -1,12 +1,12 @@
 /*
- * ĳһλֻ���Լ�ǰ���Ǹ�λ��״̬�й� 
- * dp[i][j] ��ʾ����Ϊi,���һ������Ϊj�ķ����� 
+ * 某一位只和自己前面那个位的状态有关
+ * dp[i][j] 表示长度为i,最后一个数字为j的方案数
  * dp[1][j] = 1
  * dp[i][j] = sum{ dp[i - 1][k] } (|k - j| <= 2) (i > 1)
- * ��һ����ȷ�����������ĳ�ΪL������������ 
+ * 下一步是确定对于所给的长为L的数字来计算
  * cnt[i] = sum{dp[j][k]} (1<=j<=i,0<=k<=9)
- * ��������Ҫ��dphead[i][j],��ʾ����Ϊi�����ֿ�ͷΪj�ķ����� 
- * ����ͬdp 
+ * 接下来需要求dphead[i][j],表示长度为i的数字开头为j的方案数
+ * 方程同dp
 */
 #include <cstring>
 #include <iostream>

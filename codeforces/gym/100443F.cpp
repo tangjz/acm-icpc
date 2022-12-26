@@ -15,7 +15,7 @@ bool solve() {
     vector<i64> pw = {1};
     for(int i = 1; i <= len; ++i)
         pw.push_back(pw.back() * 5);
-    
+
     i64 ans = 0;
     for(int i = len - 1, c = 0; i >= 0; --i) {
         if(dig[i] > 0) {

@@ -1,4 +1,4 @@
-#include <map> 
+#include <map>
 #include <cstdio>
 using namespace std;
 map<int, int> f;

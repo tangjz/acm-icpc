@@ -1,6 +1,6 @@
 /*
  * BabyStep
- */ 
+ */
 #include<cmath>
 #include<cstdio>
 #include<algorithm>

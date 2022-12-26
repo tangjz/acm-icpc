@@ -1,6 +1,6 @@
 #include <cstdio>
 #include <cstring>
-const int maxn = 5001; 
+const int maxn = 5001;
 int t, n, tot, prime[maxn], fact[maxn], cnt[maxn];
 int main()
 {

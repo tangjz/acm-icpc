@@ -9,7 +9,7 @@ LL inc(LL x, LL y)
 {
 	LL ret = x + (y - mod);
 	if(ret < 0)
-		ret += mod; 
+		ret += mod;
 	return ret;
 }
 LL dec(LL x, LL y)

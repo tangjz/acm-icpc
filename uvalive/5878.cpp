@@ -30,7 +30,7 @@ struct Point
 		if(t.y * y <= 0)
 			return y > t.y;
 		int ret = det(t);
-		return ret > 0 || (ret == 0 && x < t.x);	
+		return ret > 0 || (ret == 0 && x < t.x);
 	}
 	Point operator + (const Point &t) const
 	{

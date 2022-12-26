@@ -29,7 +29,7 @@ int main() {
 				buf[xx][yy] = ch;
 		}
 		(x = (x - j * dx[o]) % r) < 0 && (x += r);
-		(y = (y - j * dy[o]) % c) < 0 && (y += c); 
+		(y = (y - j * dy[o]) % c) < 0 && (y += c);
 	}
 	for(int i = 0; i < r; ++i) {
 		for(int j = 0; j < c; ++j)

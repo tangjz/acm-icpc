@@ -131,7 +131,7 @@ int main()
 		e[++tot] = (Edge){u, lnk[v]};
 		lnk[v] = tot;
 	}
-	dfs(1);			
+	dfs(1);
 	scanf("%d", &q);
 	while(q--)
 	{
@@ -139,7 +139,7 @@ int main()
 		scanf("%d%d%d%d", &u, &v, &x, &y);
 		int px = deeper(lca(u, x), lca(v, x));//x path in u -> v [px -> lca]
 		int py = deeper(lca(u, y), lca(v, y));//y path in u -> v [py -> lca]
-		int pp = deeper(lca(u, v), lca(x, y));//common path is px -> pp -> py 
+		int pp = deeper(lca(u, v), lca(x, y));//common path is px -> pp -> py
 		if(dep[px] < dep[pp] && dep[py] < dep[pp])
 		{
 			puts("-1");

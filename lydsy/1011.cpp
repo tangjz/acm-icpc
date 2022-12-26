@@ -1,5 +1,5 @@
 /*
- * ÏÈÍÆ³öO(N^2)µÄÍòÓÐÒýÁ¦¼ÆËã¹«Ê½ È»ºó½üËÆ¼ÆËã = = 
+ * å…ˆæŽ¨å‡ºO(N^2)çš„ä¸‡æœ‰å¼•åŠ›è®¡ç®—å…¬å¼ ç„¶åŽè¿‘ä¼¼è®¡ç®— = =
  */
 #include <cmath>
 #include <cstdio>

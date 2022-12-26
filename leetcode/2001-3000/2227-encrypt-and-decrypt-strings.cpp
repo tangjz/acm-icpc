@@ -18,7 +18,7 @@ public:
             ++dec[ret];
         }
     }
-    
+
     string encrypt(string word1) {
         string ret = "";
         for(char ch: word1) {
@@ -28,7 +28,7 @@ public:
         }
         return ret;
     }
-    
+
     int decrypt(string word2) {
         auto it = dec.find(word2);
         return it != dec.end() ? it -> second : 0;

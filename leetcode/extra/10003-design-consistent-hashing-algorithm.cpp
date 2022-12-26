@@ -24,7 +24,7 @@ public:
         vals[key].insert(low);
         return low;
     }
-    
+
     int removeNode(int node) {
         int low = -1;
         for(int i = 1; i < nodes.size(); ++i)
@@ -40,7 +40,7 @@ public:
         nodes[node].second = 1;
         return low;
     }
-    
+
     vector<int> addNode() {
         int low = -1;
         for(int i = 1; i < nodes.size(); ++i)

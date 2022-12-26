@@ -7,14 +7,14 @@ public:
         for(int i = 0; i < n; ++i)
             pos[arr[i]].push_back(i);
     }
-    
+
     int query(int right, int value) {
         if(!pos.count(value))
             return 0;
         vector<int> &cur = pos[value];
         return upper_bound(cur.begin(), cur.end(), right) - cur.begin();
     }
-    
+
     int query(int left, int right, int value) {
         return query(right, value) - query(left - 1, value);
     }

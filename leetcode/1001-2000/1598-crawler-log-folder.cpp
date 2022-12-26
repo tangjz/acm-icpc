@@ -6,7 +6,7 @@ public:
             if(it == "../") {
                 ans = max(ans - 1, 0);
             } else if(it == "./") {
-                
+
             } else {
                 ++ans;
             }

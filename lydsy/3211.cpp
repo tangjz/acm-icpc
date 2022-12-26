@@ -1,5 +1,5 @@
 /*
- * ´óÊýÖ±½Ó±©Á¦ÐÞ¸Ä Ð¡ÊýÀûÓÃ²¢²é¼¯¿ìËÙÌø¹ý 
+ * å¤§æ•°ç›´æŽ¥æš´åŠ›ä¿®æ”¹ å°æ•°åˆ©ç”¨å¹¶æŸ¥é›†å¿«é€Ÿè·³è¿‡
  */
 #include <cmath>
 #include <cstdio>

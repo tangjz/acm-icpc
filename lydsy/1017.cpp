@@ -42,7 +42,7 @@ bool merge(int f[], int g[])
 		if(maxw < f[i])
 			maxw = f[i];
 		else
-			f[i] = 0;//最优解, 配合上面continue剪枝 
+			f[i] = 0;//鏈�浼樿В, 閰嶅悎涓婇潰continue鍓灊
 	return flag;
 }
 void dfs2(int u, int lim)

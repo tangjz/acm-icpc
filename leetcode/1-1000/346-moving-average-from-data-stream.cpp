@@ -6,7 +6,7 @@ public:
         cnt = pos = sum = 0;
         vector<int>(size).swap(que);
     }
-    
+
     double next(int val) {
         sum -= que[pos];
         que[pos] = val;

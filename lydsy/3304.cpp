@@ -1,9 +1,9 @@
 /*
- * 超级暴力的最长公共子序列 
- * 注意内存限制 
+ * 瓒呯骇鏆村姏鐨勬渶闀垮叕鍏卞瓙搴忓垪
+ * 娉ㄦ剰鍐呭瓨闄愬埗
  */
 #include <cstdio>
-#include <cstring> 
+#include <cstring>
 const int maxl = 501;
 int n, m, p, f[2][maxl][maxl];
 char S[maxl], T[maxl], Q[maxl];

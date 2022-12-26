@@ -1,23 +1,23 @@
 #include <cstdio>
 #include <algorithm>
- 
+
 using std::sort;
- 
+
 #define N 10000
- 
+
 int T, n, o[N + 9], h[N + 9], s[N + 9], t[N + 9];
- 
+
 bool cmp(int a, int b) {
 	return t[a] > t[b];
 }
- 
+
 bool check(int m) {
 	for (int i = 0; i < n; ++i) {
 		o[i] = i;
 		if (m < h[i]) return false;
- 
+
 		t[i] = (m - h[i]) / s[i];
- 
+
 	}
 	sort(o, o + n, cmp);
 	int p = t[o[0]] + 1;
@@ -33,7 +33,7 @@ bool check(int m) {
 	}
 	return true;
 }
- 
+
 int main() {
 	scanf("%d", &T);
 	while (T--) {

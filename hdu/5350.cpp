@@ -5,7 +5,7 @@ using namespace std;
 const int maxn = 100010;
 int t, n;
 long long ans;
-priority_queue<int, vector<int>, greater<int> > Q; 
+priority_queue<int, vector<int>, greater<int> > Q;
 int main()
 {
 	scanf("%d", &t);

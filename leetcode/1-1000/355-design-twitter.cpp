@@ -9,11 +9,11 @@ public:
         e.clear();
         seq.clear();
     }
-    
+
     void postTweet(int userId, int tweetId) {
         seq[userId].push_back({++tim, tweetId});
     }
-    
+
     vector<int> getNewsFeed(int userId) {
         static const int maxm = 10;
         vector<int> ret;
@@ -46,12 +46,12 @@ public:
         }
         return ret;
     }
-    
+
     void follow(int followerId, int followeeId) {
         if(followerId != followeeId)
             e[followerId].set(followeeId);
     }
-    
+
     void unfollow(int followerId, int followeeId) {
         e[followerId].reset(followeeId);
     }

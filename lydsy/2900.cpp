@@ -1,5 +1,5 @@
 /*
- * ͬ1236 
+ * 1236
  */
 #include <cstdio>
 long long n, len, num[17], s[10], ans, f[16];

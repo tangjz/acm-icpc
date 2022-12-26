@@ -1,6 +1,6 @@
 /*
  * f[i][j] = f[i - 1][j - k] (1 <= k <= n / 2)
- * Ö±¹Û¼´¿ÉÖª ¹ö¶¯ 
+ * ç›´è§‚å³å¯çŸ¥ æ»šåŠ¨
  */
 #include <cstdio>
 #include <algorithm>

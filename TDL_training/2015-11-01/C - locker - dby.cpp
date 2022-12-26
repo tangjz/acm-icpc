@@ -31,7 +31,7 @@ int main(){
 	freopen("input","r",stdin);
 	*/
 	while(scanf("%s%s",s,t) != EOF){
-		n = strlen(t);	
+		n = strlen(t);
 		int head = 0,tail = 0,nowc,nxn,nxa,nxb,nxc;
 		Info now;
 		s[n] = '0'; t[n] = '1';
@@ -52,8 +52,8 @@ int main(){
 		q[tail ++].ini(p,s[p] - '0',s[p + 1] - '0',s[p + 2] - '0');
 		int ta = s[n - 3] - '0',tb = s[n - 2] - '0',tc = s[n - 1] - '0';
 		while(head != tail){
-			now = q[head ++];	
-			nowc = f[now.n][now.a][now.b][now.c];	
+			now = q[head ++];
+			nowc = f[now.n][now.a][now.b][now.c];
 			/*
 			printf("%d %d %d %d\n",now.n,now.a,now.b,now.c);
 			*/

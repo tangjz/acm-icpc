@@ -1,7 +1,7 @@
 /*
- * ��һ�еķ�ת����������
- * ���ѷ�����һ�У�������̰�ļ��� 
- */ 
+ * 第一行的翻转决定其他行
+ * 暴搜翻法第一行，其他行贪心即可
+ */
 #include <cstdio>
 #include <cstring>
 const int INF = ~0u >> 1;

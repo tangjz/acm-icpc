@@ -1,6 +1,6 @@
 /*
  * \sum_{i = 1}^n{k mod i} = \sum_{i = 1}^n{k - [k / i] * i}
- * [k / i]ֻ��\sqrt{k}��ȡֵ 
+ * [k / i]只有\sqrt{k}种取值
  */
 #include <cstdio>
 typedef long long LL;

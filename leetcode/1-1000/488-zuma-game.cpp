@@ -27,7 +27,7 @@ void dfs(int dep) {
         }
         if(bestPlace != -1)
             rotate(ord, ord + bestPlace, ord + oLen);
-        
+
         for(int jd = 0; jd < oLen; ++jd) {
             int j = ord[jd];
             int &nLen = boardsLen[dep + 1] = bLen + 1, &rLen = handsLen[dep + 1] = hLen - 1;

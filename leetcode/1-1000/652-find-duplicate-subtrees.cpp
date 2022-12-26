@@ -13,7 +13,7 @@ class Solution {
     int tot;
     map<vector<int>, int> pos;
     vector<vector<TreeNode *> > cand;
-    
+
     int dfs(TreeNode *rt) {
         if(rt == nullptr)
             return 0;

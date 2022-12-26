@@ -7,11 +7,11 @@ public:
         n = balance.size();
         seq = move(balance);
     }
-    
+
     bool isValid(int account) {
         return 0 <= account && account < n;
     }
-    
+
     bool transfer(int account1, int account2, long long money) {
         if(!isValid(--account1) || !isValid(--account2))
             return false;
@@ -21,14 +21,14 @@ public:
         seq[account2] += money;
         return true;
     }
-    
+
     bool deposit(int account, long long money) {
         if(!isValid(--account))
             return false;
         seq[account] += money;
         return true;
     }
-    
+
     bool withdraw(int account, long long money) {
         if(!isValid(--account))
             return false;

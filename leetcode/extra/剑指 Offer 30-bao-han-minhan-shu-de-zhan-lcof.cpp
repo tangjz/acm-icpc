@@ -6,21 +6,21 @@ public:
         stack<int>().swap(vals);
         stack<int>().swap(upps);
     }
-    
+
     void push(int x) {
         vals.push(x);
         upps.push(upps.empty() ? x : std::min(x, upps.top()));
     }
-    
+
     void pop() {
         vals.pop();
         upps.pop();
     }
-    
+
     int top() {
         return vals.top();
     }
-    
+
     int min() {
         return upps.top();
     }

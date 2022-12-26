@@ -11,7 +11,7 @@
  */
 class BSTIterator {
     stack<TreeNode *> stk;
-    
+
     void extend() {
         TreeNode *cur = stk.top();
         while(cur -> left != nullptr) {
@@ -27,7 +27,7 @@ public:
             extend();
         }
     }
-    
+
     int next() {
         TreeNode *cur = stk.top();
         stk.pop();
@@ -37,7 +37,7 @@ public:
         }
         return cur -> val;
     }
-    
+
     bool hasNext() {
         return !stk.empty();
     }

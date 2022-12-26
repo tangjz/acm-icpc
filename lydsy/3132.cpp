@@ -1,5 +1,5 @@
 /*
- * ¶şÎ¬Ê÷×´Êı×é½â¾ö¾ØĞÎĞŞ¸Ä¡¢ÇóºÍ 
+ * äºŒç»´æ ‘çŠ¶æ•°ç»„è§£å†³çŸ©å½¢ä¿®æ”¹ã€æ±‚å’Œ
  */
 #include <cstdio>
 const int maxn = 2049;
@@ -13,7 +13,7 @@ void add(int x, int y, int val)
 			bit[i][j][0] += val;
 			bit[i][j][1] += val * x;
 			bit[i][j][2] += val * y;
-			bit[i][j][3] += val * x * y; 
+			bit[i][j][3] += val * x * y;
 		}
 }
 int sum(int x, int y)
@@ -40,7 +40,7 @@ int main()
 			add(x1, y1, val);
 			add(x2 + 1, y1, -val);
 			add(x1, y2 + 1, -val);
-			add(x2 + 1, y2 + 1, val); 
+			add(x2 + 1, y2 + 1, val);
 		}
 		else
 		{

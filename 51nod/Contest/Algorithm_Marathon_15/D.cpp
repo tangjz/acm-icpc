@@ -54,7 +54,7 @@ int main()
 			LL u = it.first, ways = it.second, v = u;
 			// merge [L+1, M-1] [M+1, R-1] -> [L+1, R-1]
 			LL mask = (v >> (L + 1)) & ((1LL << (R - L - 1)) - 1); // get [L+1, R-1]
-			v ^= (mask ^ ((1LL << popcount(mask)) - 1)) << (L + 1); // sort [L+1, R-1]			
+			v ^= (mask ^ ((1LL << popcount(mask)) - 1)) << (L + 1); // sort [L+1, R-1]
 			int fir = lowbit(u, M + 1), las;
 			// not select
 			cur[v] += fir == M + 1 ? ways << 1 : ways;

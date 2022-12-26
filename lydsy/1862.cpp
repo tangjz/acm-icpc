@@ -1,5 +1,5 @@
 /*
- * Ë«±¶¾­Ñé £º ´úÂë¼°Êý¾Ý¼û 1056 
+ * åŒå€ç»éªŒ ï¼š ä»£ç åŠæ•°æ®è§ 1056
  */
 #include <map>
 #include <cstdio>

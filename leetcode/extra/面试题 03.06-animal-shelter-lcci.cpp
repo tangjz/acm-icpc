@@ -5,11 +5,11 @@ public:
     AnimalShelf() {
         stp = 0;
     }
-    
+
     void enqueue(vector<int> animal) {
         que[animal[1]].push({animal[0], stp++});
     }
-    
+
     vector<int> dequeueAny() {
         vector<int> ret(2, -1);
         if(que[0].empty() && que[1].empty())
@@ -23,7 +23,7 @@ public:
         }
         return ret;
     }
-    
+
     vector<int> dequeueDog() {
         vector<int> ret(2, -1);
         if(que[1].empty())
@@ -32,7 +32,7 @@ public:
         que[1].pop();
         return ret;
     }
-    
+
     vector<int> dequeueCat() {
         vector<int> ret(2, -1);
         if(que[0].empty())

@@ -13,7 +13,7 @@ class Solution {
         }
         while(Hash[u].count(ret[u]))
             ++ret[u];
-    }    
+    }
 public:
     vector<int> smallestMissingValueSubtree(vector<int>& parents, vector<int>& nums) {
         int n = parents.size();

@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
 inline LL mod_add(LL x, LL y, LL mod) {
 	return (x += y) < mod ? x : x - mod;
@@ -122,7 +122,7 @@ inline vector<pair<LL, LL> > factorize(LL n) {
 		}
 	return ret;
 }
- 
+
 const int maxn = (int)5e5 + 1, maxe = 60;
 int n;
 LL m, sp, pr, ex, phi, ord, gen;

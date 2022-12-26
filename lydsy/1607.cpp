@@ -18,7 +18,7 @@ void print(int x)
 		num[len++] = 0;
 	while(len)
 		putchar('0' + num[--len]);
-	putchar('\n');	
+	putchar('\n');
 }
 int main()
 {

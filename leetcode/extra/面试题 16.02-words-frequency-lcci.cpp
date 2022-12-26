@@ -6,7 +6,7 @@ public:
         for(auto &it: book)
             ++ctr[it];
     }
-    
+
     int get(string word) {
         auto it = ctr.find(word);
         return it != ctr.end() ? it -> second : 0;

@@ -10,7 +10,7 @@ public:
                 sp.erase(sp.begin());
         }
     }
-    
+
     int add(int val) {
         sp.insert(val);
         if(sp.size() > cap)

@@ -30,7 +30,7 @@ class StackOfPlates {
         }
         return ret;
     }
-    
+
 public:
     StackOfPlates(int cap) {
         this -> cap = cap;
@@ -39,7 +39,7 @@ public:
         bits = {};
         seq = {};
     }
-    
+
     void push(int val) {
         if(!cap)
             return;
@@ -54,11 +54,11 @@ public:
         }
         seq[las].push(val);
     }
-    
+
     int pop() {
         return cnt ? innerPop(las) : -1;
     }
-    
+
     int popAt(int index) {
         return index < cnt ? innerPop(innerKth(index + 1)) : -1;
     }

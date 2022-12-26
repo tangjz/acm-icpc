@@ -11,7 +11,7 @@ public:
         head = new Node();
         (head -> next).resize(1);
     }
-    
+
     void print() {
         for(int dep = (int)(head -> next).size() - 1; dep >= 0; --dep) {
             printf("dep %d:", dep);
@@ -20,7 +20,7 @@ public:
             puts("");
         }
     }
-    
+
     bool search(int target) {
         // print();
         Node *ptr = head, *tmp;
@@ -35,7 +35,7 @@ public:
             }
         return tmp != nullptr && tmp -> value == target;
     }
-    
+
     void add(int num) {
         // print();
         int upp = 1;
@@ -61,7 +61,7 @@ public:
             }
         }
     }
-    
+
     bool erase(int num) {
         // print();
         Node *ptr = head, *tmp;

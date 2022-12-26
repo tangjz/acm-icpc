@@ -14,7 +14,7 @@ public:
             res[times[i]] = idx;
         }
     }
-    
+
     int q(int t) {
         auto it = res.upper_bound(t);
         return (--it) -> second;

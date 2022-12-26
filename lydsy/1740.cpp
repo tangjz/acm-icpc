@@ -1,5 +1,5 @@
 /*
- * Ì°ÐÄ 
+ * è´ªå¿ƒ
  */
 #include <cstdio>
 long long n, s, c, y, tmp, ans;

@@ -1,7 +1,7 @@
 /*
- * …Ëf[k]±Ì æ1 <= x, y <= k÷–gcd(x, y) = 1µƒ”––Ú∂‘∏ˆ ˝ 
- * ‘Úf[k] = 2 * °∆(1 < i <= k)(phi[i]) + 1 
- * À˘“‘ ans = °∆f[n / prime]
+ * ËÆæf[k]Ë°®Á§∫1 <= x, y <= k‰∏≠gcd(x, y) = 1ÁöÑÊúâÂ∫èÂØπ‰∏™Êï∞
+ * Âàôf[k] = 2 * ‚àë(1 < i <= k)(phi[i]) + 1
+ * ÊâÄ‰ª• ans = ‚àëf[n / prime]
  */
 #include <cstdio>
 int n, m, prime[664580], cnt = 0;

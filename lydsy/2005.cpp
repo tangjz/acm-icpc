@@ -1,8 +1,8 @@
 /*
- * ²»ÏëÐ´ÏßÐÔÉ¸¿ÉÒÔÖ±½ÓÓÃÈÝ³â
- * Áîf[i]±íÊ¾gcd(x,y)=iµÄÓÐÐò¶ÔÊý 
+ * ä¸æƒ³å†™çº¿æ€§ç­›å¯ä»¥ç›´æŽ¥ç”¨å®¹æ–¥
+ * ä»¤f[i]è¡¨ç¤ºgcd(x,y)=içš„æœ‰åºå¯¹æ•°
  * f[i] = [n / i] * [m / i] - f[i * 2] - f[i * 3]...
- * ÌâÄ¿µÄk¾ÍÊÇgcd(x, y) - 1 
+ * é¢˜ç›®çš„kå°±æ˜¯gcd(x, y) - 1
  */
 #include <cstdio>
 typedef long long LL;

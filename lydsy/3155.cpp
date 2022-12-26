@@ -1,6 +1,6 @@
 /*
- * Î¬»¤s1[k] = ¡Ænum[k]ºÍs2[k] = ¡Æ(n - k + 1) * num[k]
- * ´ð°¸Îª s2[k] - s1[k] * (n - k) 
+ * ç»´æŠ¤s1[k] = âˆ‘num[k]å’Œs2[k] = âˆ‘(n - k + 1) * num[k]
+ * ç­”æ¡ˆä¸º s2[k] - s1[k] * (n - k)
  */
 #include <cstdio>
 int n, m, num[1 << 17];

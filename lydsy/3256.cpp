@@ -1,6 +1,6 @@
 /*
- * ÏÈ×öÒ»´Îkmp¼ÓËÙdp£¬ÓÃf[i,j,k]±íÊ¾S´®Ç°iÎ»£¬T´®Ç°jÎ»µÄÄ³¸ö×ÓÐòÁÐÆ¥ÅäQ´®µ½µÚkÎ»µÄ×î´ó³¤¶È 
- * Ê£ÏÂÒ»ÇÐ¶¼ºÍ×î³¤¹«¹²×ÓÐòÁÐdpÒ»Ñù 
+ * å…ˆåšä¸€æ¬¡kmpåŠ é€Ÿdpï¼Œç”¨f[i,j,k]è¡¨ç¤ºSä¸²å‰iä½ï¼ŒTä¸²å‰jä½çš„æŸä¸ªå­åºåˆ—åŒ¹é…Qä¸²åˆ°ç¬¬kä½çš„æœ€å¤§é•¿åº¦
+ * å‰©ä¸‹ä¸€åˆ‡éƒ½å’Œæœ€é•¿å…¬å…±å­åºåˆ—dpä¸€æ ·
  */
 #include <cstdio>
 const int maxl = 202;

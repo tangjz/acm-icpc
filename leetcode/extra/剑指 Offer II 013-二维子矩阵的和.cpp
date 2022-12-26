@@ -16,7 +16,7 @@ public:
                 mat[i][j] += mat[i - 1][j];
         psum = move(mat);
     }
-    
+
     int sumRegion(int row1, int col1, int row2, int col2) {
         return sumPrefix(row2, col2) - sumPrefix(row1 - 1, col2) - sumPrefix(row2, col1 - 1) + sumPrefix(row1 - 1, col1 - 1);
     }

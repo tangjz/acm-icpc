@@ -8,11 +8,11 @@ public:
         for(int x : nums)
             add(x);
     }
-    
+
     int showFirstUnique() {
         return candidates.empty() ? -1 : candidates.front();
     }
-    
+
     void add(int value) {
         unordered_map<int, int>::iterator it = counts.find(value);
         if(it == counts.end()) {

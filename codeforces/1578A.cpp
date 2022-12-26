@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 const int maxc = 7, maxd = 51;
 const int maxn = 2501, maxs = 6.25e6 + 1, INF = 0x3f3f3f3f;
- 
+
 char mat[maxd][maxd], ans[maxn][maxn];
 int r, c, n, m, tot, seq[maxn], sta[maxn];
 int sz[maxn], rem[maxn][maxn];
 pair<int, int> pos[maxn][maxc], que[maxs];
 pair<int, char> op[maxn][maxn];
- 
+
 int main() {
 	scanf("%d%d", &r, &c);
 	int rc = r * c;
@@ -77,7 +77,7 @@ int main() {
 				*(cAns++) = cOp[v].second;
 			*cAns = '\0';
 			seq[m++] = id;
- 
+
 			pair<int, int> *cPos = pos[id];
 			for(int jd = 0; jd < n; ++jd) {
 				if(sta[jd] != -1)

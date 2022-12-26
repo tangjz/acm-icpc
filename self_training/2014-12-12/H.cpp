@@ -49,14 +49,14 @@ int main()
 				e[tot++] = (edge){i, n + j - 1, dist(a[i], b[j - 1])};
 			e[tot++] = (edge){i, n + j, dist(a[i], b[j])};
 			for(int k = 1; k <= q; ++k)
-				e[tot++] = (edge){i, n + m + k, dist(a[i], c[k])};			
+				e[tot++] = (edge){i, n + m + k, dist(a[i], c[k])};
 		}
 		for(int i = 1; i <= m; ++i)
 		{
 			if(i > 1)
 				e[tot++] = (edge){n + i - 1, n + i, dist(b[i - 1], b[i])};
 			for(int k = 1; k <= q; ++k)
-				e[tot++] = (edge){n + i, n + m + k, dist(b[i], c[k])};			
+				e[tot++] = (edge){n + i, n + m + k, dist(b[i], c[k])};
 		}
 		for(int i = 2; i <= q; ++i)
 			e[tot++] = (edge){n + m + i - 1, n + m + i, dist(c[i - 1], c[i])};

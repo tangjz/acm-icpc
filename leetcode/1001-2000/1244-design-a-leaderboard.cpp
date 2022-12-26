@@ -4,11 +4,11 @@ public:
     Leaderboard() {
         Hash.clear();
     }
-    
+
     void addScore(int playerId, int score) {
         Hash[playerId] += score;
     }
-    
+
     int top(int K) {
         int n = Hash.size();
         if(n < K)
@@ -23,7 +23,7 @@ public:
             sum += vals[n - i];
         return sum;
     }
-    
+
     void reset(int playerId) {
         Hash.erase(playerId);
     }

@@ -4,7 +4,7 @@ void dfs(int x)
 {
     if(x == 1) return;
     ans += x >> 1;
-    for(int i = 2; i <= x >> 1; ++i) dfs(i); 
+    for(int i = 2; i <= x >> 1; ++i) dfs(i);
 }
 int main()
 {

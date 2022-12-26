@@ -27,7 +27,7 @@ void prepare() {
             pr.push_back(i);
             cand[i & 3] = i;
         }
-        dp[i] = (i & 1 ? i - cand[i & 3] : i) >> 2; 
+        dp[i] = (i & 1 ? i - cand[i & 3] : i) >> 2;
         for(int p: pr) {
             int j = i * p;
             if(j >= maxv)

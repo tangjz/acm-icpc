@@ -38,7 +38,7 @@ int dfs(int u, int fa) {
 		int sv = dfs(v, u);
 		memset(f[u] + su, 0, sv * sizeof(int));
 		memset(g[u] + su, 0, sv * sizeof(int));
-		for(int i = 0; i < su; ++i) if(f[u][i]) 
+		for(int i = 0; i < su; ++i) if(f[u][i])
 			for(int j = 0; j < sv; ++j) if(f[v][j])
 				g[u][i + j + 1] += 2 * f[u][i] * f[v][j];
 		for(int i = 0; i < sv; ++i) {

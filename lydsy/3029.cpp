@@ -1,5 +1,5 @@
 /*
- * f[场数][胜数][分数] 
+ * f[鍦烘暟][鑳滄暟][鍒嗘暟]
  */
 #include <cstdio>
 #include <algorithm>

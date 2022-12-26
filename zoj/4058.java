@@ -2,11 +2,11 @@ import java.math.*;
 import java.util.*;
 
 public class Main {
-	
+
 	static final int maxd = 33;
 	static BigInteger[] fct;
 	static BigInteger[][] bin;
-	
+
 	static class Poly {
 		int sta, deg;
 		BigInteger[] val;
@@ -44,7 +44,7 @@ public class Main {
 			return ret.divide(fct[deg]);
 		}
 	}
-	
+
 	static BigInteger getP(BigInteger n) {
 		BigInteger m = n.add(BigInteger.ONE).shiftLeft(1);
 		BigInteger x = BigInteger.ONE, x1 = x.add(BigInteger.ONE);
@@ -90,14 +90,14 @@ public class Main {
 			h.val[i] = g.value(BigInteger.valueOf(getF(h.sta + i)));
 		return h;
 	}
-	
+
 	static final int maxc = 5, lown = 607;
 	static int cnt;
 	static int[] P, Q;
 	static BigInteger[] que, ans;
 	static Poly[] f, g;
 	static BigInteger[][] h;
-	
+
 	public static void main(String[] args) {
 		fct = new BigInteger[maxd];
 		bin = new BigInteger[maxd][maxd];

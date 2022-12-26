@@ -5,12 +5,12 @@ public:
     ATM() {
         memset(ctr, 0, sizeof(ctr));
     }
-    
+
     void deposit(vector<int> banknotesCount) {
         for(int i = 0; i < maxd; ++i)
             ctr[i] += banknotesCount[i];
     }
-    
+
     vector<int> withdraw(int amount) {
         vector<int> ret(maxd);
         for(int i = maxd - 1; i >= 0; --i) {

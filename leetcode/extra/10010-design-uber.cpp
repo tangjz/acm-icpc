@@ -3,13 +3,13 @@ class Uber {
     unordered_set<int> trip;
 public:
     Uber() {
-        
+
     }
-    
+
     void addCab(int cabX, int cabY) {
         cand.push_back({cabX, cabY});
     }
-    
+
     vector<int> startTrip(int customerID, int customerX, int customerY) {
         if(trip.count(customerID))
             return {-1, -1};
@@ -25,7 +25,7 @@ public:
         assert(0);
         return {-1, -1};
     }
-    
+
     void endTrip(int customerID, int customerX, int customerY) {
         auto it = trip.find(customerID);
         if(it == trip.end())
@@ -33,7 +33,7 @@ public:
         trip.erase(it);
         addCab(customerX, customerY);
     }
-    
+
     vector<vector<int>> getNearestCabs(int k, int x, int y) {
         vector<vector<int> > ret;
         if(cand.empty())

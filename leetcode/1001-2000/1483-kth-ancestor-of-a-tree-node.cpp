@@ -19,7 +19,7 @@ public:
             par.push_back(move(cur));
         }
     }
-    
+
     int getKthAncestor(int node, int k) {
         int lim = (int)par.size();
         for(int i = 0; k > 0 && node != -1; k >>= 1, ++i)
