@@ -1,5 +1,5 @@
 /*
- * AC×Ô¶¯»ú+ÈÝ³â£¬Ëã³ö²»°üº¬ÈÎÒâÒ»¸ö´®µÄ´ð°¸£¬ÓÃ26^m¼õ 
+ * ACè‡ªåŠ¨æœº+å®¹æ–¥ï¼Œç®—å‡ºä¸åŒ…å«ä»»æ„ä¸€ä¸ªä¸²çš„ç­”æ¡ˆï¼Œç”¨26^må‡
  */
 #include <cstdio>
 const int maxn = 6001, maxlen = 101, maxsize = 26, mod = 10007;

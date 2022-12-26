@@ -14,9 +14,9 @@ class FileSystem {
     }
 public:
     FileSystem() {
-        
+
     }
-    
+
     bool createPath(string path, int value) {
         if(path.front() != '/' || path.back() == '/')
             return 0;
@@ -33,7 +33,7 @@ public:
         paths[path] = value;
         return 1;
     }
-    
+
     int get(string path) {
         auto it = paths.find(path);
         return it == paths.end() ? -1 : it -> second;

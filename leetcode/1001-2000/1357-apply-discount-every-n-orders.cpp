@@ -10,7 +10,7 @@ public:
         for(int i = 0; i < m; ++i)
             Hash.insert({products[i], prices[i]});
     }
-    
+
     double getBill(vector<int> product, vector<int> amount) {
         int ret = 0, m = (int)product.size();
         for(int i = 0; i < m; ++i)

@@ -1,5 +1,5 @@
 /*
- * ÒòÎªÕâ¸öÖÚÊý³öÏÖ´ÎÊý³¬¹ýÒ»°ë£¬ËùÒÔ¿ÉÒÔ°ÑÈÎÒâÁ½¸ö²»Í¬µÄÊýÏàµÖÏû£¬×îºóÊ£ÏÂµÄÒ»¶¨ÊÇÖÚÊý 
+ * å› ä¸ºè¿™ä¸ªä¼—æ•°å‡ºçŽ°æ¬¡æ•°è¶…è¿‡ä¸€åŠï¼Œæ‰€ä»¥å¯ä»¥æŠŠä»»æ„ä¸¤ä¸ªä¸åŒçš„æ•°ç›¸æŠµæ¶ˆï¼Œæœ€åŽå‰©ä¸‹çš„ä¸€å®šæ˜¯ä¼—æ•°
  */
 #include <cstdio>
 int n, x, ans, cnt;
@@ -9,7 +9,7 @@ inline void getint(int &x)
 	while((ch = getchar()) < '0' || ch > '9');
 	x = ch - '0';
 	while((ch = getchar()) >= '0' && ch <= '9')
-		x = (x << 3) + (x << 1) + ch - '0'; 
+		x = (x << 3) + (x << 1) + ch - '0';
 }
 int main()
 {

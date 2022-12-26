@@ -10,7 +10,7 @@ public:
     VendingMachine() {
 
     }
-    
+
     void addItem(int time, int number, string item, int price, int duration) {
         auto &sp = good[item];
         time += duration;
@@ -19,7 +19,7 @@ public:
         sp.expire.insert({time, price});
         // printf("add %s %d %d %d\n", item.c_str(), price, time, number);
     }
-    
+
     long long sell(int time, string customer, string item, int number) {
         auto &sp = good[item];
         auto &rem = sp.rem;

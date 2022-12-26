@@ -39,7 +39,7 @@ int main() {
 			s[i][j] = s[i][j - 1] + ((j >> i) & 1);
 		}
 	}
-	
+
 	int T = 1;
 	scanf("%d", &T);
 	for(int Case = 1; Case <= T; ++Case) {

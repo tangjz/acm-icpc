@@ -5,37 +5,42 @@ const int maxn = (int)5e5 + 1;
 int t, n, mod, nxt[maxn];
 LL m, f[maxn], g[maxn];
 char buf[maxn];
+inline void upd(LL &x, LL y) {
+	x > y && (x = y);
+}
 void append(int sta, int dif, int cnt) {
 	static int idx[maxn << 1 | 1], que[maxn << 1 | 1];
 	if(mod != sta) {
 		memcpy(g, f, mod * sizeof(LL));
 		memset(f, 0x3f, sta * sizeof(LL));
-		for(int i = 0; i < mod; ++i) {
-			int j = g[i] % sta;
-			f[j] = min(f[j], g[i]);
-		}
-		for(int i = 0, iLim = __gcd(sta, mod); i < iLim; ++i) {
-			int tot = 0;
+		for(int i = 0; i < mod; ++i)
+			upd(f[g[i] % sta], g[i]);
+		for(int i = 0, iLim = __gcd(sta, mod), adt = mod % sta; i < iLim; ++i) {
+			int tot = 0, pos = 0;
 			idx[tot++] = i;
-			for(int j = (i + mod) % sta; j != i; j = (j + mod) % sta)
+			for(int j = i + adt < sta ? i + adt : i + adt - sta; j != i; (j += adt) >= sta && (j -= sta)) {
 				idx[tot++] = j;
-			for(int j = 0; j < tot; ++j)
-				idx[tot + j] = idx[j];
-			for(int j = 1; j < tot << 1; ++j)
-				f[idx[j]] = min(f[idx[j]], f[idx[j - 1]] + mod);
+				if(f[idx[pos]] > f[j])
+					pos = tot - 1;
+			}
+			rotate(idx, idx + pos, idx + tot);
+			for(int j = 1; j < tot; ++j)
+				upd(f[idx[j]], f[idx[j - 1]] + mod);
 		}
 		mod = sta;
 	}
 	if(cnt > 1)
-		for(int i = 0, iLim = __gcd(dif, mod); i < iLim; ++i) {
-			int tot = 0;
+		for(int i = 0, iLim = __gcd(dif, mod), adt = dif % mod; i < iLim; ++i) {
+			int tot = 0, pos = 0;
 			idx[tot++] = i;
-			for(int j = (i + dif) % mod; j != i; j = (j + dif) % mod)
+			for(int j = i + adt < mod ? i + adt : i + adt - mod; j != i; (j += adt) >= mod && (j -= mod)) {
 				idx[tot++] = j;
-			for(int j = 0; j < tot; ++j)
-				idx[tot + j] = idx[j];
+				if(f[idx[pos]] > f[j])
+					pos = tot - 1;
+			}
+			rotate(idx, idx + pos, idx + tot);
 			int L = 0, R = 0;
-			for(int j = 0; j < tot << 1; ++j) {
+			for(int j = 0; j < tot; ++j) {
 				for( ; L < R && j - que[L] >= cnt; ++L);
 				for( ; L < R && f[idx[que[R - 1]]] + (LL)(j - que[R - 1]) * dif >= f[idx[j]]; --R);
 				if(L < R)
@@ -58,6 +63,10 @@ int main() {
 		for(int i = nxt[n], j = i; i; i = j) {
 			int cnt = 0, dif = i - nxt[i];
 			for( ; j && j - nxt[j] == dif; j = nxt[j], ++cnt);
+			if(j) {
+				j = nxt[j];
+				++cnt;
+			}
 			append(n - i, dif, cnt);
 		}
 		LL ans = 0;

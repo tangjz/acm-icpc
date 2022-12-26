@@ -63,7 +63,7 @@ int main() {
 			for(j = sa[rk[i] - 1]; buf[i + k] == buf[j + k]; ++k);
 			ht[rk[i]] = k;
 		}
-		for(int i = 2; i <= len; ++i) 
+		for(int i = 2; i <= len; ++i)
 			Log[i] = Log[i >> 1] + 1;
 		for(int i = 1; 1 << i <= len; ++i)
 			for(int j = 0; j + (1 << (i - 1)) < len; ++j)

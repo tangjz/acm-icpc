@@ -32,7 +32,7 @@ int main() {
         ofs[m] = ofs[m - 1] * (ctr[i] + 1);
     }
     assert(m < maxm && ofs[m] < maxs);
-    
+
     fct[0] = bin[0][0] = 1;
     for(int i = 1; i <= n; ++i) {
         fct[i] = (i64)fct[i - 1] * i % mod;
@@ -47,14 +47,14 @@ int main() {
         for(int j = 2; j <= n - i; ++j)
             pw[i][j] = (i64)pw[i][j - 1] * pw[i][1] % mod;
     }
-    
+
     for(int i = 0; i < m; ++i)
         for(int j = 1, msk = 0, ways = 1; j <= ctr[idx[i]]; ++j) {
             msk += ofs[i];
             ways = (i64)ways * pw[0][idx[i]] % mod;
             dp[i][0][0][msk] = ways;
         }
-    
+
     for(int i = 1; i < ofs[m]; ++i) {
         int sum = 0;
         static int cur[maxm];
@@ -82,7 +82,7 @@ int main() {
                         }
                 }
     }
-    
+
     int ans = 0;
     for(int i = 0; i < m; ++i)
         for(int j = 0; j < n; ++j)

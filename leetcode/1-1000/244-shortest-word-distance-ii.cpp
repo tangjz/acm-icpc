@@ -49,7 +49,7 @@ public:
             Hash[it.first] = move(res);
         }
     }
-    
+
     int shortest(string word1, string word2) {
         int u = getID(word1), v = getID(word2);
         if(pos[u].size() < pos[v].size())

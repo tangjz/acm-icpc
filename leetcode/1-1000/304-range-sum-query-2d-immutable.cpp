@@ -12,7 +12,7 @@ public:
             for(int j = 0; j < c; ++j)
                 mat[i][j] += mat[i - 1][j];
     }
-    
+
     int sumRegion(int row1, int col1, int row2, int col2) {
         int row[2] = {row2, row1 - 1};
         int col[2] = {col2, col1 - 1};

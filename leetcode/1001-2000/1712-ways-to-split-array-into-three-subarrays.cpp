@@ -10,7 +10,7 @@ public:
             // [0, j): psum[j] - psum[0]
             // [j, i): psum[i] - psum[j]
             // [i, n): psum[n] - psum[i]
-            
+
             // 0 < j < i
             // psum[j] <= psum[i] / 2
             // psum[j] >= 2 psum[i] - psum[n]

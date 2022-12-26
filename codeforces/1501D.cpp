@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef unsigned int UL;
 typedef long long LL;
 typedef unsigned long long ULL;
 typedef	double DB;
 typedef long double LD;
- 
+
 const int mod = (int)1e9 + 7, maxd = 10, maxc = 26;
 const int maxn = (int)1e5 + 9, maxm = (int)1e6 + 1;
 const DB eps = 1e-9, pi = acos((DB)-1);
- 
+
 inline int sgn(DB x) {
 	return (x > eps) - (x < -eps);
 }
- 
+
 int exgcd(int a, int b, int &x, int &y) {
 	if(!b) {
 		x = 1;
@@ -25,14 +25,14 @@ int exgcd(int a, int b, int &x, int &y) {
 	y -= a / b * x;
 	return r;
 }
- 
+
 void solve() {
 	int n, m;
 	LL q;
 	scanf("%d%d%lld", &n, &m, &q);
 	int x, y, r = exgcd(n, m, x, y);
 	LL lcm = m / r * (LL)n;
- 
+
 	int upp = max(n, m) * 2;
 	static pair<int, int> pos[maxm];
 	memset(pos + 1, 0, upp * sizeof(pos[0]));
@@ -45,7 +45,7 @@ void solve() {
 			pos[val].second = i - n;
 		}
 	}
- 
+
 	LL L = 1, R = q * upp;
 	while(L < R) {
 		LL M = (L + R) >> 1;
@@ -70,7 +70,7 @@ void solve() {
 	}
 	printf("%lld\n", L);
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

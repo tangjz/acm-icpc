@@ -7,7 +7,7 @@ class StreamChecker {
     vector<Trie> nodes;
     vector<int> bcnt;
     int cur;
-    
+
     void parse(vector<string> &words) {
         int n = words.size();
         vector<int> ord(n);
@@ -50,7 +50,7 @@ class StreamChecker {
             }
         }
     }
-    
+
     void build() {
         if(!nodes[0].cnt) {
             return;
@@ -83,7 +83,7 @@ class StreamChecker {
             }
         }
     }
-    
+
 public:
     StreamChecker(vector<string>& words) {
         bcnt.resize(maxm);
@@ -94,7 +94,7 @@ public:
         build();
         cur = 0;
     }
-    
+
     bool query(char letter) {
         int k = letter - 'a';
         for( ; cur && !((nodes[cur].msk >> k) & 1); cur = nodes[cur].nxt);

@@ -38,7 +38,7 @@ int main()
 					{
 						que[R++] = v;
 						vis[v] = 1;
-						dis[v] = dis[u] + w; 
+						dis[v] = dis[u] + w;
 						if(Max < dis[v])
 							Max = dis[v];
 						if(Min > dis[v])

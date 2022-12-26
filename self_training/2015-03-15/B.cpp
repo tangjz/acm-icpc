@@ -43,7 +43,7 @@ struct Point
 	double mode() const
 	{
 		return sqrt(dot(*this));
-	}	
+	}
 } p[maxn], A, B, pp[maxn];
 int n, tot;
 double ans;

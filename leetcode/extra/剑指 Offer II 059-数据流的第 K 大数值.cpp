@@ -11,7 +11,7 @@ public:
                 val.erase(val.begin());
         }
     }
-    
+
     int add(int x) {
         val.insert(x);
         if(val.size() > cap)

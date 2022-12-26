@@ -12,7 +12,7 @@ public:
              unrented[it[1]].insert({it[2], it[0]});
          }
     }
-    
+
     vector<int> search(int movie) {
         if(!unrented.count(movie))
             return {};
@@ -24,19 +24,19 @@ public:
         }
         return ret;
     }
-    
+
     void rent(int shop, int movie) {
         int price = store[shop][movie];
         unrented[movie].erase({price, shop});
         rented.insert({price, {shop, movie}});
     }
-    
+
     void drop(int shop, int movie) {
         int price = store[shop][movie];
         rented.erase({price, {shop, movie}});
         unrented[movie].insert({price, shop});
     }
-    
+
     vector<vector<int>> report() {
         vector<vector<int> > ret;
         for(auto &it: rented) {

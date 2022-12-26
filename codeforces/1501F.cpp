@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef unsigned int UL;
 typedef long long LL;
 typedef unsigned long long ULL;
 typedef	double DB;
 typedef long double LD;
- 
+
 const int mod = (int)1e9 + 7, maxd = 11, maxc = 26;
 const int maxn = 1501, maxm = (int)2.3e6 + 1;
 const DB eps = 1e-9, pi = acos((DB)-1);
- 
+
 inline int sgn(DB x) {
 	return (x > eps) - (x < -eps);
 }
- 
+
 void solve() {
 	int n, q;
 	scanf("%d%d", &n, &q);
@@ -88,7 +88,7 @@ void solve() {
 	for(int i = 1; i <= n; ++i)
 		printf("%d\n", ans[i]);
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

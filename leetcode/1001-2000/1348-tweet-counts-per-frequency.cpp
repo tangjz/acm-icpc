@@ -4,11 +4,11 @@ public:
     TweetCounts() {
         unordered_map<string, vector<int> >().swap(rec);
     }
-    
+
     void recordTweet(string tweetName, int time) {
         rec[tweetName].push_back(time);
     }
-    
+
     vector<int> getTweetCountsPerFrequency(string freq, string tweetName, int startTime, int endTime) {
         static unordered_map<string, int> trans = {
             {"minute", 60},

@@ -52,7 +52,7 @@ double r, dist[maxn * 2];
 pair<Point, Point> seg[maxn];
 vector<edge> e[maxn * 2];
 priority_queue<edge, vector<edge>, greater<edge> > Q;
-bool vis[maxn * 2]; 
+bool vis[maxn * 2];
 bool valid(Point x)
 {
 	for(int i = 0; i < n; ++i)
@@ -64,7 +64,7 @@ bool cover(Point s, Point t)
 {
 	if(!dcmp((s - t).mode()))
 		return 1;
-	s = s + (t - s) * 0.001;//不明觉厉为啥不加会WA 
+	s = s + (t - s) * 0.001;//涓嶆槑瑙夊帀涓哄暐涓嶅姞浼歐A
 	if(t < s)
 		swap(s, t);
 	cnt = 0;

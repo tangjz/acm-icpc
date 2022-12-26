@@ -1,7 +1,7 @@
 /*
- * 设b某一边比它大的数与比它小的数个数之差为i 
- * 左边出现i的次数为left[i] 右边为right[i] 
- * ans = ∑left[i] * rigth[-i]
+ * 璁綽鏌愪竴杈规瘮瀹冨ぇ鐨勬暟涓庢瘮瀹冨皬鐨勬暟涓暟涔嬪樊涓篿
+ * 宸﹁竟鍑虹幇i鐨勬鏁颁负left[i] 鍙宠竟涓簉ight[i]
+ * ans = 鈭憀eft[i] * rigth[-i]
  */
 #include <map>
 #include <cstdio>

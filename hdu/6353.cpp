@@ -7,7 +7,7 @@ struct Edge {
 } e[maxn << 1 | 1];
 bool ban[maxn];
 int tot, ord[maxn], fa[maxn], dep[maxn];
-void bfs(int rt) { // fa[rt], dep[rt] have been set 
+void bfs(int rt) { // fa[rt], dep[rt] have been set
     tot = 0;
     ord[tot++] = rt;
     for(int i = 0; i < tot; ++i) {

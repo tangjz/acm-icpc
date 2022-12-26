@@ -5,7 +5,7 @@ public:
     FileSharing(int m) {
         cand.push(-1);
     }
-    
+
     int join(vector<int> ownedChunks) {
         int uid = -cand.top();
         cand.pop();
@@ -16,14 +16,14 @@ public:
                 chunk[x].insert(uid);
         return uid;
     }
-    
+
     void leave(int userID) {
         for(int x: user[userID])
             chunk[x].erase(userID);
         user.erase(userID);
         cand.push(-userID);
     }
-    
+
     vector<int> request(int userID, int chunkID) {
         bool needUpd = 1;
         vector<int> ret;

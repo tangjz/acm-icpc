@@ -11,13 +11,13 @@ public:
         for(int x: B)
             ++ctr[x];
     }
-    
+
     void add(int index, int val) {
         --ctr[B[index]];
         B[index] += val;
         ++ctr[B[index]];
     }
-    
+
     int count(int tot) {
         int ret = 0;
         for(int x: A) {

@@ -38,7 +38,7 @@ public:
         unordered_map<int, list<Block>::iterator>().swap(pos);
         list<Block>().swap(lst);
     }
-    
+
     int get(int key) {
         auto it = pos.find(key);
         if(it == pos.end())
@@ -54,7 +54,7 @@ public:
         pos[key] = kt;
         return value;
     }
-    
+
     void put(int key, int value) {
         if(!upp)
             return;

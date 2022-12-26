@@ -9,7 +9,7 @@ public:
             rnk[cuisines[i]].insert({-ratings[i], foods[i]});
         }
     }
-    
+
     void changeRating(string food, int newRating) {
         string cuisine;
         int oldRating;
@@ -18,7 +18,7 @@ public:
         info[food].first = newRating;
         rnk[cuisine].insert({-newRating, food});
     }
-    
+
     string highestRated(string cuisine) {
         return rnk[cuisine].begin() -> second;
     }

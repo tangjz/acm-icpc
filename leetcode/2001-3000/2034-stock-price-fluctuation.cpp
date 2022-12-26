@@ -6,7 +6,7 @@ public:
         sp.clear();
         hs.clear();
     }
-    
+
     void update(int ts, int pr) {
         auto it = hs.find(ts);
         if(it != hs.end()) {
@@ -15,15 +15,15 @@ public:
         hs[ts] = pr;
         sp.insert(pr);
     }
-    
+
     int current() {
         return hs.rbegin() -> second;
     }
-    
+
     int maximum() {
         return *sp.rbegin();
     }
-    
+
     int minimum() {
         return *sp.begin();
     }

@@ -6,7 +6,7 @@ public:
         res = 0;
         vector<pair<int, int> >().swap(seg);
     }
-    
+
     int getIndex(int time) {
         int size = (int)seg.size();
         for(int i = 0; i < size; ++i) {
@@ -23,7 +23,7 @@ public:
         seg.push_back(make_pair(time, 0));
         return size;
     }
-    
+
     int book(int start, int end) {
         for(start = getIndex(start), end = getIndex(end); start < end; ++start)
             res = max(res, ++seg[start].second);

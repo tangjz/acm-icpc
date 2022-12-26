@@ -63,7 +63,7 @@ public:
         cand.insert({cap, -machineId});
         app.erase(appId);
     }
-    
+
     vector<int> getApplications(int machineId) {
         vector<int> ret;
         if(!host.count(machineId))

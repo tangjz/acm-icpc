@@ -1,5 +1,5 @@
 /*
- * ������˷���ʽ�ӷֽ��ϲ�������ǰ׺�� 
+ * 将矩阵乘法的式子分解后合并发现是前缀和
  */
 #include <cstdio>
 const int BUFSIZE = 1000000;

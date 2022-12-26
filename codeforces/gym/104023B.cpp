@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
 const int maxn = (int)1e5 + 1, maxm = 33, maxv = (int)1e9;
- 
+
 void solve() {
 	int n;
 	static int a[maxn], p[maxn], s[maxn];
@@ -118,7 +118,7 @@ void solve() {
 	for(int i = 1; i < n; ++i)
 		printf("%d\n", p[i]);
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

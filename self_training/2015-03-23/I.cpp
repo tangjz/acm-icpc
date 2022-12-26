@@ -83,7 +83,7 @@ int main()
 					last[nameid][cnt[nameid]][0] = tt;
 					last[nameid][cnt[nameid]++][1] = pen[nameid];
 				}
-				
+
 			}
 		}
 		sort(id, id + n, cmp);

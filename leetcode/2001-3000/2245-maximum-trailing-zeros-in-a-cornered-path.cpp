@@ -1,9 +1,9 @@
 class Solution {
     static const int maxd = 4;
     static constexpr int dx[maxd] = {-1, 0, 1, 0}, dy[maxd] = {0, 1, 0, -1};
-    
+
     pair<int, int> zero = {};
-    
+
     pair<int, int> &F(int d, int x, int y, vector<vector<pair<int, int> > > &adt, vector<vector<vector<pair<int, int> > > > &f) {
         if(x < 0 || x >= f[d].size() || y < 0 || y >= f[d][x].size())
             return zero;
@@ -15,7 +15,7 @@ class Solution {
         }
         return ret;
     }
-    
+
 public:
     int maxTrailingZeros(vector<vector<int>>& grid) {
         int n = grid.size(), m = grid[0].size(), ans = 0;

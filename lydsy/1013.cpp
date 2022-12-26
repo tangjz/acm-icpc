@@ -1,5 +1,5 @@
 /*
- * ¡Æx[i] * 2 * (b[i] - a[i]) = ¡Æb[i]^2 - a[i]^2 
+ * âˆ‘x[i] * 2 * (b[i] - a[i]) = âˆ‘b[i]^2 - a[i]^2
  */
 #include <cstdio>
 #include <algorithm>

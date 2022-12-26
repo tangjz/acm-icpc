@@ -3,7 +3,7 @@ class MyHashMap {
     int cap, sz;
     unsigned ofs;
     vector<list<pair<int, int> > > buckets;
-    
+
     void refactor(int newCap) {
         vector<list<pair<int, int> > > newBuckets(newCap);
         ofs = rnd();
@@ -23,7 +23,7 @@ public:
         ofs = rnd();
         buckets = {{}};
     }
-    
+
     void put(int key, int value) {
         int idx = ((unsigned)key ^ ofs) & (cap - 1);
         bool found = false;
@@ -41,7 +41,7 @@ public:
             refactor(cap << 1);
         }
     }
-    
+
     int get(int key) {
         int idx = ((unsigned)key ^ ofs) & (cap - 1);
         for(auto &it: buckets[idx])
@@ -50,7 +50,7 @@ public:
             }
         return -1;
     }
-    
+
     void remove(int key) {
         int idx = ((unsigned)key ^ ofs) & (cap - 1);
         bool found = false;

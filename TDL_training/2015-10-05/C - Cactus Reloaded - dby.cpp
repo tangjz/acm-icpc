@@ -38,7 +38,7 @@ void dfs(int cur,int fa){
 		if(dfn[j->y]) low[cur] = min(low[cur],dfn[j->y]);
 		else{
 			stk[++ top] = j;
-			dfs(j->y,cur); low[cur] = min(low[cur],low[j->y]);	
+			dfs(j->y,cur); low[cur] = min(low[cur],low[j->y]);
 			if(low[j->y] > dfn[cur]){
 				-- top;
 				int tmp = dis[j->y] + 1;

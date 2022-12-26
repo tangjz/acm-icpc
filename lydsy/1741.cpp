@@ -1,6 +1,6 @@
 /*
- * ͬ1693
- */ 
+ * 1693
+ */
 #include <vector>
 #include <cstdio>
 #include <cstring>

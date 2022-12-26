@@ -18,7 +18,7 @@ int main()
 		printf("%d\n", a[0]);
 		for(int i = 1; i < a[0]; ++i)
 			printf("%d ", a[i]);
-		printf("%d\n", a[a[0]]); 
+		printf("%d\n", a[a[0]]);
 	}
 	return 0;
-} 
+}

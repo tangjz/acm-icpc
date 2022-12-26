@@ -1,5 +1,5 @@
 /*
- * 传递闭包，一个人的排名确定当且仅当它前后的人数为n - 1
+ * 浼犻�掗棴鍖咃紝涓�涓汉鐨勬帓鍚嶇‘瀹氬綋涓斾粎褰撳畠鍓嶅悗鐨勪汉鏁颁负n - 1
  */
 #include <cstdio>
 const int maxn = 101;
@@ -11,7 +11,7 @@ int main()
 	for(int i = 0, u, v; i < m; ++i)
 	{
 		scanf("%d%d", &u, &v);
-		g[u][v] = 1; 
+		g[u][v] = 1;
 	}
 	for(int k = 1; k <= n; ++k)
 		for(int i = 1; i <= n; ++i)

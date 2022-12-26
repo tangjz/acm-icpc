@@ -9,7 +9,7 @@ public:
         vector<int>().swap(que);
         rnd.seed(time(NULL));
     }
-    
+
     /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
     bool insert(int val) {
         auto &it = pos[val];
@@ -17,7 +17,7 @@ public:
         que.push_back(val);
         return (int)it.size() == 1;
     }
-    
+
     /** Removes a value from the collection. Returns true if the collection contained the specified element. */
     bool remove(int val) {
         auto it = pos.find(val);
@@ -41,7 +41,7 @@ public:
         que.pop_back();
         return 1;
     }
-    
+
     /** Get a random element from the collection. */
     int getRandom() {
         int x = rnd() % (int)que.size();

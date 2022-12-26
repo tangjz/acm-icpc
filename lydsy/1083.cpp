@@ -1,5 +1,5 @@
 /*
- * 大水题kruskal直接搞一下就好了 
+ * 澶ф按棰榢ruskal鐩存帴鎼炰竴涓嬪氨濂戒簡
  */
 #include <cstdio>
 #include <algorithm>

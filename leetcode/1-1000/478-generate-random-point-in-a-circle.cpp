@@ -7,7 +7,7 @@ class Solution {
     double rad, ox, oy;
 public:
     Solution(double radius, double x_center, double y_center) : rad(radius), ox(x_center), oy(y_center), rnd(time(NULL)) {}
-    
+
     vector<double> randPoint() {
         double dx, dy;
         do {

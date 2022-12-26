@@ -1,5 +1,5 @@
 /*
- * ̰�ĳ����ֵ ��̰�ĳ���Сֵ 
+ * 贪心出最大值 反贪心出最小值
  */
 #include <cstdio>
 #include <algorithm>

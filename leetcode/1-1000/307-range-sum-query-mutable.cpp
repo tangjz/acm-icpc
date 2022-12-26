@@ -14,14 +14,14 @@ public:
                 bits[j] += bits[i];
         }
     }
-    
+
     void update(int index, int val) {
         int adt = val - vals[++index];
         vals[index] = val;
         for( ; index < sz; index += index & -index)
             bits[index] += adt;
     }
-    
+
     int sumRange(int left, int right) {
         int ret = 0;
         for( ; left > 0; left -= left & -left)

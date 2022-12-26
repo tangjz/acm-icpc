@@ -4,7 +4,7 @@ class WordDictionary {
         map<char, TrieNode *> childs;
         TrieNode() : hasEnd(0), childs(map<char, TrieNode *>()) {}
     } *root;
-    
+
     bool dfs(string &word, int pos, TrieNode *rt) {
         if(pos == (int)word.size())
             return rt -> hasEnd;
@@ -39,7 +39,7 @@ public:
         }
         cur -> hasEnd = 1;
     }
-    
+
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     bool search(string word) {
         return dfs(word, 0, root);

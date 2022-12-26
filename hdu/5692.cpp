@@ -10,7 +10,7 @@ int t, n, m, a[maxn], tot, seq[maxn], in[maxn], out[maxn];
 vector<int> e[maxn];
 struct Segment
 {
-	long long val, tag;	
+	long long val, tag;
 } seg[maxn << 1];
 void dfs(int u, int fa)
 {

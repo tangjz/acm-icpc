@@ -18,7 +18,7 @@ public:
         rnd.seed(19260817);
         this -> head = head;
     }
-    
+
     /** Returns a random node's value. */
     int getRandom() {
         int val = 0, ctr = 0;

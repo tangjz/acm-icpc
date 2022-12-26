@@ -1,5 +1,5 @@
 /*
- * 暴搜即可... 注意输出要倒着... 
+ * 鏆存悳鍗冲彲... 娉ㄦ剰杈撳嚭瑕佸�掔潃...
  */
 #include <cstdio>
 #include <string>

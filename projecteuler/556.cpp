@@ -1,5 +1,5 @@
 #include <cmath>
-#include <stdio.h> 
+#include <stdio.h>
 typedef long long LL;
 const int maxn = 10000001;
 int f[maxn], g[maxn];

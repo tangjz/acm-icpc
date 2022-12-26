@@ -6,7 +6,7 @@ const LL INF = (LL)1e18 + 1;
 int main() {
 	int n, s;
 	scanf("%d%d", &n, &s);
-	
+
 	int mx = 0;
 	static int c[maxn];
 	for(int i = 0; i < n; ++i) {
@@ -16,12 +16,12 @@ int main() {
 		c[u] = max(c[u], v);
 	}
 	mx = min(mx, s);
-	
+
 	int mod = 0;
 	for(int i = 1; i <= mx; ++i)
 		if(c[i] != -1 && (!mod || (LL)c[mod] * i < (LL)c[i] * mod))
 			mod = i;
- 
+
 	int bound = (mod - 1) * mx;
 	if(s < bound + mod) {
 		int tot = 0;
@@ -56,12 +56,12 @@ int main() {
 		printf("%lld\n", dp[tot - 1]);
 		return 0;
 	}
- 
+
 	static LL rep[maxn];
 	rep[0] = 0;
 	for(int i = 1; i < mod; ++i)
 		rep[i] = -INF;
- 
+
 	for(int i = 1; i <= mx; ++i) {
 		if(c[i] == -1 || i == mod)
 			continue;
@@ -86,7 +86,7 @@ int main() {
 					rep[que[v]] = max(rep[que[v]], rep[que[u]] + c[i] - (que[u] + i - que[v]) / mod * (LL)c[mod]);
 		}
 	}
- 
+
 	LL ans = 0;
 	for(int i = 0; i < mod; ++i)
 		ans = max(ans, rep[i] + (s - i) / mod * (LL)c[mod]);

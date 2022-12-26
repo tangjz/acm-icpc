@@ -12,7 +12,7 @@ long double pow(long double x, int k)
 		if(k & 1)
 			ret = ret * x;
 		x = x * x;
-		k >>= 1; 
+		k >>= 1;
 	}
 	return ret;
 }

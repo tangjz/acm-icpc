@@ -6,8 +6,8 @@ TASK: beads
 #include <cstdio>
 char a[350];
 int Max, n;
-int main()  
-{ 
+int main()
+{
 	freopen("beads.in", "r", stdin);
 	freopen("beads.out", "w", stdout);
 	int temp, flag1, flag2;

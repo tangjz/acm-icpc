@@ -1,5 +1,5 @@
 /*
- * 将原串复制一遍，求后缀数组即可 
+ * 灏嗗師涓插鍒朵竴閬嶏紝姹傚悗缂�鏁扮粍鍗冲彲
  */
 #include <cstdio>
 #include <cstring>

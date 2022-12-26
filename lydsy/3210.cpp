@@ -1,7 +1,7 @@
 /*
  * |x1 - x2| + |y1 - y2| = max(|(x1 + y1) - (x2 + y2)|, |(x1 - y1) - (x2 - y2)|)
- * ���Ƚ��б�ѩ�����ת��Ϊ�����پ��룬x��y�ֿ�ͳ����λ�� 
- * ����ת���б�ѩ����룬�п��ܲ������㣬��������һ�¼�飬����Сֵ 
+ * 首先将切比雪夫距离转化为曼哈顿距离，x与y分开统计中位数
+ * 将答案转回切比雪夫距离，有可能不是整点，于是扰乱一下检查，找最小值
  */
 #include <cstdio>
 #include <algorithm>
@@ -31,7 +31,7 @@ int main()
 	getint(n);
 	for(int i = 0; i < n; ++i)
 	{
-		getint(x[i]), getint(y[i]); 
+		getint(x[i]), getint(y[i]);
 		a[i] = (x[i] + y[i]) / 2.0;
 		b[i] = (x[i] - y[i]) / 2.0;
 	}
@@ -41,6 +41,6 @@ int main()
 	for(int i = -1; i <= 1; ++i)
 		for(int j = -1; j <= 1; ++j)
 			check(mx + i, my + j);
-	printf("%lld\n", ans); 
+	printf("%lld\n", ans);
 	return 0;
 }

@@ -6,11 +6,11 @@ public:
         ctr.clear();
         act.clear();
     }
-    
+
     void addActivity(int actId, int priceLimit, int discount, int number, int userLimit) {
         act.push_back({actId, priceLimit, discount, number, userLimit});
     }
-    
+
     void removeActivity(int actId) {
         auto it = act.begin();
         for( ; it != act.end() && (*it)[0] != actId; ++it);
@@ -19,7 +19,7 @@ public:
             act.pop_back();
         }
     }
-    
+
     int consume(int userId, int cost) {
         pair<int, int> best = {cost, -1};
         for(auto &vec: act) {

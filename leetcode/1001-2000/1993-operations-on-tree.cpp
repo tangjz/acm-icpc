@@ -10,7 +10,7 @@ class LockingTree {
         }
         out[u] = seq.size() - 1;
     }
-    
+
 public:
     LockingTree(vector<int>& parent) {
         par = move(parent);
@@ -24,21 +24,21 @@ public:
             e[par[i]].push_back(i);
         dfs(0);
     }
-    
+
     bool lock(int num, int user) {
         if(ack[num])
             return false;
         ack[num] = user;
         return true;
     }
-    
+
     bool unlock(int num, int user) {
         if(ack[num] != user)
             return false;
         ack[num] = 0;
         return true;
     }
-    
+
     bool upgrade(int num, int user) {
         for(int u = num; u != -1; u = par[u])
             if(ack[u])

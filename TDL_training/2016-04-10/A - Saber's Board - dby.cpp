@@ -6,13 +6,13 @@ using namespace std;
 const int MAXL = 100 + 5;
 char buf[MAXL];
 int l[MAXL][MAXL],r[MAXL][MAXL],n,m,k;
- 
+
 bool chk(int i,int j,int len){
 	if(i >= 0 && i < n && j >= 0 && j < m){
 		return l[i][j] >= len && r[i][j] >= len;
 	}else return true;
 }
- 
+
 int main(){
 	int TT;
 	scanf("%d",&TT);

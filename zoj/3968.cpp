@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <algorithm>
 using namespace std;
-typedef long long LL; 
+typedef long long LL;
 typedef long double DB;
 const DB eps = 1e-12;
 int t, x[3], y[3], r[3], px, py, pr2, tot;

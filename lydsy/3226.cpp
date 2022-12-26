@@ -1,6 +1,6 @@
 /*
- * �߶��� Ⱦɫ+��ɫ 
- * ÿ��������������ڼ��㿪������ 
+ * 线段树 染色+反色
+ * 每个数拆成两个便于计算开闭区间
  */
 #include <cstdio>
 #include <cstdlib>
@@ -118,7 +118,7 @@ int main()
 		printf("%d,%d", out[i][0] >> 1, out[i][1] + 1 >> 1);
 		if(out[i][1] & 1) putchar(')');
 		else putchar(']');
-		if((out[i][1] + 1 >> 1) != 65535) putchar(' ');//ɥ�Ĳ��� 
+		if((out[i][1] + 1 >> 1) != 65535) putchar(' ');//ɥ�Ĳ���
 		putchar('\n');
 	}
 #ifndef ONLINE_JUDGE

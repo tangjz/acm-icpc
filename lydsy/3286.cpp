@@ -1,7 +1,7 @@
 /*
- * ¾ØÕóµÝÍÆ + Ê®½øÖÆ¿ìËÙÃÝ
- * PS: µ±È»Ò²¿ÉÒÔÖ±½ÓÄ£p^2-1 ÕâÊÇËùÓÐì³²¨ÄÇÆõÊýÁÐµÄÑ­»·½Ú 
- */ 
+ * çŸ©é˜µé€’æŽ¨ + åè¿›åˆ¶å¿«é€Ÿå¹‚
+ * PS: å½“ç„¶ä¹Ÿå¯ä»¥ç›´æŽ¥æ¨¡p^2-1 è¿™æ˜¯æ‰€æœ‰æ–æ³¢é‚£å¥‘æ•°åˆ—çš„å¾ªçŽ¯èŠ‚
+ */
 #include <cstdio>
 #include <cstring>
 typedef long long LL;

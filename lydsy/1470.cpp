@@ -1,5 +1,5 @@
 /*
- * ͬ3229 
+ * 3229
  */
 #include <cstdio>
 int n, num[50001], tmp, ans;

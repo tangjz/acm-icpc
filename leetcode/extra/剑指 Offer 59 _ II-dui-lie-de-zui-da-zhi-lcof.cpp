@@ -5,18 +5,18 @@ class MaxQueue {
 public:
     MaxQueue() {
     }
-    
+
     int max_value() {
         return que.empty() ? -1 : best.front().first;
     }
-    
+
     void push_back(int value) {
         que.push({value, ++ctr});
         while(!best.empty() && best.back().first <= value)
             best.pop_back();
         best.push_back({value, ctr});
     }
-    
+
     int pop_front() {
         if(que.empty())
             return -1;

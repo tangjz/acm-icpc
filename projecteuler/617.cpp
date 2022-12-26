@@ -167,7 +167,7 @@ int solve(LL lim) {
 				Hash.insert(seq[m++]);
 		}
 	}
-//	sort(seq, seq + m); 
+//	sort(seq, seq + m);
 //	for(int i = 0; i < m; ++i)
 //		printf("%lld %lld %lld\n", seq[i].n, seq[i].e, seq[i].num);
 	return ret + m;

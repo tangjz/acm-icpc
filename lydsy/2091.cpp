@@ -1,5 +1,5 @@
 /*
- * 博弈的策略类似于dp 
+ * 鍗氬紙鐨勭瓥鐣ョ被浼间簬dp
  */
 #include <cstdio>
 #include <algorithm>

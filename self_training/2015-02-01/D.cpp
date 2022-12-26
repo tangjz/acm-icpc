@@ -75,7 +75,7 @@ int main()
 			if(a[i] > 2 * M)
 				return 1;
 			double theta = acos(1 - sqr(a[i] / M) / 2);
-			double area = sqr(M) * sin(theta) / 2; 
+			double area = sqr(M) * sin(theta) / 2;
 			if(i + 1 == n)
 				ans += tri < pi ? -area : area;
 			else

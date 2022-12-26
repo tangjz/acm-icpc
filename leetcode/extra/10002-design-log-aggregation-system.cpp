@@ -7,13 +7,13 @@ public:
         vector<vector<int> >(machines).swap(ms);
         vector<vector<int> >(services).swap(sv);
     }
-    
+
     void pushLog(int logId, int machineId, int serviceId, string message) {
         msg[logId] = message;
         ms[machineId].push_back(logId);
         sv[serviceId].push_back(logId);
     }
-    
+
     vector<int> getLogsFromMachine(int machineId) {
         return ms[machineId];
     }
@@ -21,7 +21,7 @@ public:
     vector<int> getLogsOfService(int serviceId) {
         return sv[serviceId];
     }
-    
+
     vector<string> search(int serviceId, string searchString) {
         vector<string> ret;
         for(int logId: sv[serviceId]) {

@@ -14,7 +14,7 @@ public:
             return {};
         dt >>= 1;
         for(int i = 0; i < m; ++i) {
-            long long v = dt + array2[i]; 
+            long long v = dt + array2[i];
             if(v < INT_MIN || v > INT_MAX)
                 continue;
             auto it = pos1.find(v);

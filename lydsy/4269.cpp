@@ -25,5 +25,5 @@ int main()
 	for(int i = 0; i < r; ++i)
 		ans ^= a[i];
 	printf("%d %d\n", ans, ans ^ a[r - 1]);
-	return 0;	
+	return 0;
 }

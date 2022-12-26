@@ -6,7 +6,7 @@ public:
         for(int i = 0; i < maxNumbers; ++i)
             cand.insert(i);
     }
-    
+
     int get() {
         if(cand.empty())
             return -1;
@@ -14,11 +14,11 @@ public:
         cand.erase(x);
         return x;
     }
-    
+
     bool check(int number) {
         return cand.count(number);
     }
-    
+
     void release(int number) {
         cand.insert(number);
     }

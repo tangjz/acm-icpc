@@ -16,4 +16,4 @@ int main() {
         puts(sgn(len * rem + len1 * rem1 + len2 * rem2 + len3 * rem3) * sgn(rem) > 0 ? "Accepted" : "Rejected");
     }
     return 0;
-} 
+}

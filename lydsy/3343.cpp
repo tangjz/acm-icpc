@@ -1,8 +1,8 @@
 /*
- * ��ÿ���СΪSize������[N/Size]�飬ÿ���ټ�¼һ������� 
- * ��������Ӳ���������Ĳ��ֿ��Լ�¼������������Ĳ���ֱ�ӱ����޸ģ������ʱ�临�Ӷ�O([N/Size]+SizelogSize)
- * ��������ѯ�ʣ�����Ĳ��ֿ���ֱ�������������ֲ����㣬����Ĳ��ֱ����������ʱ�临�Ӷ�O([N/Size]logSize+Size)
- * �����Size = \sqrt{N}����ʹ���Ӷ���� 
+ * 设每块大小为Size，共有[N/Size]块，每块再记录一个有序表
+ * 对于区间加操作，整块的部分可以记录增加量，不足的部分直接暴力修改，单次最坏时间复杂度O([N/Size]+SizelogSize)
+ * 对于区间询问，整块的部分可以直接在有序表里二分查找算，不足的部分暴力，单次最坏时间复杂度O([N/Size]logSize+Size)
+ * 大概令Size = \sqrt{N}可以使复杂度最好
  */
 #include <cmath>
 #include <cstdio>

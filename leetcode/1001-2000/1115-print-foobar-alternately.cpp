@@ -13,7 +13,7 @@ public:
     }
 
     void foo(function<void()> printFoo) {
-        
+
         for (int i = 0; i < n; i++) {
             sem_wait(&s_f);
         	// printFoo() outputs "foo". Do not change or remove this line.
@@ -23,7 +23,7 @@ public:
     }
 
     void bar(function<void()> printBar) {
-        
+
         for (int i = 0; i < n; i++) {
             sem_wait(&s_b);
         	// printBar() outputs "bar". Do not change or remove this line.

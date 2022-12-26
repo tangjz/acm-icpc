@@ -15,7 +15,7 @@ public:
         }
         rnd.seed(time(NULL));
     }
-    
+
     vector<int> pick() {
         int pos = rnd() % M, L = 0, R = N - 1;
         while(L < R) {

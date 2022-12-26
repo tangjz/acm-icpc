@@ -14,7 +14,7 @@ public:
         for(int i = 0; i < 4; ++i)
             sem_init(s + i, 0, i == choose(1));
     }
-    
+
     // printFizz() outputs "fizz".
     void fizz(function<void()> printFizz) {
         for(int i = 1; i <= n; ++i)

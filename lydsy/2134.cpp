@@ -1,5 +1,5 @@
 /*
- * ϲ���ּ��ļ�ģ��... 
+ * 喜闻乐见的简单模拟...
  */
 #include <cstdio>
 typedef long long LL;

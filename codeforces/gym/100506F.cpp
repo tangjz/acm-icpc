@@ -60,5 +60,5 @@ int main()
 		}
 		printf("%.8f\n", l);
 	}
-	return 0; 
+	return 0;
 }

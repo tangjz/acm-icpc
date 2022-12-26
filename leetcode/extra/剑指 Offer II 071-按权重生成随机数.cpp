@@ -39,7 +39,7 @@ public:
         assert(lft.empty() && rht.empty());
         rnd.seed(time(NULL));
     }
-    
+
     int pickIndex() {
         Item &cur = seq[rnd() % N];
         return rnd() % M < cur.first.second ? cur.first.first : cur.second;

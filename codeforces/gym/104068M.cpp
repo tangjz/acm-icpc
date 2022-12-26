@@ -6,7 +6,7 @@ const int BLEN = 4 << 20 | 1;
 struct FastInput {
 	char *pool, *head, *tail;
 	bool eof;
- 
+
 	FastInput() {
 		pool = new char[BLEN];
 		head = tail = pool;
@@ -41,7 +41,7 @@ struct FastInput {
 
 struct FastOutput {
 	char *pool, *head, *tail;
- 
+
 	FastOutput() {
 		pool = new char[BLEN];
 		head = pool;

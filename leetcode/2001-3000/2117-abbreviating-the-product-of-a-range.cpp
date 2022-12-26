@@ -12,18 +12,18 @@ public:
             for( ; x % 5 == 0; x /= 5, ++c5);
             for(vD *= x; vD >= mod; vD /= 10);
             vL = min(vL * x, maxv);
-            rem = rem * x % mod;            
+            rem = rem * x % mod;
         }
         int ex = min(c2, c5);
         for(int i = ex; i < c2; ++i) {
             for(vD *= 2; vD >= mod; vD /= 10);
             vL = min(vL * 2, maxv);
-            rem = rem * 2 % mod;            
+            rem = rem * 2 % mod;
         }
         for(int i = ex; i < c5; ++i) {
             for(vD *= 5; vD >= mod; vD /= 10);
             vL = min(vL * 5, maxv);
-            rem = rem * 5 % mod;            
+            rem = rem * 5 % mod;
         }
         if(vL < maxv) {
             return to_string(vL) + "e" + to_string(ex);

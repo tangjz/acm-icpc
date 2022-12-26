@@ -6,7 +6,7 @@ public:
         for(int x: nums)
             psums.push_back(psums.back() + x);
     }
-    
+
     int sumRange(int left, int right) {
         return psums[right + 1] - psums[left];
     }

@@ -15,7 +15,7 @@ public:
     FindElements(TreeNode* root) {
         this -> root = root;
     }
-    
+
     bool find(int target) {
         ++target;
         int mx = 0;

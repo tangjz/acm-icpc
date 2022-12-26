@@ -1,5 +1,5 @@
 /*
- * »ØÎÄĞòÁĞµÄÇø¼ä¶¯Ì¬¹æ»®  
+ * å›æ–‡åºåˆ—çš„åŒºé—´åŠ¨æ€è§„åˆ’
  */
 #include <cstdio>
 template<typename _> inline const _& min(const _& x, const _& y) { return x < y ? x : y; }

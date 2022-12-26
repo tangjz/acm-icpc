@@ -5,7 +5,7 @@ public:
     Logger() {
         unordered_map<string, int>().swap(his);
     }
-    
+
     bool shouldPrintMessage(int timestamp, string message) {
         auto it = his.find(message);
         if(it != his.end() && timestamp - (it -> second) < delta)

@@ -19,7 +19,7 @@ int main()
 		for(int i = 1; i <= n; ++i)
 		{
 			int cnt = n % i;
-			upd(ans, f[n / i + 1] * cnt + f[n / i] * (i - cnt) + x * i); 
+			upd(ans, f[n / i + 1] * cnt + f[n / i] * (i - cnt) + x * i);
 		}
 		printf("Case #%d: %.6f\n", Case, ans);
 	}

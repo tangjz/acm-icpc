@@ -1,7 +1,7 @@
 /*
- * ÉèÆ½¾ùÊıÎªk, sum[x] = ¡Æ(i = 1 to x) num[i] - x
- * Ôòans = ¡Æ(x = 1 to n) sum[x] - sum[y] 
- * µ±sum[y]ÎªÖĞÎ»ÊıÊ±ans×îĞ¡ ÅÅĞò 
+ * è®¾å¹³å‡æ•°ä¸ºk, sum[x] = âˆ‘(i = 1 to x) num[i] - x
+ * åˆ™ans = âˆ‘(x = 1 to n) sum[x] - sum[y]
+ * å½“sum[y]ä¸ºä¸­ä½æ•°æ—¶ansæœ€å° æ’åº
  */
 #include <cstdio>
 #include <algorithm>

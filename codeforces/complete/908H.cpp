@@ -13,7 +13,7 @@ void dsu_merge(int u, int v) {
 	dsu[u] += dsu[v];
 	dsu[v] = u;
 }
-int main() { 
+int main() {
 	scanf("%d", &n);
 	for(int i = 0; i < n; ++i) {
 		scanf("%s", buf[i]);

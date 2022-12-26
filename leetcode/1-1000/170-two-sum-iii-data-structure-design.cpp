@@ -5,11 +5,11 @@ public:
     TwoSum() {
         ctr.clear();
     }
-    
+
     void add(int number) {
         ++ctr[number];
     }
-    
+
     bool find(int value) {
         int low = max((LL)value - INT_MAX, (LL)INT_MIN);
         int upp = min(min((LL)value - INT_MIN, ((LL)value - (value & 1)) / 2), (LL)INT_MAX);

@@ -28,7 +28,7 @@ int main() {
 			}
 		}
 		if(fz == fm * s[i])
-			ctr = 0; 
+			ctr = 0;
 		if(ctr == 1)
 			dsu[dsu_find(i)] = dsu_find(pos);
 		c[i] = ctr;

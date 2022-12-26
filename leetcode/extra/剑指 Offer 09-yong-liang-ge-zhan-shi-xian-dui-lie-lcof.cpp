@@ -5,11 +5,11 @@ public:
         stack<int>().swap(in);
         stack<int>().swap(out);
     }
-    
+
     void appendTail(int value) {
         in.push(value);
     }
-    
+
     int deleteHead() {
         if(out.empty())
             while(!in.empty()) {

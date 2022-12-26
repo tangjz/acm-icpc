@@ -1,5 +1,5 @@
 /*
- * ¾­µädpÎÊÌâ? Áîf[i,j]±íÊ¾ÑÝ×àµÚiÊ×¸èÊ±ÊÇ·ñ¿ÉÒÔÓÐÒôÁ¿j£¬×ªÒÆ²»ÓÃ¶àËµ 
+ * ç»å…¸dpé—®é¢˜? ä»¤f[i,j]è¡¨ç¤ºæ¼”å¥ç¬¬ié¦–æ­Œæ—¶æ˜¯å¦å¯ä»¥æœ‰éŸ³é‡jï¼Œè½¬ç§»ä¸ç”¨å¤šè¯´
  */
 #include <cstdio>
 const int maxn = 51, maxlim = 1010;

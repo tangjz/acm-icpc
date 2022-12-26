@@ -7,7 +7,7 @@ public:
         m = 0;
         vector<vector<pair<int, int> > >(n).swap(info);
     }
-    
+
     void set(int index, int val) {
         auto &vec = info[index];
         if(!vec.empty() && vec.back().first == m) {
@@ -16,11 +16,11 @@ public:
             vec.push_back({m, val});
         }
     }
-    
+
     int snap() {
         return m++;
     }
-    
+
     int get(int index, int snap_id) {
         auto &vec = info[index];
         auto it = lower_bound(vec.begin(), vec.end(), make_pair(snap_id + 1, 0));

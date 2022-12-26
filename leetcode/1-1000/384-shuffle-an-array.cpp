@@ -6,11 +6,11 @@ public:
         rnd.seed(19260817);
         seq = move(nums);
     }
-    
+
     vector<int> reset() {
         return seq;
     }
-    
+
     vector<int> shuffle() {
         int n = seq.size();
         vector<int> ret = seq;

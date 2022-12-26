@@ -8,7 +8,7 @@ public:
         lft.clear();
         rht.clear();
     }
-    
+
     void add(string name, int score) {
         rht.insert({-score, name});
         if(!ctr)
@@ -21,7 +21,7 @@ public:
             rht.insert(u);
         }
     }
-    
+
     string get() {
         pk state = *rht.begin();
         string ans = state.second;

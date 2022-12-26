@@ -6,7 +6,7 @@ public:
     ExamRoom(int n) {
         this -> n = n;
     }
-    
+
     int seat() {
         pair<int, int> ret = {INT_MAX, INT_MAX}, mid;
         if(sp.empty()) {
@@ -41,7 +41,7 @@ public:
         }
         return ret.second;
     }
-    
+
     void leave(int p) {
         sp.erase(p);
         if(sp.empty())

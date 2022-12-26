@@ -4,11 +4,11 @@ typedef long long LL;
 typedef double DB;
 const int maxn = (int)2e5 + 1;
 const int mod = (int)1e9 + 7;
- 
+
 struct Info {
 	int fir, las, cnt;
 };
- 
+
 int main() {
 	int T = 1;
 	scanf("%d", &T);
@@ -43,6 +43,6 @@ int main() {
 		printf("%d\n", ans);
 		// printf("Case #%d:");
 	}
- 
+
 	return 0;
 }

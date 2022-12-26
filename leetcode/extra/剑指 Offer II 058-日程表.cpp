@@ -4,7 +4,7 @@ public:
     MyCalendar() {
         seg.clear();
     }
-    
+
     bool book(int start, int end) {
         for(auto &it: seg) {
             int low = max(it.first, start);

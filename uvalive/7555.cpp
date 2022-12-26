@@ -69,4 +69,4 @@ int main()
 		printf("%.10f\n", (double)(ans / total));
 	}
 	return 0;
-} 
+}

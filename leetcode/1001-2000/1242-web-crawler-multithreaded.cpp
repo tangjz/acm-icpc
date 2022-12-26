@@ -14,18 +14,18 @@ class Solution {
     vector<string> que;
     unordered_set<string> sp;
     int done, active;
-    
+
     string getHostName(string const &s) {
         auto pos = s.find('/', 7);
         return s.substr(7, pos == string::npos ? pos : pos - 7);
     }
-    
+
     void extend(string const &s) {
         if(getHostName(s) == hostName && sp.insert(s).second) {
             que.push_back(string(s));
         }
     }
-    
+
 public:
     vector<string> crawl(string startUrl, HtmlParser htmlParser) {
         pool.clear();

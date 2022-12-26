@@ -29,12 +29,12 @@ public:
 	    if((hasHeader = Iterator::hasNext()))
             header = Iterator::next();
 	}
-	
+
     // Returns the next element in the iteration without advancing the iterator.
 	int peek() {
         return header;
 	}
-	
+
 	// hasNext() and next() should behave the same as in the Iterator interface.
 	// Override them if needed.
 	int next() {
@@ -44,7 +44,7 @@ public:
             header = Iterator::next();
 	    return ret;
 	}
-	
+
 	bool hasNext() const {
 	    return hasHeader;
 	}

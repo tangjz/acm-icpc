@@ -13,7 +13,7 @@ public:
         pos.clear();
         pos.reserve(upp);
     }
-    
+
     int get(int key) {
         int value = -1;
         Map::const_iterator it = pos.find(key);
@@ -25,7 +25,7 @@ public:
         }
         return value;
     }
-    
+
     void put(int key, int value) {
         Map::const_iterator it = pos.find(key);
         if(it != pos.end()) {

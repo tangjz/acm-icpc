@@ -25,13 +25,13 @@ public:
                 int u = s[pos] - 'a', v = ch - 'a';
                 int R = *rht[u].lower_bound(pos);
                 int L = pL[R];
-                
+
                 rht[u].erase(R);
                 sp[u].erase({R - L + 1, L});
                 pL[R] = pR[L] = -1;
-                
+
                 int nL = pos, nR = pos;
-                
+
                 if(pos > L) {
                     rht[u].insert(pos - 1);
                     sp[u].insert({pos - L, L});
@@ -44,7 +44,7 @@ public:
                     pL[tR] = pR[tL] = -1;
                     nL = tL;
                 }
-                
+
                 if(pos < R) {
                     rht[u].insert(R);
                     sp[u].insert({R - pos, pos + 1});
@@ -57,13 +57,13 @@ public:
                     pL[tR] = pR[tL] = -1;
                     nR = tR;
                 }
-                
+
                 s[pos] = ch;
                 rht[v].insert(nR);
                 sp[v].insert({nR - nL + 1, nL});
                 pL[nR] = nL;
                 pR[nL] = nR;
-                
+
                 upp[u] = sp[u].empty() ? 0 : sp[u].rbegin() -> first;
                 upp[v] = sp[v].empty() ? 0 : sp[v].rbegin() -> first;
             }

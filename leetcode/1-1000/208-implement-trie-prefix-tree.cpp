@@ -9,7 +9,7 @@ public:
     Trie() {
         rt = new Node();
     }
-    
+
     /** Inserts a word into the trie. */
     void insert(string word) {
         Node *cur = rt;
@@ -21,7 +21,7 @@ public:
         }
         cur -> end = true;
     }
-    
+
     /** Returns if the word is in the trie. */
     bool search(string word) {
         Node *cur = rt;
@@ -33,7 +33,7 @@ public:
         }
         return cur -> end;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         Node *cur = rt;

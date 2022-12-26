@@ -7,12 +7,12 @@ public:
         vector<int>().swap(stk);
         stk.reserve(upp);
     }
-    
+
     void push(int x) {
         if(stk.size() < upp)
             stk.push_back(x);
     }
-    
+
     int pop() {
         int ret = -1;
         if(!stk.empty()) {
@@ -21,7 +21,7 @@ public:
         }
         return ret;
     }
-    
+
     void increment(int k, int val) {
         for(int &x : stk) {
             if(!k)

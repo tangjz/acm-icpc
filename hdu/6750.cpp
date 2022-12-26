@@ -37,7 +37,7 @@ int main() {
                 las = cur;
                 val = s(cur);
             }
-            if(f[i]) 
+            if(f[i])
                 ans = (ans + (LL)f[i] * val) % mod;
         }
         if(ans < 0)

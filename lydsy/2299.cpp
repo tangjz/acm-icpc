@@ -1,6 +1,6 @@
 /*
- * 分类讨论 
- */ 
+ * 鍒嗙被璁ㄨ
+ */
 #include <cstdio>
 typedef long long LL;
 LL gcd(LL a, LL b) { return b ? gcd(b, a % b) : a; }

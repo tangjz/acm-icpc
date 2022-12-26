@@ -2,8 +2,8 @@
  * \sum_{i = 1}^n{\sum_{j = 1}^m{[gcd(i, j) = d]}}
  * = \sum_{i = 1}^n{\sum_{j = 1}^m{\sum_{d|gcd(i, j)}{mu(d)}}}
  * = [n / d] * [m / d] * \sum_{d = 1}^min(n, m){mu(d)}
- * 线性筛预处理莫比乌斯函数mu[]
- * 每次询问是有关mu[]前缀和的分块>_< 
+ * 绾挎�х瓫棰勫鐞嗚帿姣斾箤鏂嚱鏁癿u[]
+ * 姣忔璇㈤棶鏄湁鍏砿u[]鍓嶇紑鍜岀殑鍒嗗潡>_<
  */
 #include <cstdio>
 const int maxv = 50001;

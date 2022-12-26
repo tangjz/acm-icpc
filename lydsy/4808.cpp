@@ -51,7 +51,7 @@ int dfs(int u, int lim)
 		lev[u] = -1;
 	return ret;
 }
-const int maxs = 201, maxd = 8, dx[maxd] = {1, 2, 2, 1, -1, -2, -2, -1}, dy[maxd] = {2, 1, -1, -2, -2, -1, 1, 2}; 
+const int maxs = 201, maxd = 8, dx[maxd] = {1, 2, 2, 1, -1, -2, -2, -1}, dy[maxd] = {2, 1, -1, -2, -2, -1, 1, 2};
 int n, m, val[maxs][maxs];
 inline int idx(int x, int y)
 {

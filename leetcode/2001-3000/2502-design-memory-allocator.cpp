@@ -4,7 +4,7 @@ public:
     Allocator(int n) {
         idx.resize(n);
     }
-    
+
     int allocate(int size, int mID) {
         int n = idx.size();
         for(int i = 0; i < n; ++i) {
@@ -20,7 +20,7 @@ public:
         }
         return -1;
     }
-    
+
     int free(int mID) {
         int n = idx.size(), ctr = 0;
         for(int i = 0; i < n; ++i)

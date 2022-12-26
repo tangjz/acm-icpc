@@ -19,18 +19,18 @@ public:
         idx = 0;
         len = cand.size();
     }
-    
+
     void move(int num) {
         if(idx + num >= len) {
             cand.front().second = "South";
         }
         idx = (idx + num) % len;
     }
-    
+
     vector<int> getPos() {
         return cand[idx].first;
     }
-    
+
     string getDir() {
         return cand[idx].second;
     }

@@ -8,7 +8,7 @@ public:
             sum += f[i + 1];
             if(i + maxPts + 1 <= n)
                 sum -= f[i + maxPts + 1];
-            if(i >= k) {            
+            if(i >= k) {
                 f[i] = 1;
             } else {
                 f[i] = sum / maxPts;

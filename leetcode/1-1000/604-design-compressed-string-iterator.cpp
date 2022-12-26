@@ -20,14 +20,14 @@ public:
         tail = buf.end();
         fetch();
     }
-    
+
     char next() {
         char ret = ch;
         if(!(--ctr))
             fetch();
         return ret;
     }
-    
+
     bool hasNext() {
         return (ch != ' ' && ctr > 0) || head != tail;
     }

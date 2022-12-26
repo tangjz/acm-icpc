@@ -1,5 +1,5 @@
 /*
- * 直接枚举约数 ans = ∑p * phi(n / p) 
+ * 鐩存帴鏋氫妇绾︽暟 ans = 鈭憄 * phi(n / p)
  */
 #include <cstdio>
 int sum;

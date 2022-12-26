@@ -26,7 +26,7 @@ int main(){
 		int lines = len / m,rest = len % m;
 		for(int j = m,cur = 0;j;-- j)
 			for(int i = 1,lim = (j <= rest) + lines;i <= lim;++ i)
-				mat[i][j] = s[cur ++] - 'a'; 
+				mat[i][j] = s[cur ++] - 'a';
 		//Step 4
 		int dt = 1,x = 1,y = 1,ex,ey; lines += rest != 0;
 		while(x < lines && mat[x][y] != -1){

@@ -5,17 +5,17 @@ public:
         stack<int>().swap(in);
         stack<int>().swap(out);
     }
-    
+
     void push(int x) {
         in.push(x);
     }
-    
+
     int pop() {
         int ret = peek();
         out.pop();
         return ret;
     }
-    
+
     int peek() {
         if(out.empty()) {
             while(!in.empty()) {
@@ -25,7 +25,7 @@ public:
         }
         return out.top();
     }
-    
+
     bool empty() {
         return in.empty() && out.empty();
     }

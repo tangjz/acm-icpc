@@ -53,7 +53,7 @@ void dfs(int u) {
 		int v = e[it].v;
 		st[0][v] = u;
 		for(int i = 1; st[i - 1][v]; mx < ++i && (mx = i))
-			st[i][v] = st[i - 1][st[i - 1][v]]; 
+			st[i][v] = st[i - 1][st[i - 1][v]];
 		dfs(v);
 		f[u] += f[v];
 	}

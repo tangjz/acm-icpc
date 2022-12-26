@@ -1,6 +1,6 @@
 /*
- * ºÏ²¢gcd(i, n)ÏàÍ¬Ïî 
- * ans = n * ¡Æ£¨p | n) p * phi(p) / 2 
+ * åˆå¹¶gcd(i, n)ç›¸åŒé¡¹
+ * ans = n * âˆ‘ï¼ˆp | n) p * phi(p) / 2
  */
 #include <cstdio>
 const int maxn = 1000001;

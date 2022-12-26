@@ -3,9 +3,9 @@ class NumberContainers {
     map<int, set<int> > ref;
 public:
     NumberContainers() {
-        
+
     }
-    
+
     void change(int index, int number) {
         if(seq.count(index)) {
             ref[seq[index]].erase(index);
@@ -13,7 +13,7 @@ public:
         seq[index] = number;
         ref[number].insert(index);
     }
-    
+
     int find(int number) {
         return ref.count(number) && !ref[number].empty() ? *ref[number].begin() : -1;
     }

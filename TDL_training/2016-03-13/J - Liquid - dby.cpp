@@ -27,7 +27,7 @@ int main(){
                     printf("la:lb = %d %d\n",la,lb);
                 */
                 if(x <= lb + 1){
-                    retl = la; 
+                    retl = la;
                     x = lb + 1;
                     segs.erase(prec);
                 }

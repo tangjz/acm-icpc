@@ -7,7 +7,7 @@ public:
         sub.clear();
         sub[""] = {};
     }
-    
+
     vector<string> ls(string path) {
         if(path.back() == '/')
             path.pop_back();
@@ -19,7 +19,7 @@ public:
         auto &jt = sub[path];
         return vector<string>(jt.begin(), jt.end());
     }
-    
+
     void mkdir(string path) {
         sub[path] = {};
         while(path != "") {
@@ -29,14 +29,14 @@ public:
             path = move(pre);
         }
     }
-    
+
     void addContentToFile(string filePath, string content) {
         auto it = filePath.rfind('/');
         string pre = filePath.substr(0, it), suf = filePath.substr(it + 1);
         sub[pre].insert(suf);
         con[filePath] += content;
     }
-    
+
     string readContentFromFile(string filePath) {
         return con[filePath];
     }

@@ -10,7 +10,7 @@ public:
             st = 0;
         }
     }
-    
+
     void track(int x) {
         for(++x; x < maxv; x += x & -x)
             if(bits[x].second != st) {
@@ -19,7 +19,7 @@ public:
                 ++bits[x].first;
             }
     }
-    
+
     int getRankOfNumber(int x) {
         int ret = 0;
         for(++x; x > 0; x -= x & -x)

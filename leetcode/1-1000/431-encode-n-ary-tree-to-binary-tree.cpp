@@ -45,7 +45,7 @@ public:
             }
         return rt;
     }
-	
+
     // Decodes your binary tree to an n-ary tree.
     Node* decode(TreeNode* root) {
         if(root == nullptr)

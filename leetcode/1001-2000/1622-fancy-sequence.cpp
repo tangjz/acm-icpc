@@ -10,16 +10,16 @@ public:
         seq = {};
         inv = {0, 1};
     }
-    
+
     void append(int val) {
         val = (val - b + mod) * (LL)ik % mod;
         seq.push_back(val);
     }
-    
+
     void addAll(int inc) {
         (b += inc) >= mod && (b -= mod);
     }
-    
+
     void multAll(int m) {
         for(int i = inv.size(); i <= m; ++i)
             inv.push_back(mod - (int)(mod / i * (LL)inv[mod % i] % mod));
@@ -27,7 +27,7 @@ public:
         ik = (LL)ik * inv[m] % mod;
         b = (LL)b * m % mod;
     }
-    
+
     int getIndex(int idx) {
         return idx < seq.size() ? ((LL)k * seq[idx] + b) % mod : -1;
     }

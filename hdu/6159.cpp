@@ -100,7 +100,7 @@ inline void poly_inv(int n, int f[], int g[]) {
 // A[i] * B[j] -> (i + j) d G[i + j] (i, j <= n / d)
 void cdq(int L, int R) {
     if(L == R) {
-        B[L] = L ? (LL)B[L] * inv[L * d] % mod : 1; 
+        B[L] = L ? (LL)B[L] * inv[L * d] % mod : 1;
         return;
     }
     int M = (L + R) >> 1;

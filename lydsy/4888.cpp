@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
-using namespace std; 
+using namespace std;
 typedef long long LL;
 const int maxn = 100001;
 int n, s[maxn], tot, p[maxn], bit[maxn], ans;

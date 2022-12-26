@@ -8,7 +8,7 @@ public:
     MapSum() {
         root = new TrieNode();
     }
-    
+
     void insert(string key, int val) {
         TrieNode *cur = root;
         cur -> sum += val;
@@ -37,7 +37,7 @@ public:
             cur -> sum -= dt;
         }
     }
-    
+
     int sum(string prefix) {
         TrieNode *cur = root;
         for(char ch: prefix) {

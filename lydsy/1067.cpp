@@ -1,5 +1,5 @@
 /*
- * ST±Ì¡∑œ∞Ã‚ 
+ * STË°®ÁªÉ‰π†È¢ò
  */
 #include <cstdio>
 #include <algorithm>
@@ -19,7 +19,7 @@ int main()
 		scanf("%d%d", &year[i], &st[i][0]);
 	for(int j = 1; j <= 18; ++j)
 		for(int i = 1; i <= n - (1 << j) + 1; ++i)
-			st[i][j] = max(st[i][j - 1], st[i + (1 << j - 1)][j - 1]); 
+			st[i][j] = max(st[i][j - 1], st[i + (1 << j - 1)][j - 1]);
 	for(int i = 1, j = 1, k = -1; i <= n; ++i)
 		if(i == j) Log[i] = ++k, j <<= 1;
 		else Log[i] = k;

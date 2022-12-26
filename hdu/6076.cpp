@@ -29,4 +29,4 @@ int main() {
         printf("%d\n", c[n] + n);
     }
     return 0;
-} 
+}

@@ -74,7 +74,7 @@ int main(){
 		}
 		int ret = oo;
 		for(int tmp,i = 0;i <= m;++ i){
-			tmp = tree[i].query(tot,1,tot,1);	
+			tmp = tree[i].query(tot,1,tot,1);
 			if(tmp < ret) ret = tmp;
 		}
 		printf("Case %d: %d\n",++ cas,ret);

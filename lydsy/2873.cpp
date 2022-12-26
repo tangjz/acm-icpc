@@ -1,6 +1,6 @@
 /*
- * ´ø±êºÅ±ß-ÏÉÈËÕÆÍ¼ 
- * ¾ßÌå¿´ptyµÄÌâ½â 
+ * å¸¦æ ‡å·è¾¹-ä»™äººæŒå›¾
+ * å…·ä½“çœ‹ptyçš„é¢˜è§£
  */
 #include <cstdio>
 #define rep(i,l,r) for(int i=l;i<=r;i++)
@@ -14,7 +14,7 @@ struct Program
 		scanf("%d%d", &n, &pp);
 		rep(i,0,n) c[i][0] = 1;
 		rep(i,1,n)
-			rep(j,1,n) 
+			rep(j,1,n)
 			{
 				c[i][j] = c[i-1][j-1] + c[i-1][j];
 				if (c[i][j] >= pp) c[i][j] -= pp;

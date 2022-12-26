@@ -31,7 +31,7 @@ struct Bitset
 		for(int i = maxs - 1; i >= 0; --i)
 			if(data[i])
 				return (i << 6) + (
-				data[i] >> 48 ? hbit[data[i] >> 48] + 48 : 
+				data[i] >> 48 ? hbit[data[i] >> 48] + 48 :
 				data[i] >> 32 ? hbit[(data[i] >> 32) & ((1 << 16) - 1)] + 32 :
 				data[i] >> 16 ? hbit[(data[i] >> 16) & ((1 << 16) - 1)] + 16 :
 								hbit[data[i] & ((1 << 16) - 1)]);

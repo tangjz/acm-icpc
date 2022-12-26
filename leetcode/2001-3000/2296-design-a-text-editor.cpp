@@ -80,7 +80,7 @@ public:
         pool[0] = {};
         rt = ofs = 0;
     }
-    
+
     void addText(string text) {
         int cur = 0;
         for(char ch: text)
@@ -91,7 +91,7 @@ public:
         ofs += text.size();
         // printf("cur %d (%d): %s\n", ofs, pool[rt].sz, gather(0, pool[rt].sz).c_str());
     }
-    
+
     int deleteText(int k) {
         k = min(k, ofs);
         pair<int, int> t1 = split(rt, ofs);
@@ -101,13 +101,13 @@ public:
         // printf("cur %d (%d): %s\n", ofs, pool[rt].sz, gather(0, pool[rt].sz).c_str());
         return k;
     }
-    
+
     string cursorLeft(int k) {
         ofs = max(ofs - k, 0);
         // printf("cur %d (%d): %s\n", ofs, pool[rt].sz, gather(0, pool[rt].sz).c_str());
         return gather(max(ofs - 10, 0), ofs);
     }
-    
+
     string cursorRight(int k) {
         ofs = min(ofs + k, pool[rt].sz);
         // printf("cur %d (%d): %s\n", ofs, pool[rt].sz, gather(0, pool[rt].sz).c_str());

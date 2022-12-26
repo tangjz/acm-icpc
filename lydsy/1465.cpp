@@ -1,5 +1,5 @@
 /*
- * Ë«±¶¾­Ñé £º ´úÂë¼°Êý¾Ý¼û 1045 
+ * åŒå€ç»éªŒ ï¼š ä»£ç åŠæ•°æ®è§ 1045
  */
 #include <cstdio>
 #include <algorithm>

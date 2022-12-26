@@ -7,21 +7,21 @@ public:
         sz[0] = sz[1] = sz[2] = 0;
         seq.resize(cap * 3);
     }
-    
+
     void push(int stackNum, int value) {
         if(sz[stackNum] == cap)
             return;
         seq[stackNum * cap + (sz[stackNum]++)] = value;
     }
-    
+
     int pop(int stackNum) {
         return !sz[stackNum] ? -1 : seq[stackNum * cap + (--sz[stackNum])];
     }
-    
+
     int peek(int stackNum) {
         return !sz[stackNum] ? -1 : seq[stackNum * cap + sz[stackNum] - 1];
     }
-    
+
     bool isEmpty(int stackNum) {
         return !sz[stackNum];
     }

@@ -1,5 +1,5 @@
 /*
- * 预处理出1~maxn的方案数 回答询问用容斥原理 
+ * 预处理出1~maxn的方案数 回答询问用容斥原理
  */
 #include <cstdio>
 const int maxn = 100001;

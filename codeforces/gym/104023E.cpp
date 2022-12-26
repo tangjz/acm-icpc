@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 const int maxn = (int)1e5 + 21;
- 
+
 void solve() {
 	int n, m;
 	static int a[maxn];
@@ -26,7 +26,7 @@ void solve() {
 	}
 	printf("Python 3.%d will be faster than C++\n", n);
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

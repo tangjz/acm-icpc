@@ -5,14 +5,14 @@ public:
     SmallestInfiniteSet() {
         mex = 1;
     }
-    
+
     int popSmallest() {
         int ret = mex;
         rem.insert(mex);
         for(++mex; rem.count(mex); ++mex);
         return ret;
     }
-    
+
     void addBack(int num) {
         if(rem.count(num)) {
             rem.erase(num);

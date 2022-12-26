@@ -10,7 +10,7 @@ int main()
     for(i = 0; i < n; ++i)
     {
         cin >> a[i];
-        b[i] = a[i]; 
+        b[i] = a[i];
     }
     sort(b, b + n);
     for(i = 0; i < n; ++i)

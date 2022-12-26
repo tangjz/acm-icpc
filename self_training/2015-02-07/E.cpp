@@ -19,7 +19,7 @@ int main()
 		{
 			++ans;
 			continue;
-		}//Í¬Àà			±»³Ô				³Ô 
+		}//åŒç±»			è¢«åƒ				åƒ
 		int fx1 = find(x), fx2 = find(x + n), fx3 = find(x + n + n);
 		int fy1 = find(y), fy2 = find(y + n), fy3 = find(y + n + n);
 		if(d == 1)

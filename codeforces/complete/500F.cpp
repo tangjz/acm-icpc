@@ -8,7 +8,7 @@ struct Node
 	int c, h, t;
 	bool operator < (const Node &x) const
 	{
-		return t < x.t; 
+		return t < x.t;
 	}
 } s[maxn];
 const int &max(const int &a, const int &b)
@@ -23,7 +23,7 @@ int main()
 	sort(s + 1, s + n + 1);
 	for(int i = 1, j = 1; (i - 1) * p + 1 < maxt; ++i)
 	{
-		for( ; j <= n && s[j].t <= i * p; ++j)//dp : left to right 
+		for( ; j <= n && s[j].t <= i * p; ++j)//dp : left to right
 			if(j > 1 && (i - 1) * p < s[j - 1].t)
 			{
 				for(int k = 0; k < s[j].c; ++k)
@@ -67,7 +67,7 @@ int main()
 				pr = i;
 				break;
 			}
-		if(pl > pr)//nothing 
+		if(pl > pr)//nothing
 		{
 			puts("0");
 			continue;

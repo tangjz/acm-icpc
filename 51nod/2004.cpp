@@ -237,7 +237,7 @@ int main() {
 		dsu[u] = fa[u];
 		for(int it = lnk[fa[u]]; it != -1; it = e[it].nxt) {
 			dsu_find(e[it].v);
-			idom[e[it].v] = sdom[pos[e[it].v]] == sdom[e[it].v] ? fa[u] : pos[e[it].v]; 
+			idom[e[it].v] = sdom[pos[e[it].v]] == sdom[e[it].v] ? fa[u] : pos[e[it].v];
 		}
 		lnk[fa[u]] = -1;
 	}

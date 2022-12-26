@@ -5,7 +5,7 @@ public:
         while(!que.empty())
             que.pop();
     }
-    
+
     int ping(int t) {
         que.push(t);
         while(!que.empty() && que.front() < t - 3000)

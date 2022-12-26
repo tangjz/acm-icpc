@@ -8,38 +8,38 @@ public:
         rev = 0;
         vector<bool>(size).swap(vec);
     }
-    
+
     void fix(int idx) {
         if(vec[idx] == rev) {
             ++cnt;
             vec[idx] = !rev;
         }
     }
-    
+
     void unfix(int idx) {
         if(vec[idx] != rev) {
             --cnt;
             vec[idx] = rev;
         }
     }
-    
+
     void flip() {
         rev = !rev;
         cnt = vec.size() - cnt;
     }
-    
+
     bool all() {
         return cnt == vec.size();
     }
-    
+
     bool one() {
         return cnt > 0;
     }
-    
+
     int count() {
         return cnt;
     }
-    
+
     string toString() {
         string ret = "";
         for(bool x: vec)

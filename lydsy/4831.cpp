@@ -34,9 +34,9 @@ int main()
 				if(f[cur][j][1] != -1)
 					upd_max(f[nxt][a[i] - j][0], f[cur][j][1] + j);
 				if(g[cur][j][0] != INF)
-					upd_min(g[nxt][a[i] - j][0], g[cur][j][0] + j);	
+					upd_min(g[nxt][a[i] - j][0], g[cur][j][0] + j);
 				if(g[cur][j][1] != INF)
-					upd_min(g[nxt][a[i] - j][0], g[cur][j][1] + j);	
+					upd_min(g[nxt][a[i] - j][0], g[cur][j][1] + j);
 			}
 			int tf = -1, tg = INF;
 			for(int j = a[i] + 1; j <= a[i - 1]; ++j)
@@ -49,7 +49,7 @@ int main()
 				if(g[cur][j][0] != INF)
 				{
 					upd_min(tg, g[cur][j][0]);
-					upd_min(g[nxt][0][0], g[cur][j][0] + a[i]);	
+					upd_min(g[nxt][0][0], g[cur][j][0] + a[i]);
 				}
 			}
 			for(int j = std::min(a[i - 1], a[i]); j >= 0; --j)

@@ -1,6 +1,6 @@
 /*
- * f[i][j] ±íÊ¾iµ½jµÄ×î¶ÌÕÛµş³¤¶È 
- * Ëæ±ãdpÒ»ÏÂ¾ÍºÃÁË - - 
+ * f[i][j] è¡¨ç¤ºiåˆ°jçš„æœ€çŸ­æŠ˜å é•¿åº¦
+ * éšä¾¿dpä¸€ä¸‹å°±å¥½äº† - -
  */
 #include <cmath>
 #include <cstdio>
@@ -9,7 +9,7 @@
 using namespace std;
 char word[101] = {};
 int f[101][101];
-int length(const int x) { return (int)log10(x) + 3; } 
+int length(const int x) { return (int)log10(x) + 3; }
 int dp(const int x, const int y);
 int calc(const int x, const int y)
 {

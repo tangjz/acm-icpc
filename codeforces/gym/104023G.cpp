@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
 const int maxn = (int)1e5 + 1, maxm = 1 << 20 | 1;
 const LL maxv = (LL)1e12;
- 
+
 void solve() {
 	int n, x;
 	static pair<LL, LL> seg[maxn];
@@ -40,7 +40,7 @@ void solve() {
 		printf("%lld\n", ans);
 	}
 }
- 
+
 int main() {
 	int T = 1;
 	// scanf("%d", &T);

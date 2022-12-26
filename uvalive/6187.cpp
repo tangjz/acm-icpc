@@ -16,7 +16,7 @@ int main()
 {
 	while(scanf("%d%d", &n, &m) == 2 && n + m)
 	{
-		memset(dist, 0, sizeof dist); 
+		memset(dist, 0, sizeof dist);
 		for(int i = 1; i <= n; ++i)
 			fa[i] = i;
 		while(m--)

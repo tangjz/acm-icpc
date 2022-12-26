@@ -1,5 +1,5 @@
 /*
- * Burnside¶¨ÀíºÍP¨®lya¼ÆÊı·¨ 
+ * Burnsideå®šç†å’ŒPÃ³lyaè®¡æ•°æ³•
  * f[i][j][k] = f[i-g[t]][j][k] + f[i][j-g[t]][k] + f[i][j][k-g[t]]
  * ans = sigma(f[sr][sb][sg] / m) % p
  */

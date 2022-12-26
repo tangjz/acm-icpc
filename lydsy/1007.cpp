@@ -1,5 +1,5 @@
 /*
- * 开个栈维护半平面交即可 
+ * 寮�涓爤缁存姢鍗婂钩闈氦鍗冲彲
  */
 #include <cstdio>
 #include <cstdlib>

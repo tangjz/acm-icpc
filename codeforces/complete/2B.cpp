@@ -66,7 +66,7 @@ int main()
             y = j;
          }
       }
-   dp(d2, dr2, 2); 
+   dp(d2, dr2, 2);
    dp(d5, dr5, 5);
    if(flag)
    {

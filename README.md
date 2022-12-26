@@ -16,7 +16,7 @@
 |leetcode|3026|
 |loj|29|
 |luogu|56|
-|lydsy|894|
+|lydsy|883|
 |openjudge|7|
 |poj|104|
 |projecteuler|71|
@@ -27,7 +27,7 @@
 |uvalive|164|
 |zoj|20|
 
-`total: 6574`
+`total: 6563`
 
 #### count of misc trainings
 

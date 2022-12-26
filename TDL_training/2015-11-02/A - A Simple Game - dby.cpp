@@ -9,7 +9,7 @@ int neg[MAXN],pos[MAXN],n,T;
 inline int gcd(int x,int y){
 	int tmp;
 	while(y){
-		tmp = y; y = x % y; x = tmp;	
+		tmp = y; y = x % y; x = tmp;
 	}
 	return x;
 }
@@ -25,7 +25,7 @@ int main(){
 		sort(pos,pos + cpos);
 		sort(neg,neg + cneg);
 		int B = n * n,A = 0;
-		int rp = cpos,rn = 0; 
+		int rp = cpos,rn = 0;
 		for(int i = 0;i < cpos;++ i){
 			while(rp - 1 >= 0 && pos[rp - 1] * pos[i] > T) -- rp;
 			while(rn < cneg && neg[rn] * pos[i] <= T) ++ rn;

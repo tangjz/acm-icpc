@@ -37,7 +37,7 @@ bool check(int m)
 	for(int i = 0; i < m; ++i)
 		switch(c[i])
 		{
-			case 0: addedge(n + a[i], b[i]); addedge(n + b[i], a[i]); break; 
+			case 0: addedge(n + a[i], b[i]); addedge(n + b[i], a[i]); break;
 			case 1: addedge(a[i], b[i]); addedge(b[i], a[i]); addedge(n + a[i], n + b[i]); addedge(n + b[i], n + a[i]); break;
 			case 2: addedge(a[i], n + b[i]); addedge(b[i], n + a[i]); break;
 		}
@@ -74,7 +74,7 @@ int main()
 			if(check(M))
 				L = M;
 			else
-				R = M - 1; 
+				R = M - 1;
 		}
 		printf("%d\n", L);
 	}

@@ -1,6 +1,6 @@
 /*
- * ¼«´ó´®±»¿¨µôhashºÜÈÝÒ×£¬×¢ÒâhashÖµÒª±Èmod´ó
- * ²»ACÊÇRPÎÊÌâ 
+ * æžå¤§ä¸²è¢«å¡æŽ‰hashå¾ˆå®¹æ˜“ï¼Œæ³¨æ„hashå€¼è¦æ¯”modå¤§
+ * ä¸ACæ˜¯RPé—®é¢˜
  */
 #include <cstdio>
 #include <cstdlib>

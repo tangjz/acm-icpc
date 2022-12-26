@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
 const int maxn = (int)1e4 + 1, maxm = (int)1e6 + 1;
 const int maxd = 6721, maxe = 13, mod = (int)1e9 + 7;
 const int maxd2 = 241, maxq = 101, BLEN = 1 << 20 | 1;
- 
+
 struct FastInput {
 	char *pool, *head, *tail;
 	bool eof;
- 
+
 	FastInput() {
 		pool = new char[BLEN];
 		head = tail = pool;
@@ -41,9 +41,9 @@ struct FastInput {
 		sgn && (x = -x);
 	}
 } in;
- 
+
 int d[maxm];
- 
+
 struct FactorSet {
 	LL upp;
 	int etot, dtot;
@@ -82,7 +82,7 @@ public:
 		generate();
 	}
 } R, C, RC;
- 
+
 int modPow(int x, LL k) {
 	int ret = 1;
 	for( ; k > 0; k >>= 1, x = (LL)x * x % mod)
@@ -90,7 +90,7 @@ int modPow(int x, LL k) {
 			ret = (LL)ret * x % mod;
 	return ret;
 }
- 
+
 int modInv(int x) {
 	int y = mod, u = 1, v = 0, q;
 	while(x) {
@@ -101,7 +101,7 @@ int modInv(int x) {
 	// assert(y == 1);
 	return v < 0 ? v + mod : v;
 }
- 
+
 void solve() {
 	int n, r, c;
 	static int perm[maxn], ctr[maxn];
@@ -119,7 +119,7 @@ void solve() {
 		for( ; perm[i] != -1; ++c, j = perm[i], perm[i] = -1, i = j);
 		ctr[c] += c;
 	}
- 
+
 	int qtot = 0;
 	static int com[maxd2];
 	static pair<LL, int> coeff[maxd];
@@ -151,7 +151,7 @@ void solve() {
 			int nxt = RC.idx[u / com[j] * v];
 			coeff[nxt].first += up * vp;
 		}
- 
+
 	int ans = 0;
 	for(int i = 0; i < RC.dtot; ++i)
 		if((coeff[i].first %= mod) && coeff[i].second)
@@ -159,7 +159,7 @@ void solve() {
 	ans = (LL)ans * modInv(RC.upp % mod) % mod;
 	printf("%d\n", ans);
 }
- 
+
 int main() {
 	int ptot = 0;
 	static int pr[maxm];
@@ -173,7 +173,7 @@ int main() {
 				break;
 		}
 	}
- 
+
 	int T;
 	in.read(T);
 	for(int Case = 1; Case <= T; ++Case) {

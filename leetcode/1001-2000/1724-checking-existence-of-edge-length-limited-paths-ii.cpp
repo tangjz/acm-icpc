@@ -1,11 +1,11 @@
 class DistanceLimitedPathsExist {
     vector<pair<int, int> > dsu;
-    
+
     int dsuFind(int x) {
         for( ; dsu[x].first >= 0; x = dsu[x].first);
         return x;
     }
-    
+
     void dsuMerge(int u, int v, int w) {
         u = dsuFind(u);
         v = dsuFind(v);
@@ -25,7 +25,7 @@ public:
         for(auto &it: edges)
             dsuMerge(it[0], it[1], it[2]);
     }
-    
+
     bool query(int p, int q, int limit) {
         for( ; dsu[p].first >= 0 && dsu[p].second < limit; p = dsu[p].first);
         for( ; dsu[q].first >= 0 && dsu[q].second < limit; q = dsu[q].first);

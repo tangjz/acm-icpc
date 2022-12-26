@@ -10,7 +10,7 @@ int main()
 	scanf("%s", tex);
 	for(int i = 0; tex[i]; ++i)
 		++cnt[tex[i]];
-	
+
 	for(int i = 0; i < maxw; ++i)
 	{
 		if(!need[i])

@@ -1,5 +1,5 @@
 /*
- * 计算方案数，总体方案数为2^n 
+ * 璁＄畻鏂规鏁帮紝鎬讳綋鏂规鏁颁负2^n
  */
 #include <cstdio>
 const int maxn = 51;

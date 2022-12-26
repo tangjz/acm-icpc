@@ -10,7 +10,7 @@ int main(){
 		long long sum = 0;
 		int cnt = 0,cur = 2;
 		for(int i = 0;i < n - k;++ i) a[i] = 1;
-		cnt = n - k; sum = n - k;	
+		cnt = n - k; sum = n - k;
 		for(int i = n - k;i < n;++ i){
 			if(cnt * 100 < p * i){
 				cnt = i; a[i] = ++ cur;

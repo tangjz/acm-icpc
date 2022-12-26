@@ -39,7 +39,7 @@ int main() {
 			if(tmp && (upp - i) & 1)
 				tmp = mod - tmp;
 			(ans += tmp) >= mod && (ans -= mod);
-		}		
+		}
 	}
 	for(int i = 2; i <= n; ++i)
 		ans = (LL)ans * i % mod;

@@ -1,5 +1,5 @@
 /*
- * Ã¿´ÎÇÐÍêµÄÃæ»ý±ØÈ»ÊÇnµÄÕûÊý±¶ 
+ * æ¯æ¬¡åˆ‡å®Œçš„é¢ç§¯å¿…ç„¶æ˜¯nçš„æ•´æ•°å€
  */
 #include <cstdio>
 #include <algorithm>

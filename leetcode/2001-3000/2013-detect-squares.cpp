@@ -1,6 +1,6 @@
 class DetectSquares {
     unordered_map<int, unordered_map<int, int> > hs;
-    
+
     int get(int x, int y) {
         auto it = hs.find(x);
         if(it == hs.end())
@@ -14,12 +14,12 @@ public:
     DetectSquares() {
         hs.clear();
     }
-    
+
     void add(vector<int> point) {
         int x = point[0], y = point[1];
         hs[x][y] += 1;
     }
-    
+
     int count(vector<int> point) {
         int x = point[0], y = point[1];
         int ans = 0;

@@ -8,7 +8,7 @@ public:
         for(int k = 2; k <= n; ++k)
             if((n & 1) == (k & 1)) {
                 for(int i = 0, j = k - 1; j < n; ++i, ++j) {
-                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]); 
+                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]);
                 }
             } else {
                 for(int i = 0, j = k - 1; j < n; ++i, ++j) {

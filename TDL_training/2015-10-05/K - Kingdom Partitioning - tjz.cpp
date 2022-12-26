@@ -28,7 +28,7 @@ bool check(double xmax, int frac)
 			{
 				double theta = 2 * acos(fabs(xmax - x[i][j]) / r[i][j]);
 				if(dcmp(x[i][j] - xmax) < 0)
-					ret += r[i][j] * r[i][j] * (pi - (theta - sin(theta)) / 2); 
+					ret += r[i][j] * r[i][j] * (pi - (theta - sin(theta)) / 2);
 				else
 					ret += r[i][j] * r[i][j] * (theta - sin(theta)) / 2;
 			}

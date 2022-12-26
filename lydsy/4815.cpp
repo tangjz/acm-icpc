@@ -30,7 +30,7 @@ int main()
 			else
 				f[k] = f[i] * (pr[j] - 1);
 		}
-		a[i] = (LL)i * i % mod; 
+		a[i] = (LL)i * i % mod;
 		f[i] = (f[i - 1] + (LL)a[i] * f[i]) % mod;
 	}
 	for(sqn = 1; sqn * sqn < n; ++sqn);

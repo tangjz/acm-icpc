@@ -1,15 +1,15 @@
 /*
  * gcd(fib_i, fib_{i + 1}) = gcd(fib_{i - 1}, fib_i) = ... = gcd(fib_1, fib_2) = 1
  * fib_{n + m} = fib_{n - 1} * fib_m + fib_n * fib_{m + 1}
- * ËùÒÔ gcd(fib_{n + m}, fib_n) = gcd(fib_{n - 1} * fib_m, fib_n) = gcd(fib_{n - 1}, fib_n) * gcd(fib_m, fib_n) = gcd(fib_m, fib_n)
- * ËùÒÔ gcd(fib_i, fib_j) = fib_{gcd(i, j)}
- * ËùÒÔ fib_j | fib_i µÈ¼ÛÓÚ j | i
- * ¼Çe[i]ÎªiµÄ×îÐ¡ÖÊÒòÊý´ÎÊý£¬d[i]Îªi³ýÈ¥×îÐ¡ÖÊÒòÊýµÄÊý£¬g[i]ÎªiµÄÒòÊý¸öÊý£¬f[i]ÎªiµÄÒòÊýÆ½·½ºÍ 
- * ¶ÔÓÚÅ·Ê½É¸ÖÐi mod prime[j]Îª0µÄÇé¿ö:
- * ×îÐ¡ÖÊÒòÊý+1£¬ÒòÊý¸öÊý¹ØÓÚ×îÐ¡ÖÊÒòÊý²¿·ÖÖØËã£¬d[]²»±ä£¬f[]Îªf[i] * prime[j] ^ 2 + f[d[]]
- * ¶ÔÓÚi mod prime[j]·Ç0µÄÇé¿ö:
- * Óö¼ûµÄÊÇ×îÐ¡ÖÊÒòÊý£¬ÒòÊý¸öÊý·­±¶£¬f[]Îªf[i] * prime[j] ^ 2 + f[i]
- * ×¢Òâfib_1 = fib_2 = 1 
+ * æ‰€ä»¥ gcd(fib_{n + m}, fib_n) = gcd(fib_{n - 1} * fib_m, fib_n) = gcd(fib_{n - 1}, fib_n) * gcd(fib_m, fib_n) = gcd(fib_m, fib_n)
+ * æ‰€ä»¥ gcd(fib_i, fib_j) = fib_{gcd(i, j)}
+ * æ‰€ä»¥ fib_j | fib_i ç­‰ä»·äºŽ j | i
+ * è®°e[i]ä¸ºiçš„æœ€å°è´¨å› æ•°æ¬¡æ•°ï¼Œd[i]ä¸ºié™¤åŽ»æœ€å°è´¨å› æ•°çš„æ•°ï¼Œg[i]ä¸ºiçš„å› æ•°ä¸ªæ•°ï¼Œf[i]ä¸ºiçš„å› æ•°å¹³æ–¹å’Œ
+ * å¯¹äºŽæ¬§å¼ç­›ä¸­i mod prime[j]ä¸º0çš„æƒ…å†µ:
+ * æœ€å°è´¨å› æ•°+1ï¼Œå› æ•°ä¸ªæ•°å…³äºŽæœ€å°è´¨å› æ•°éƒ¨åˆ†é‡ç®—ï¼Œd[]ä¸å˜ï¼Œf[]ä¸ºf[i] * prime[j] ^ 2 + f[d[]]
+ * å¯¹äºŽi mod prime[j]éž0çš„æƒ…å†µ:
+ * é‡è§çš„æ˜¯æœ€å°è´¨å› æ•°ï¼Œå› æ•°ä¸ªæ•°ç¿»å€ï¼Œf[]ä¸ºf[i] * prime[j] ^ 2 + f[i]
+ * æ³¨æ„fib_1 = fib_2 = 1
  */
 #include <cstdio>
 typedef long long LL;

@@ -1,9 +1,9 @@
 /*
- * 石子合并... 
+ * 鐭冲瓙鍚堝苟...
  */
 #include <queue>
 #include <cstdio>
-using namespace std; 
+using namespace std;
 int n;
 long long ans;
 priority_queue<int, vector<int>, greater<int> > Q;

@@ -84,7 +84,7 @@ int main() {
                         }
                     } else {
                         break;
-                    } 
+                    }
                 }
             num[0] += c - 1;
             if(c - 1 < 0) {

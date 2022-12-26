@@ -80,66 +80,66 @@ int main()
 			e[i].y2 = lower_bound(ypos, ypos + y_tot, e[i].y2) - ypos + 1;
 	}
 	sort(e, e + e_tot);
-	Sta.insert(-INF), Sta.insert(INF);//¿éµÄÉÏ¶Ë 
-	End.insert(-INF), End.insert(INF);//¿éµÄÏÂ¶Ë 
-	y_set.insert(-INF), y_set.insert(INF);//µ±Ç°¼¯ºÏÀïµÄµã 
+	Sta.insert(-INF), Sta.insert(INF);//å—çš„ä¸Šç«¯
+	End.insert(-INF), End.insert(INF);//å—çš„ä¸‹ç«¯
+	y_set.insert(-INF), y_set.insert(INF);//å½“å‰é›†åˆé‡Œçš„ç‚¹
 	for(int i = 0; i < e_tot; ++i)
-		if(!e[i].type)//Ìí¼ÓÆğµã 
+		if(!e[i].type)//æ·»åŠ èµ·ç‚¹
 		{
 			int &y1 = e[i].y1;
-			y_set.insert(y1);//Ìí¼Ó½Úµã 
-			pos[y1] = e[i].id;//Ìí¼Ó¹éÊô 
+			y_set.insert(y1);//æ·»åŠ èŠ‚ç‚¹
+			pos[y1] = e[i].id;//æ·»åŠ å½’å±
 			add(y1, 1);
-			int yy = *(--Sta.upper_bound(*End.lower_bound(y1)));//ÔÚStaÀïĞ¡ÓÚEndÀï>=y1µÄµãy2µÄµãyy£¬¼´°üº¬y1µÄ¿é[yy,y2]µÄÆğµãyy 
-			Sta.insert(y1);//²åÈëÒ»¸ö¿é, [y1, y1] 
+			int yy = *(--Sta.upper_bound(*End.lower_bound(y1)));//åœ¨Staé‡Œå°äºEndé‡Œ>=y1çš„ç‚¹y2çš„ç‚¹yyï¼Œå³åŒ…å«y1çš„å—[yy,y2]çš„èµ·ç‚¹yy
+			Sta.insert(y1);//æ’å…¥ä¸€ä¸ªå—, [y1, y1]
 			End.insert(y1);
-			if(yy <= y1)//´æÔÚ°üº¬ËüµÄ¿é£¬ĞèÒª·ÖÁÑ³ÉÁ½¸ö[yy, y3], [y4, y2] 
+			if(yy <= y1)//å­˜åœ¨åŒ…å«å®ƒçš„å—ï¼Œéœ€è¦åˆ†è£‚æˆä¸¤ä¸ª[yy, y3], [y4, y2]
 			{
-				Sta.insert(*y_set.upper_bound(y1));//µã¼¯Àï>y1µÄµãy4 (y4<=y2) 
-				End.insert(*(--y_set.lower_bound(y1)));//µã¼¯Àï<y1µÄµãy3 (y3>=yy) 
+				Sta.insert(*y_set.upper_bound(y1));//ç‚¹é›†é‡Œ>y1çš„ç‚¹y4 (y4<=y2)
+				End.insert(*(--y_set.lower_bound(y1)));//ç‚¹é›†é‡Œ<y1çš„ç‚¹y3 (y3>=yy)
 			}
 		}
-		else if(e[i].type == 1)//Í³¼Æ¡¢ºÏ²¢ 
+		else if(e[i].type == 1)//ç»Ÿè®¡ã€åˆå¹¶
 		{
 			int &y1 = e[i].y1, &y2 = e[i].y2;
-			if(y_set.lower_bound(y1) == y_set.upper_bound(y2))//¹ÂÁ¢µÄÏß¶Î, ²»ÓÃ´¦Àí, ·ñÔòÖÁÉÙÓĞÒ»¸ö¿é 
+			if(y_set.lower_bound(y1) == y_set.upper_bound(y2))//å­¤ç«‹çš„çº¿æ®µ, ä¸ç”¨å¤„ç†, å¦åˆ™è‡³å°‘æœ‰ä¸€ä¸ªå—
 				continue;
-			set<int>::iterator lpos = End.lower_bound(y1), rpos = End.lower_bound(y2);//Éæ¼°µÄ¿éµÄÆğµãÓëÖÕµã [..., lpos], ..., [..., rpos] 
-			if(y2 < *(--Sta.upper_bound(*rpos)))//Èç¹ûrposËùÔÚ¿é²»ÓëÏß¶Î½Ó´¥ÔòÉ¾³ı 
+			set<int>::iterator lpos = End.lower_bound(y1), rpos = End.lower_bound(y2);//æ¶‰åŠçš„å—çš„èµ·ç‚¹ä¸ç»ˆç‚¹ [..., lpos], ..., [..., rpos]
+			if(y2 < *(--Sta.upper_bound(*rpos)))//å¦‚æœrposæ‰€åœ¨å—ä¸ä¸çº¿æ®µæ¥è§¦åˆ™åˆ é™¤
 				--rpos;
-			int cnt = 1, u = find(pos[*rpos]), v, tmp, stop = *rpos;//Éè×îºóÒ»¸ö¿éÊÇ¸¸Ç× 
-			vis[u] = i + 1;//¸üĞÂÊ±¼ä´Á 
-			for(set<int>::iterator it = lpos; *it != stop; it = End.upper_bound(tmp))//ÓÉÓÚÉ¾³ı²Ù×÷ÒÑ¾­É¾³ıÁËit, µü´úÆ÷È«²¿Ê§Ğ§ 
+			int cnt = 1, u = find(pos[*rpos]), v, tmp, stop = *rpos;//è®¾æœ€åä¸€ä¸ªå—æ˜¯çˆ¶äº²
+			vis[u] = i + 1;//æ›´æ–°æ—¶é—´æˆ³
+			for(set<int>::iterator it = lpos; *it != stop; it = End.upper_bound(tmp))//ç”±äºåˆ é™¤æ“ä½œå·²ç»åˆ é™¤äº†it, è¿­ä»£å™¨å…¨éƒ¨å¤±æ•ˆ
 			{
-				tmp = *it;//»º´æÊı¾İ 
-				v = find(pos[tmp]);//¿´¸Ã¿éµÄ¸ù 
-				if(vis[v] != i + 1)//ÊÇ·ñÒÑ¾­¸üĞÂ 
+				tmp = *it;//ç¼“å­˜æ•°æ®
+				v = find(pos[tmp]);//çœ‹è¯¥å—çš„æ ¹
+				if(vis[v] != i + 1)//æ˜¯å¦å·²ç»æ›´æ–°
 				{
 					vis[v] = i + 1;
-					++cnt;//ĞÂ¿é 
+					++cnt;//æ–°å—
 				}
-				merge(u, v);//ºÏ²¢u,vËùÔÚ¿é 
-				End.erase(tmp);//ºÏ²¢¸Ã¿éºÍÏÂÒ»¸ö¿é 
-				Sta.erase(Sta.upper_bound(tmp));//ºÏ²¢[l1, r1], [l2, r2]Í¨¹ıÉ¾³ır1ºÍl2 
+				merge(u, v);//åˆå¹¶u,væ‰€åœ¨å—
+				End.erase(tmp);//åˆå¹¶è¯¥å—å’Œä¸‹ä¸€ä¸ªå—
+				Sta.erase(Sta.upper_bound(tmp));//åˆå¹¶[l1, r1], [l2, r2]é€šè¿‡åˆ é™¤r1å’Œl2
 			}
-			merge(u, e[i].id, cnt - sum(y2) + sum(y1 - 1));//ºÏ²¢ÊúÏß£¬Ôö¼Ó´ğ°¸ 
+			merge(u, e[i].id, cnt - sum(y2) + sum(y1 - 1));//åˆå¹¶ç«–çº¿ï¼Œå¢åŠ ç­”æ¡ˆ
 		}
-		else//É¾³ı½Úµã 
+		else//åˆ é™¤èŠ‚ç‚¹
 		{
 			int &y1 = e[i].y1;
-			y_set.erase(y1);//²Á³ı 
-			pos[y1] = 0;//²Á³ı¹éÊô 
-			add(y1, -1);//È¡Ïû¹±Ï× 
-			int lpos = *(--Sta.upper_bound(y1)), rpos = *End.lower_bound(y1);//ÕÒµ½¶ÔÓ¦µÄ¿é[lpos, rpos] 
-			if(lpos != y1 && rpos != y1)//ÔÚ¿éÄÚ£¬ÎŞĞèĞŞ¸Ä¿é 
+			y_set.erase(y1);//æ“¦é™¤
+			pos[y1] = 0;//æ“¦é™¤å½’å±
+			add(y1, -1);//å–æ¶ˆè´¡çŒ®
+			int lpos = *(--Sta.upper_bound(y1)), rpos = *End.lower_bound(y1);//æ‰¾åˆ°å¯¹åº”çš„å—[lpos, rpos]
+			if(lpos != y1 && rpos != y1)//åœ¨å—å†…ï¼Œæ— éœ€ä¿®æ”¹å—
 				continue;
-			if(lpos != y1)//ĞÂÏÂ¶Ëµã 
+			if(lpos != y1)//æ–°ä¸‹ç«¯ç‚¹
 				End.insert(*(--y_set.lower_bound(y1)));
-			if(rpos != y1)//ĞÂÉÏ¶Ëµã 
+			if(rpos != y1)//æ–°ä¸Šç«¯ç‚¹
 				Sta.insert(*y_set.upper_bound(y1));
-			if(lpos == y1)//É¾ÉÏ¶Ëµã 
+			if(lpos == y1)//åˆ ä¸Šç«¯ç‚¹
 				Sta.erase(y1);
-			if(rpos == y1)//É¾ÏÂ¶Ëµã 
+			if(rpos == y1)//åˆ ä¸‹ç«¯ç‚¹
 				End.erase(y1);
 		}
 	long long ans = 0;

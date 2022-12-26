@@ -36,7 +36,7 @@ void poly_div(Poly A, Poly B, Poly &D, Poly &R) { // A = B D + R
     for(int i = R.deg; i >= B.deg; --i) {
         int prd = D.coeff[i - B.deg] = (LL)R.coeff[i] * ivs % mod;
         for(int j = 0; j <= B.deg; ++j)
-            (R.coeff[i - j] = (R.coeff[i - j] - (LL)prd * B.coeff[B.deg - j]) % mod) < 0 && (R.coeff[i - j] += mod); 
+            (R.coeff[i - j] = (R.coeff[i - j] - (LL)prd * B.coeff[B.deg - j]) % mod) < 0 && (R.coeff[i - j] += mod);
     }
     for( ; ~R.deg && !R.coeff[R.deg]; --R.deg);
 }

@@ -1,6 +1,6 @@
 /*
- * µ¥µ÷Õ»É¨Ò»±é 
- */ 
+ * å•è°ƒæ ˆæ‰«ä¸€é
+ */
 #include <cstdio>
 int n, q[50001], tail, ans;
 int main()

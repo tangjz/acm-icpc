@@ -7,7 +7,7 @@ const int maxn = (int)1e6 + 1, BLEN = 4 << 20 | 1;
 struct FastInput {
 	char *pool, *head, *tail;
 	bool eof;
- 
+
 	FastInput() {
 		pool = new char[BLEN];
 		head = tail = pool;

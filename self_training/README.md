@@ -19,7 +19,7 @@
 	http://acm.bnu.edu.cn/v3/contest_show.php?cid=6418
 	2015-06-27	03/12	Codeshark Round 1
 	http://codeforces.com/gym/100705
-	
+
 	2016-11-19	06/06	Mutual Training for Wannafly Union 1
 	http://vjudge.net/contest/142053
 	2016-07-31	10/10	2012 ACM-ICPC Asia Tokyo Regional Contest
@@ -53,7 +53,7 @@
 	2015-03-03	16/16	2015 Union of Weak Universities Winter Training 5
 	http://acm.bnu.edu.cn/v3/contest_show.php?cid=5840
 	2015-02-24	10/10	Dynamic Programming Exercise
-	http://acm.bnu.edu.cn/v3/contest_show.php?cid=5763 
+	http://acm.bnu.edu.cn/v3/contest_show.php?cid=5763
 	2015-02-23	05/05	Easy Problem Exercise
 	http://acm.bnu.edu.cn/v3/contest_show.php?cid=5748
 	2015-02-22	16/16	2015 Union of Weak Universities Winter Training 4

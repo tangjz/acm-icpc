@@ -1,5 +1,5 @@
 /*
- * ͬ1113 
+ * 1113
  */
 #include <cstdio>
 int n, q[50001], tail, ans;

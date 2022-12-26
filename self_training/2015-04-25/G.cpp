@@ -28,7 +28,7 @@ int main()
 			int M = L + R + 1 >> 1;
 			if(check(M))
 				L = M;
-			else 
+			else
 				R = M - 1;
 		}
 		printf("%d\n", L);

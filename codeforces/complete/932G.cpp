@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std; 
+using namespace std;
 const int maxn = (int)1e6 + 1, maxl = 25, mod = (int)1e9 + 7;
 int n, m, sta[maxl], dif[maxl], cnt[maxl], f[maxn], g[maxn];
 char buf[maxn], str[maxn];

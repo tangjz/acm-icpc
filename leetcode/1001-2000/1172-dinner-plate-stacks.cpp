@@ -2,7 +2,7 @@ class DinnerPlates {
     int cap;
     vector<vector<int> > seq;
     set<int> toAdd, toSub;
-    
+
     void innerPush(int pos, int val) {
         // printf("push %d: %d\n", pos, val);
         auto &stk = seq[pos];
@@ -14,7 +14,7 @@ class DinnerPlates {
             toAdd.erase(pos);
         }
     }
-    
+
     int innerPop(int pos) {
         auto &stk = seq[pos];
         int ret = stk.back();
@@ -28,7 +28,7 @@ class DinnerPlates {
         }
         return ret;
     }
-    
+
 public:
     DinnerPlates(int capacity) {
         cap = capacity;
@@ -36,7 +36,7 @@ public:
         toAdd = {};
         toSub = {};
     }
-    
+
     void push(int val) {
         if(toAdd.empty()) {
             toAdd.insert(seq.size());
@@ -45,13 +45,13 @@ public:
         }
         innerPush(*toAdd.begin(), val);
     }
-    
+
     int pop() {
         if(toSub.empty())
             return -1;
         return innerPop(*toSub.rbegin());
     }
-    
+
     int popAtStack(int index) {
         if(index >= seq.size() || seq[index].empty())
             return -1;

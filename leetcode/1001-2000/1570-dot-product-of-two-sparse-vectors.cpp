@@ -1,7 +1,7 @@
 class SparseVector {
     map<int, int> poly;
 public:
-    
+
     SparseVector(vector<int> &nums) {
         poly.clear();
         int n = nums.size();
@@ -9,7 +9,7 @@ public:
             if(nums[i] > 0)
                 poly[i] = nums[i];
     }
-    
+
     // Return the dotProduct of two sparse vectors
     int dotProduct(SparseVector& vec) {
         int ans = 0;

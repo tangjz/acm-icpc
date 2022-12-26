@@ -38,7 +38,7 @@ public:
             stk.push(make_pair(nestedList.begin(), nestedList.end()));
         adjust();
     }
-    
+
     int next() {
         pair<Iter, Iter> cur = stk.top();
         stk.pop();
@@ -48,7 +48,7 @@ public:
         adjust();
         return ret;
     }
-    
+
     bool hasNext() {
         return !stk.empty();
     }

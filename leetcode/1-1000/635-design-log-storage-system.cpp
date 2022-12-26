@@ -4,11 +4,11 @@ public:
     LogSystem() {
         logs.clear();
     }
-    
+
     void put(int id, string timestamp) {
         logs[timestamp].push_back(id);
     }
-    
+
     vector<int> retrieve(string start, string end, string granularity) {
         static const string pat[] = {"Year", "Month", "Day", "Hour", "Minute", "Second"};
         int pos = 0;

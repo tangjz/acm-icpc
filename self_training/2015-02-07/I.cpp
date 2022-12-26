@@ -48,7 +48,7 @@ int main()
 					pre[i][j] = pre[i - 1][j];
 				}
 			else
-				for(int j = 0; j <= p1; ++j)//·ÇºÃ¼´»µ 
+				for(int j = 0; j <= p1; ++j)//éå¥½å³å
 				{
 					if(j >= cnt[i][0] && f[i - 1][j - cnt[i][0]])
 					{

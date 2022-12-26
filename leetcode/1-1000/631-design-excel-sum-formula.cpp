@@ -10,25 +10,25 @@ class Excel {
             ret += getVal(it.first) * it.second;
         return ret;
     }
-    
+
 public:
     Excel(int height, char width) {
         r = height;
         c = width - 'A' + 1;
         vector<pair<int, map<int, int> > >(r * c).swap(vals);
     }
-    
+
     void set(int row, char column, int val) {
         int idx = (row - 1) * c + (column - 'A');
         vals[idx].first = val;
         vals[idx].second.clear();
     }
-    
+
     int get(int row, char column) {
         int idx = (row - 1) * c + (column - 'A');
         return getVal(idx);
     }
-    
+
     int sum(int row, char column, vector<string> numbers) {
         int idx = (row - 1) * c + (column - 'A'), tmp;
         auto &mp = vals[idx].second;

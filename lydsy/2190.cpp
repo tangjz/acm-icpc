@@ -1,5 +1,5 @@
 /*
- * Çógcd(i, j) = 1µÄ¸öÊý 
+ * æ±‚gcd(i, j) = 1çš„ä¸ªæ•°
  */
 #include <cstdio>
 int n, prime[40001], tot = 0, phi[40001];

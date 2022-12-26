@@ -33,6 +33,6 @@ int main() {
 				break;
 		}
 	}
-	printf("%lld\n", solve((LL)1e12));	
+	printf("%lld\n", solve((LL)1e12));
 	return 0;
 }
