@@ -7,7 +7,7 @@ public:
         pos = 0;
         dt = k;
     }
-    
+   
     bool consec(int num) {
         if(num == val)
             cand.push(pos);

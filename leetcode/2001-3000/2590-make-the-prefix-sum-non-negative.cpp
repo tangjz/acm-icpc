@@ -10,7 +10,7 @@ class TodoList {
 public:
     TodoList() {
     }
-    
+   
     int addTask(int userId, string taskDescription, int dueDate, vector<string> tags) {
         pair<int, int> key = {dueDate, (int)seq.size()};
         taskByUser[userId].insert(key);
@@ -19,7 +19,7 @@ public:
         seq.push_back((Task){userId, dueDate, taskDescription, move(tags)});
         return (int)seq.size();
     }
-    
+   
     vector<string> getAllTasks(int userId) {
         vector<string> ret;
         auto it = taskByUser.find(userId);
@@ -28,7 +28,7 @@ public:
                 ret.push_back(seq[jt.second].dsc);
         return ret;
     }
-    
+   
     vector<string> getTasksForTag(int userId, string tag) {
         vector<string> ret;
         auto it = taskByUserTag.find({userId, tag});
@@ -37,7 +37,7 @@ public:
                 ret.push_back(seq[jt.second].dsc);
         return ret;
     }
-    
+   
     void completeTask(int userId, int taskId) {
         --taskId;
         if(taskId >= 0 && taskId < (int)seq.size() && seq[taskId].uid == userId) {
