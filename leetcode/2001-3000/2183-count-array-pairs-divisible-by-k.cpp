@@ -1,6 +1,6 @@
 class Solution {
 public:
-    long long coutPairs(vector<int>& nums, int k) {
+    long long countPairs(vector<int>& nums, int k) {
         typedef long long LL;
         vector<int> f(k + 1);
         for(int &x: nums)
