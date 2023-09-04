@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+with cte1 as (select customer_id, transaction_date, (rank() over(partition by customer_id order by transaction_date asc)) as rnk from Transactions), cte2 as (select customer_id, count(customer_id) as cnt from cte1 group by customer_id, date_sub(transaction_date, interval rnk day)), cte3 as (select max(cnt) as upp from cte2) select cte2.customer_id as customer_id from cte2 inner join cte3 on cte2.cnt = cte3.upp order by customer_id asc;
