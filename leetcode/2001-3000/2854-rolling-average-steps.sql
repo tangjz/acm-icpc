@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+with cte1 as (select user_id, steps_date, (count(steps_date) over(partition by user_id order by steps_date range between interval 2 day preceding and current row)) as cnt_date, (sum(sum(steps_count)) over(partition by user_id order by steps_date range between interval 2 day preceding and current row)) as cnt from Steps group by user_id, steps_date) select user_id, steps_date, round(cnt / 3, 2) as rolling_average from cte1 where cnt_date = 3 order by user_id asc, steps_date asc;

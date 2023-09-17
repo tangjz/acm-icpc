@@ -20,7 +20,7 @@ public:
         len = cand.size();
     }
 
-    void move(int num) {
+    void step(int num) {
         if(idx + num >= len) {
             cand.front().second = "South";
         }

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool PredictTheWinner(vector<int>& nums) {
+    bool predictTheWinner(vector<int>& nums) {
         vector<int> que;
         for(int x: nums) {
             while(que.size() >= 2 && que.back() >= x && que[que.size() - 2] <= que.back()) {

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isNumber(string s) {
+    bool isNumber(string_view s) {
         auto isInteger = [&](string_view s, bool allowSign) -> bool {
             if(allowSign && !s.empty() && (s[0] == '-' || s[0] == '+'))
                 s = s.substr(1);
@@ -24,6 +24,10 @@ public:
                 return 0;
             return (!u || isInteger(s.substr(0, u), 0)) && (u + 1 == s.size() || isInteger(s.substr(u + 1), 0));
         };
+        int L = 0, R = s.size();
+        for( ; L < R && s[L] == ' '; ++L);
+        for( ; L < R && s[R - 1] == ' '; --R);
+        s = s.substr(L, R - L);
         auto u = s.find('e'), v = s.find('E');
         int c0 = u != string::npos, c1 = v != string::npos;
         if(c0 != c1) {

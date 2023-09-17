@@ -12,16 +12,15 @@
 class Solution {
 public:
     int closestValue(TreeNode* root, double target) {
-        int ans = root -> val;
+        pair<double, int> ans = {fabs(root -> val - target), root -> val};
         while(root != nullptr) {
-            if(fabs(root -> val - target) < fabs(ans - target))
-                ans = root -> val;
+            ans = min(ans, make_pair(fabs(root -> val - target), root -> val));
             if(target < root -> val) {
                 root = root -> left;
             } else {
                 root = root -> right;
             }
         }
-        return ans;
+        return ans.second;
     }
 };

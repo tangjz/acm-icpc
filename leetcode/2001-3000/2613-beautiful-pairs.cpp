@@ -3,20 +3,8 @@ public:
     vector<int> beautifulPair(vector<int>& x, vector<int>& y) {
         typedef long long LL;
         int n = x.size();
-        unordered_map<LL, int> ctr;
-        vector<int> ord;
-        for(int i = 0; i < n; ++i) {
-            LL key = x[i] * (n + 1LL) + y[i];
-            if((++ctr[key]) <= 2)
-                ord.push_back(i);
-        }
-        auto cmp_x = [&](int const &u, int const &v) {
-            return x[u] < x[v];
-        };
-        auto cmp_y = [&](int const &u, int const &v) {
-            return y[u] < y[v];
-        };
-        sort(ord.begin(), ord.end(), cmp_x);
+        unordered_map<LL, int> hs;
+        vector<int> ord(n);
         pair<int, pair<int, int> > ans = {n + n + 1, {-1, -1}}, tmp;
         auto upd = [&](int u, int v) {
             if(u > v)
@@ -24,6 +12,22 @@ public:
             tmp = {abs(x[u] - x[v]) + abs(y[u] - y[v]), {u, v}};
             ans = min(ans, tmp);
         };
+        for(int i = 0; i < n; ++i) {
+            LL key = x[i] * (n + 1LL) + y[i];
+            int j = hs.insert({key, i}).first -> second;
+            if(j < i)
+                upd(j, i);
+            ord[i] = i;
+        }
+        if(!ans.first)
+            return {ans.second.first, ans.second.second};
+        auto cmp_x = [&](int const &u, int const &v) {
+            return x[u] < x[v];
+        };
+        auto cmp_y = [&](int const &u, int const &v) {
+            return y[u] < y[v];
+        };
+        sort(ord.begin(), ord.end(), cmp_x);
         function<void(int, int)> dfs = [&](int L, int R) {
             int len = R - L + 1;
             if(len <= 24) {
