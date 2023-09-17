@@ -42,7 +42,8 @@ public:
         int pos = ret.size();
         for( ; pos >= 5 && ret.substr(pos - 5, 5) == "null,"; pos -= 5);
         ret.resize(pos);
-        ret.pop_back();
+        if(!ret.empty())
+            ret.pop_back();
         return ret;
     }
 

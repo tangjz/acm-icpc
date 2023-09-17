@@ -28,7 +28,7 @@ public:
                 --L;
                 tp = min(tp, psum[L] + 2LL * k * (m - L) - psum[n] + psum[n - m + L]);
             }
-            ret.push_back();
+            ret.push_back(tp);
         }
         return ret;
     }

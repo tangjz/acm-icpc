@@ -37,7 +37,7 @@ public:
         static mt19937_64 rnd(19260817);
         string pat = "RYBGW";
         shuffle(pat.begin(), pat.end(), rnd);
-       
+
         int n = board.size(), m = hand.size();
         State s = {};
         s.ctr |= (LL)n << 40;
