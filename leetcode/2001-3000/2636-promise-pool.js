@@ -1,9 +1,9 @@
 /**
  * @param {Function[]} functions
  * @param {number} n
- * @return {Function}
+ * @return {Promise<any>}
  */
-var promisePool = async function(functions, n) {
+var promisePool = async function (functions, n) {
     let init = functions.slice(0, n);
     let remain = functions.slice(n);
     let pick = () => remain.length && remain.shift()().then(pick);

@@ -3,8 +3,8 @@
  * @param {number} t
  * @return {Function}
  */
-var timeLimit = function(fn, t) {
-	return async function(...args) {
+var timeLimit = function (fn, t) {
+    return async function (...args) {
         return Promise.race([
             fn(...args),
             new Promise((_, reject) => setTimeout(reject, t, "Time Limit Exceeded")),

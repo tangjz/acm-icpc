@@ -1,9 +1,9 @@
 /**
  * @return {Generator<number>}
  */
-var fibGenerator = function*() {
+var fibGenerator = function* () {
     let a = 1, b = 0;
-    while(true) {
+    while (true) {
         yield b;
         [a, b] = [b, a + b];
     }

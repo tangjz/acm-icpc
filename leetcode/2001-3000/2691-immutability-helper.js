@@ -1,4 +1,4 @@
-var ImmutableHelper = function(obj) {
+var ImmutableHelper = function (obj) {
     this.obj = obj;
 };
 
@@ -6,34 +6,34 @@ var ImmutableHelper = function(obj) {
  * @param {Function} mutator
  * @return {JSON} clone of obj
  */
-ImmutableHelper.prototype.produce = function(mutator) {
+ImmutableHelper.prototype.produce = function (mutator) {
     const isObj = o => typeof o === 'object' && o !== null;
     const wrapper = (obj, diff) => {
         return new Proxy(obj, {
-              set(_, p, v) {
-                  diff[p] = v;
-              },
-              get(_, p) {
-                  if(!(p in diff)) {
-                      diff[p] = {};
-                  }
-                  if(!isObj(diff[p])) {
-                      return diff[p];
-                  }
-                  if(isObj(obj[p])) {
-                      return wrapper(obj[p], diff[p]);
-                  }
-                  return obj[p];
-              },
+            set(_, p, v) {
+                diff[p] = v;
+            },
+            get(_, p) {
+                if (!(p in diff)) {
+                    diff[p] = {};
+                }
+                if (!isObj(diff[p])) {
+                    return diff[p];
+                }
+                if (isObj(obj[p])) {
+                    return wrapper(obj[p], diff[p]);
+                }
+                return obj[p];
+            },
         });
     };
     const purify = (diff) => {
-        if(!isObj(diff)) {
+        if (!isObj(diff)) {
             return true;
         }
         let upd = false;
-        for(const key in diff) {
-            if(!purify(diff[key])) {
+        for (const key in diff) {
+            if (!purify(diff[key])) {
                 delete diff[key];
             } else {
                 upd = true;
@@ -42,11 +42,11 @@ ImmutableHelper.prototype.produce = function(mutator) {
         return upd;
     };
     const reduce = (obj, diff) => {
-        if(!isObj(diff)) {
+        if (!isObj(diff)) {
             return diff;
         }
         let res = { ...obj };
-        for(const key in diff) {
+        for (const key in diff) {
             res[key] = reduce(obj[key], diff[key]);
         }
         return res;

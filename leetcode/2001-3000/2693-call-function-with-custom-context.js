@@ -1,9 +1,9 @@
 /**
  * @param {Object} context
- * @param {any[]} args
- * @return {any}
+ * @param {Array} args
+ * @return {null|boolean|number|string|Array|Object}
  */
-Function.prototype.callPolyfill = function(context, ...args) {
+Function.prototype.callPolyfill = function (context, ...args) {
     const ctx = { ...context };
     ctx.__proto__.func = this;
     return ctx.func(...args);

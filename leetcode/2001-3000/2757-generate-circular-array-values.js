@@ -4,10 +4,10 @@
  * @yields {number}
  */
 var cycleGenerator = function* (arr, idx) {
-    while(true) {
+    while (true) {
         let ret = yield arr[idx];
         idx = (idx + ret) % arr.length;
-        if(idx < 0)
+        if (idx < 0)
             idx += arr.length;
     }
 };

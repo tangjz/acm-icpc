@@ -1,8 +1,8 @@
 /**
  * @param {Array<Function>} functions
- * @return {Promise}
+ * @return {Promise<Array>}
  */
-var promiseAllSettled = function(functions) {
+var promiseAllSettled = function (functions) {
     return new Promise((resolve, _) => {
         let rem = functions.length;
         const res = new Array(rem);
@@ -19,7 +19,7 @@ var promiseAllSettled = function(functions) {
                 };
             }).finally(() => {
                 --rem;
-                if(rem === 0)
+                if (rem === 0)
                     resolve(res);
             });
         });

@@ -1,9 +1,10 @@
 /**
  * @param {Function} callback
- * @param {Context} context
+ * @param {Object} context
+ * @return {void}
  */
-Array.prototype.forEach = function(callback, context) {
-    for(let i = 0; i < this.length; ++i)
+Array.prototype.forEach = function (callback, context) {
+    for (let i = 0; i < this.length; ++i)
         callback.call(context, this[i], i, this)
 }
 

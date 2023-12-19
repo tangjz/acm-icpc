@@ -2,11 +2,11 @@
  * @param {number} target
  * @return {number}
  */
-Array.prototype.upperBound = function(target) {
+Array.prototype.upperBound = function (target) {
     let L = 0, R = this.length - 1;
-    while(L < R) {
+    while (L < R) {
         let M = (L + R + 1) >> 1;
-        if(this[M] <= target) {
+        if (this[M] <= target) {
             L = M;
         } else {
             R = M - 1;

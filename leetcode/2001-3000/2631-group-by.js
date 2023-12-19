@@ -1,12 +1,12 @@
 /**
  * @param {Function} fn
- * @return {Array}
+ * @return {Object}
  */
-Array.prototype.groupBy = function(fn) {
+Array.prototype.groupBy = function (fn) {
     const ret = {};
-    for(let i = 0; i < this.length; ++i) {
+    for (let i = 0; i < this.length; ++i) {
         let key = fn(this[i]);
-        if(!ret.hasOwnProperty(key))
+        if (!ret.hasOwnProperty(key))
             ret[key] = [];
         ret[key].push(this[i]);
     }

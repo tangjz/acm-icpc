@@ -1,11 +1,11 @@
 /**
- * @param {Object} object
- * @param {Function} classFunction
+ * @param {*} obj
+ * @param {*} classFunction
  * @return {boolean}
  */
-var checkIfInstanceOf = function(obj, classFunction) {
-    while(obj != null) {
-        if(obj.constructor === classFunction)
+var checkIfInstanceOf = function (obj, classFunction) {
+    while (obj != null) {
+        if (obj.constructor === classFunction)
             return true;
         obj = obj.__proto__;
     }

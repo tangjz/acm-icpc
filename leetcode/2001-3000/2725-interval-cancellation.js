@@ -4,7 +4,7 @@
  * @param {number} t
  * @return {Function}
  */
-var cancellable = function(fn, args, t) {
+var cancellable = function (fn, args, t) {
     let fid;
     const recall = () => {
         fn(...args);
@@ -15,29 +15,30 @@ var cancellable = function(fn, args, t) {
 };
 
 /**
- *  const result = []
+ *  const result = [];
  *
- *  const fn = (x) => x * 2
- *  const args = [4], t = 20, cancelT = 110
+ *  const fn = (x) => x * 2;
+ *  const args = [4], t = 35, cancelTimeMs = 190;
  *
- *  const start = performance.now()
+ *  const start = performance.now();
  *
  *  const log = (...argsArr) => {
- *		const val = fn(...argsArr)
- *      result.push({"time": Math.floor(performance.now() - start), "returned": fn(...argsArr)})
+ *      const diff = Math.floor(performance.now() - start);
+ *      result.push({"time": diff, "returned": fn(...argsArr)});
  *  }
  *
  *  const cancel = cancellable(log, args, t);
  *
+ *  setTimeout(cancel, cancelTimeMs);
+ *
  *  setTimeout(() => {
- *     cancel()
- *     console.log(result) // [
- *                         //      {"time":0,"returned":8},
- *                         //      {"time":20,"returned":8},
- *                         //      {"time":40,"returned":8},
- *                         //      {"time":60,"returned":8},
- *                         //      {"time":80,"returned":8},
- *                         //      {"time":100,"returned":8}
- *                         //  ]
- *  }, cancelT)
+ *      console.log(result); // [
+ *                           //     {"time":0,"returned":8},
+ *                           //     {"time":35,"returned":8},
+ *                           //     {"time":70,"returned":8},
+ *                           //     {"time":105,"returned":8},
+ *                           //     {"time":140,"returned":8},
+ *                           //     {"time":175,"returned":8}
+ *                           // ]
+ *  }, cancelTimeMs + t + 15)
  */

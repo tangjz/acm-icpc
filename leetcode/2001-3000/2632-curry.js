@@ -2,7 +2,7 @@
  * @param {Function} fn
  * @return {Function}
  */
-var curry = function(fn) {
+var curry = function (fn) {
     const agg = [];
     return function curried(...args) {
         agg.push(...args);

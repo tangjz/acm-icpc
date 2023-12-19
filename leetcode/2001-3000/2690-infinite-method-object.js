@@ -1,8 +1,8 @@
 /**
  * @return {Object}
  */
-var createInfiniteObject = function() {
-    return new Proxy({}, { get: (_, k) => () => k } );
+var createInfiniteObject = function () {
+    return new Proxy({}, { get: (_, k) => () => k });
 };
 
 /**
