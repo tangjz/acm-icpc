@@ -7,7 +7,7 @@
 
 const timeQue = [];
 
-function customInterval(fn, delay, period){
+function customInterval(fn, delay, period) {
     let idx = timeQue.length, cnt = 0;
     const exec = () => {
         fn();
@@ -20,6 +20,7 @@ function customInterval(fn, delay, period){
 
 /**
  * @param {number} id
+ * @return {void}
  */
 function customClearInterval(id) {
     clearTimeout(timeQue[id]);

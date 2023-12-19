@@ -2,9 +2,9 @@
  * @param {Function} fn
  * @return {Function}
  */
-var once = function(fn) {
+var once = function (fn) {
     let done = false;
-    return function(...args){
+    return function (...args) {
         return done ? undefined : (done = true, fn(...args));
     }
 };

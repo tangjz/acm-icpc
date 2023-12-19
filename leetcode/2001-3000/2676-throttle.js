@@ -3,17 +3,17 @@
  * @param {number} t
  * @return {Function}
  */
-var throttle = function(fn, t) {
-    var idle = true, nextArgs, wrapper = function(...args) {
+var throttle = function (fn, t) {
+    var idle = true, nextArgs, wrapper = function (...args) {
         nextArgs = args;
-        if(!idle)
+        if (!idle)
             return;
         fn(...args);
         idle = false;
         nextArgs = undefined;
         setTimeout(() => {
             idle = true;
-            if(nextArgs !== undefined)
+            if (nextArgs !== undefined)
                 wrapper(...nextArgs);
         }, t);
     };

@@ -3,22 +3,32 @@ class EventEmitter {
         this.relations = new Map();
     }
 
-    subscribe(event, cb) {
-        const callbacks = this.relations.get(event) ?? [];
-        callbacks.push(cb);
-        this.relations.set(event, callbacks);
+    /**
+     * @param {string} eventName
+     * @param {Function} callback
+     * @return {Object}
+     */
+    subscribe(eventName, callback) {
+        const callbacks = this.relations.get(eventName) ?? [];
+        callbacks.push(callback);
+        this.relations.set(eventName, callbacks);
         return {
             unsubscribe: () => {
-                const callbacks = (this.relations.get(event) ?? []).filter(fn => fn !== cb);
-                this.relations.set(event, callbacks);
+                const callbacks = (this.relations.get(eventName) ?? []).filter(fn => fn !== callback);
+                this.relations.set(eventName, callbacks);
             }
         };
     }
 
-    emit(event, args = []) {
-        const callbacks = this.relations.get(event) ?? [];
+    /**
+     * @param {string} eventName
+     * @param {Array} args
+     * @return {Array}
+     */
+    emit(eventName, args = []) {
+        const callbacks = this.relations.get(eventName) ?? [];
         const res = [];
-        for(const cb of callbacks)
+        for (const cb of callbacks)
             res.push(cb(...args));
         return res;
     }

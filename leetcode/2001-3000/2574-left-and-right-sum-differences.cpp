@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> leftRigthDifference(vector<int>& nums) {
+    vector<int> leftRightDifference(vector<int>& nums) {
         int lft = 0, rht = 0;
         vector<int> ans;
         for(int x: nums)

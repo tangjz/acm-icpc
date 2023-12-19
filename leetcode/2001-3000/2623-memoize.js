@@ -1,12 +1,13 @@
 /**
  * @param {Function} fn
+ * @return {Function}
  */
 function memoize(fn) {
     var cache = {};
-    return function(...args) {
+    return function (...args) {
         var key = JSON.stringify(args);
         var val = cache[key];
-        if(val === undefined) {
+        if (val === undefined) {
             val = fn(...args);
             cache[key] = val;
         }

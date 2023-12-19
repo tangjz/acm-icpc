@@ -1,4 +1,7 @@
-Date.prototype.nextDay = function() {
+/**
+ * @return {string}
+ */
+Date.prototype.nextDay = function () {
     const nxtTime = this.getTime() + 24 * 60 * 60 * 1000;
     return new Date(nxtTime).toISOString().split('T')[0];
 }

@@ -8,7 +8,7 @@ var dateRangeGenerator = function* (start, end, step) {
     let staTime = new Date(start).getTime();
     const endTime = new Date(end).getTime();
     const strip = step * 24 * 60 * 60 * 1000;
-    while(staTime <= endTime) {
+    while (staTime <= endTime) {
         yield new Date(staTime).toISOString().split('T')[0];
         staTime += strip;
     }

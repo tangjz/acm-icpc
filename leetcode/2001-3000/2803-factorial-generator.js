@@ -5,7 +5,7 @@
 function* factorial(n) {
     let ret = 1;
     n = Math.max(n, 1);
-    for(let i = 1; i <= n; ++i) {
+    for (let i = 1; i <= n; ++i) {
         ret *= i;
         yield ret;
     }

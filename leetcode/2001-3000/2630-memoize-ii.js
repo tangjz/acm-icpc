@@ -1,24 +1,19 @@
 /**
  * @param {Function} fn
+ * @return {Function}
  */
 function memoize(fn) {
     let keyHash = new Map();
-    let valHash = {};
-    return function(...args) {
+    let valHash = new Map();
+    return function (...args) {
         let key = JSON.stringify(args.map(k => {
-            let id = keyHash.get(k);
-            if(id === undefined) {
-                id = keyHash.size;
-                keyHash.set(k, id);
-            }
-            return id;
+            if (!keyHash.has(k))
+                keyHash.set(k, keyHash.size);
+            return keyHash.get(k);
         }));
-        let val = valHash[key];
-        if(val === undefined) {
-            val = fn(...args);
-            valHash[key] = val;
-        }
-        return val;
+        if (!valHash.has(key))
+            valHash.set(key, fn(...args));
+        return valHash.get(key);
     }
 }
 

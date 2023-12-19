@@ -2,21 +2,21 @@
  * @param {Generator} generator
  * @return {[Function, Promise]}
  */
-var cancellable = function(generator) {
+var cancellable = function (generator) {
     let cancel;
     const p1 = new Promise((_, reject) => {
         cancel = () => reject("Cancelled");
     });
-    p1.catch(() => {});
+    p1.catch(() => { });
     const p2 = (async () => {
         let result = {
             'value': async () => undefined,
             'done': false,
         };
-        while(!result.done) {
+        while (!result.done) {
             try {
                 result = generator.next(await Promise.race([result.value, p1]));
-            } catch(e) {
+            } catch (e) {
                 result = generator.throw(e);
             }
         }

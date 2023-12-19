@@ -3,12 +3,12 @@
  * @param {Array} valuesArr
  * @return {Object}
  */
-var createObject = function(keysArr, valuesArr) {
+var createObject = function (keysArr, valuesArr) {
     let ret = {};
-    for(let i = 0; i < keysArr.length; ++i) {
+    for (let i = 0; i < keysArr.length; ++i) {
         let key = String(keysArr[i]);
-        if(!(key in ret))
-           ret[key] = valuesArr[i];
+        if (!(key in ret))
+            ret[key] = valuesArr[i];
     }
     return ret;
 };

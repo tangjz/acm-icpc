@@ -2,10 +2,10 @@
  * @param {Function} queryMultiple
  * @param {number} t
  */
-var QueryBatcher = function(queryMultiple, t) {
+var QueryBatcher = function (queryMultiple, t) {
     let wait = false, que = [];
     const check = async () => {
-        if(wait || que.length === 0)
+        if (wait || que.length === 0)
             return;
         wait = true;
         setTimeout(() => { wait = false; check(); }, t);
@@ -14,7 +14,7 @@ var QueryBatcher = function(queryMultiple, t) {
         [que, tmpQue] = [tmpQue, que];
         const res = await queryMultiple(tmpQue.map(i => i[0]));
         const resQue = tmpQue.map(i => i[1]);
-        for(let i = 0; i < resQue.length; ++i)
+        for (let i = 0; i < resQue.length; ++i)
             resQue[i](res[i]);
     };
     this.append = (key, res) => {
@@ -27,7 +27,7 @@ var QueryBatcher = function(queryMultiple, t) {
  * @param {string} key
  * @returns Promise<string>
  */
-QueryBatcher.prototype.getValue = async function(key) {
+QueryBatcher.prototype.getValue = async function (key) {
     return new Promise((resolve, _) => {
         this.append(key, resolve);
     });
@@ -35,7 +35,7 @@ QueryBatcher.prototype.getValue = async function(key) {
 
 /**
  * async function queryMultiple(keys) {
- *   return keys.map(key => key + '!');
+ *   return keys.map(key => key + '!');
  * }
  *
  * const batcher = new QueryBatcher(queryMultiple, 100);

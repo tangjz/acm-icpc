@@ -2,9 +2,9 @@
  * @param {number} n
  * @return {Function} counter
  */
-var createCounter = function(n) {
+var createCounter = function (n) {
     var ctr = n - 1;
-    return function() {
+    return function () {
         ctr += 1;
         return ctr;
     };
