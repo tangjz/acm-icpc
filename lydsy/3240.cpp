@@ -1,5 +1,5 @@
 /*
- * 矩阵递推 + 费马小定理 
+ * 矩阵递推 + 费马小定理
  */
 #include <cstdio>
 typedef long long LL;

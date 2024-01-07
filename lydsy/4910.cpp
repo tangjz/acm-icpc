@@ -27,16 +27,16 @@ inline void modify(int *dst, int *src, int upp, int cst)
 void dfs(int u)
 {
 	int *Fu = F + (P[u] = st);
-	if(stg == 0 && c[u] > 1) // 2??? -> 2????¨² 
+	if(stg == 0 && c[u] > 1) // 2??? -> 2????ï¿½ï¿½
 		modify(Fu, Fu, c[u] - 1, w[u]);
 	for(std::vector<int>::iterator it = e[u].begin(); it != e[u].end(); ++it)
 	{
 		int v = *it, *Fv = F + (st += m);
 		memcpy(Fv, Fu, m * sizeof(int));
 		dfs(v);
-		if(stg == 0) // 2????¨² -> ???¨² 
+		if(stg == 0) // 2????ï¿½ï¿½ -> ???ï¿½ï¿½
 			modify(Fu, Fv, 1, w[v]);
-		else // 2??? -> ???¨² 
+		else // 2??? -> ???ï¿½ï¿½
 			modify(Fu, Fv, c[v], w[v]);
 	}
 }
@@ -58,7 +58,7 @@ int main()
 		st = 0;
 		P = pos[0];
 		F = f;
-		stg = 0; // ?¨´?¡ã¨°?¨¦?2????¨² 
+		stg = 0; // ?ï¿½ï¿½?ï¿½ã¨°?ï¿½ï¿½?2????ï¿½ï¿½
 		memset(F, 0, m * sizeof(int));
 		dfs(0);
 		for(int i = 0; i < n; ++i)
@@ -66,7 +66,7 @@ int main()
 		st = 0;
 		P = pos[1];
 		F = g;
-		stg = 1; // ?¨´?¡ã¨°?¨¦?2??? 
+		stg = 1; // ?ï¿½ï¿½?ï¿½ã¨°?ï¿½ï¿½?2???
 		memset(F, 0, m * sizeof(int));
 		dfs(0);
 		for(int i = 0; i < n; ++i)
