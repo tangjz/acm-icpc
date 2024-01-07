@@ -1,6 +1,37 @@
 ## Tangjz's code repository, for acm-icpc.
 
-#### count of solved problems
+#### type of archives
+
+- active online contests
+  - codeforces (include gym, sgu)
+  - atcoder
+  - codechef (include snackdown)
+  - leetcode
+  - topcoder (include tco)
+  - usaco
+  - hdu (include bestcoder, astar)
+  - nowcoder
+- huge problemsets
+  - 51nod
+  - lydsy
+  - poj
+  - hiho
+  - hackerrank
+  - projecteuler
+  - timus
+  - uoj
+  - uva
+  - zoj
+- annual contest
+  - company: fhc/gcj/snackdown/tco
+  - university: icpc/ccpc
+  - high school: noi/poi/pa
+- stale
+  - bestcoder
+  - lanqiao
+  - oj3rd
+
+#### count of solved problems (work in progress)
 
 [aggregated stat](https://clist.by/coder/skywalkert/)
 
